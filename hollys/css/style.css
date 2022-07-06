@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Glory:wght@100&family=Jua&family=Nanum+Gothic:wght@400;700;800&display=swap');
+*{
+    font-family: 'Nanum Gothic', sans-serif;
+    padding: 0;
+    margin: 0;
+    color:#2f2f2f;
+    font-size: 12px;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+header{
+    
+}
+.hWrap{
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+    position: relative;
+
+}
+.hWrap::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.hWrap h1{
+    padding-top: 54px;
+}
+.util{
+    position: absolute;
+    font-size: 0; 
+    right: 0;
+    top: 17px;
+}
+.util li{
+    display: inline-block;
+    font-size: 14px;
+    margin-right: 18px;
+    color: #2f2f2f;
+}
+
+.sub_util{
+    position: absolute;
+    left: 0;
+    top:0;
+ 
+}
+.sub_util li{
+    float:left;
+    margin-right: 21px;
+}
+.sub_util02{
+    padding-top: 21px;
+}
+
+.gnb{
+    font-size: 0;
+    text-align: center;
+}
+.gnb li{
+    font-size: 20px;
+    color: #2f2f2f;
+    display: inline-block;
+    margin-left: 27px;
+    margin-right: 27px;
+    margin-bottom: 16px;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.mainBn{
+    height: 477px;
+    background-image:url(../images/mainBn.png);
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 45px;
+
+}
+.mainBn a{
+    height: 477px;
+    display: block;
+    width: 100%;
+}
+.sWrap{
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+
+
+    position: relative;
+}
+.sWrap .row01{
+    width: 940px;
+    height: 250px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.sWrap .row01::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.sWrap .row01 .con{
+    float: left;
+    width: 240.5px;
+
+    height: 250px;
+    
+}
+.sWrap .row01 .con:nth-child(3){
+
+    width: 459px;
+
+}
+.row01 .mall
+{  }
+.row01 .mall::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.row01 .mall .mall_box    {
+    float: left;
+
+}
+.row01 .con .fran{
+    padding-top: 23px;
+    text-align: center;
+
+    
+
+}  
+.row01 .con:nth-child(3) h3{
+
+    margin-bottom: 12px;
+}
+.row01 .con:nth-child(3) p{
+    font-size: 12px;
+   /* padding-bottom: 20px;*/
+
+}
+.row01 .mall{
+    
+    
+
+}
+.row01 .mall::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.row01 .mall .mall_box{
+    float: left;
+    width: 153px;
+    height: 130px;
+    text-align: center;
+    position: relative;
+    padding-top: 20px;
+    background-image: url(../images/bar.png);
+    background-repeat: no-repeat;
+    background-position-y: 50px;
+}
+.row01 .mall .mall_box:nth-child(1){
+    background-image: none;
+}
+.row01 .mall .mall_box span{
+    display: block;
+    position: absolute;
+    bottom: 0;
+
+    left: 0;
+    width: 100%;
+}
+.row01 .mall_box:nth-child(1) img{
+    margin-top: 25px;
+
+}
+.row01 .mall_box:nth-child(2) img{
+    margin-top: 10px;
+}
+.row01 .mall_box:nth-child(3) img{
+    margin-top: 25px;
+}
+
+.row01 .con3 p{
+    font-size: 12px;
+    margin-top: 12px;
+}
+.row01 .con3 div{
+    text-align: center;
+    margin-top: 27px;
+}
+.row02:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.row02 .box{
+    float: left;
+}
+.row03{}
+.row03:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.row03 .box{
+    float: left;
+    padding-top: 35px;
+    width: 235px;
+    line-height:1.5;
+    
+}
+.row03 .box h3{
+    margin-bottom: 16px;
+
+}
+
+.row03 .box .Barogagi{
+    padding-top: 17px;
+
+}
+.row03 .box .Barogagi a img{
+
+vertical-align: middle;
+padding-right: 15px;
+
+}
+.row03 .box3{
+   
+
+}
+.row03 .box3 .btnonly{
+padding-left: 14px;
+}
+.row03 .box3 .News li a{
+    line-height: 1.7;
+    width:140px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    float: left;
+  
+}
+/*
+[일정이상 길어진 텍스트 말줄임표 처리하기]
+
+1. 먼저 공간값을 한정지어준다
+2. 공간값에 따라 줄바꿈이 일어나는 텍스트들을 공간값 무시하고 진행될 수 있게끔 
+white-space: nowrap
+을 준다
+3. 밖으로 튀어나간 텍스트들 숨김처리 시키기
+overflow : hidden
+4. 숨김처리된 요소들 중 텍스트들은 말줄임표로 처리하기
+text-overflow: ellipsis
+*/
+
+.row03 .box3 .News li span{
+    float: right;
+    line-height: 1.7;
+}
+
+.row03 .box .quick{
+
+    float: left;
+    text-align: center;
+    background-image: url(../images/bar.png);
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    padding: 0 5px;
+    margin-top: 40px;
+    margin-bottom: 48px;
+    
+
+}
+.row03 .box .quick:nth-child(1){
+    background-image: none;
+    padding-left: 30px;
+}
+.row03 .box .quick span{
+    display: block;
+}
+
+.row04{
+    position: relative;
+    border-top: 2px solid #b5121b;
+    padding-top: 38px;
+}
+.row04 ul{
+    position: absolute;
+    font-size:0;
+    top: 38px;
+    left: 150px;
+}
+.row04 ul li{
+float: left;
+margin-left: 21px;
+
+}
+.row04 .box{
+    float: left;
+    width: 235px;
+    
+    padding-top: 35px;
+    position: relative;
+    padding-bottom: 89px;
+}
+.row04 box img{
+    
+}
+.blue{
+    color: blue;
+    display: block;
+    position: absolute;
+    left: 70px;
+    top:35px;
+}
+.live{
+    position: absolute;
+    left: 70px;
+    top:50px;
+}
+.row04:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+
+
+
+footer{
+    background-image: url(../images/pattern.png);
+
+
+    
+}
+.fWrap{
+    width: 940px;
+    height: 424px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+address{
+    font-style: normal;
+    color: #eb7379;
+}
+footer .white{
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 37px;
+    padding-bottom: 37px;
+}
+footer p{
+    margin-top: 25px;
+    color: #eb7379;
+}

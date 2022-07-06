@@ -1,0 +1,636 @@
+*{margin:0;padding:0;}
+ul{list-style:none;}
+a{text-decoration: none; color:inherit}
+
+
+header{
+    height: 50px;
+    background-color: #132822;
+}
+
+h1{
+    text-align: center;
+}
+
+h1 img{
+    width: 178px;
+}
+
+header button{
+    border:0;
+    background-color: transparent;
+}
+
+.allBtn{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.allBtn img{
+    width: 17px;
+}
+
+.shareBtn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+}
+.shareBtn img{
+    width: 17px;
+}
+
+aside{
+    background-color:#132822;
+    position: fixed;
+    top:0;
+    left:-100%;
+    width: 100%;
+    height: 100%;
+    color:#8e9996;
+    font-size: 12px;
+    overflow-y: scroll;
+}
+
+.closeBtn{
+    width: 50px;
+    height: 50px;
+}
+.closeBtn img{
+    width: 20px;
+}
+
+.util{
+    display: flex;
+    justify-content: center;
+}
+
+.srch input{display: none;}
+
+.util li:after{
+    content: '|';
+    margin:0 4px;
+}
+
+.util li:last-child:after{
+    content: none;
+}
+
+.gnb{
+    margin-top: 15px;
+}
+.gnb li>a{
+    display: block;
+}
+.gnb>li>a:hover{
+    background-color: rgba(0,0,0,0.2);
+}
+.gnb li{
+    line-height: 52px;
+    text-align: center;
+}
+
+.sub li{
+    background-color: #1b302a;
+    border-bottom: 1px solid #0c221c;
+}
+
+
+.mainBn{
+    position: relative;
+}
+
+.mainBn img{
+    width: 100%;
+}
+
+.mainBn .txt{
+    color: #fff;
+    font-size: 14px;
+    position: absolute;
+    margin-top: 40px;
+    top: 50%;
+    left:0;
+    text-align: center;
+    width: 100%;
+}
+
+.mainBn .txt a{
+    display: inline-block;
+    border:1px solid #fff;
+    padding:5px 10px;
+    margin-top: 25px;
+}
+
+.pc_bn{display: none;}
+
+
+.row1{
+    padding:0 15px;
+    margin-top: 15px;
+}
+
+.row1 .box{
+    width: 100%;
+    position: relative;
+}
+
+.row1 .box img{
+    width: 100%;
+    vertical-align: top;
+}
+.pc{display: none;}
+
+.row1 .txt{
+
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    text-align: center;
+    color:#fff;
+    font-size: 14px;
+    /* transform:translate
+        있는 자리에서 움직이는 속성 
+        이유: 해당 요소의 높이값이나 너비값을 모르는
+        상태에서 %로 조절할 수 있다
+          ㄴ translate의 %는 해당 요소의
+          너비와 높이에 의존한다 
+          translateX(100%) -> 해당요소의 너비값만큼 왼쪽에서 오른쪽으로 움직이기
+          translateY(100%) -> 해당요소의 높이값만큼 위에서 아래로 움직이기 
+    */
+}
+
+/* 만약 flex로 해결한다면?? (추천은 안하지만 해보기) */
+
+.row1 .txt a{    
+    display: inline-block;
+    padding:5px 10px;
+    border:1px solid #fff;
+    margin-top: 15px;
+}
+
+.row2{
+    padding:0 15px;
+    margin-top: 25px;
+    color: #fff;
+}
+
+
+.row2 .box:first-child{
+    /* 
+    display:flex
+    수직축 맞추는 속성
+    align-items -> 기본값이 stretch
+         -> 부모의 높이만큼 
+         자식의 높이를 유연하게 땡겨서
+         부모의 높이와 똑같이 맞춤 
+
+    .txt영역의 경우 원래대로라면
+    안에 들어있는 텍스트만큼만 높이가 존재했어야 했는데,
+    align-items:stretch 속성 덕분에
+    늘어나는 부모의 높이값에 맞춰
+    자동으로 자기 높이값도 늘어나는 구조
+    */
+   display: flex;
+}
+
+.row2 .box:first-child .photo{
+    width:50%;
+}
+
+.row2 .box:first-child img{
+    width: 100%;
+    vertical-align: top;
+    
+}
+
+.row2 .box:first-child .txt{
+        width:50%;
+    background-color:#222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.row2 .box:first-child .txt a{
+    padding:5px 10px;
+    border:1px solid #fff;
+    border:1px solid #fff;
+    margin-top: 10px;
+}
+
+.row2 .box:nth-child(2){
+    margin-top: 15px;
+    position: relative;
+}
+
+
+
+.row2 .box:nth-child(2) .txt{
+    position: absolute;
+    top:50%;
+    left:0;
+    width:100%;
+    transform: translateY(-50%);
+    text-align: center;
+    z-index: 3;
+}
+.row2 .box:nth-child(2) img{
+    width: 100%;
+    vertical-align: top;
+}
+.row2 .box:nth-child(2):after{
+    content: '';
+    display: block;
+    width: calc(100% - 14px);
+    height: calc(100% - 14px);
+    border:1px solid #556460;
+    position: absolute;
+    top: 7px;
+    left: 7px;
+}
+
+.row2 .box:nth-child(2) a{
+    display: inline-block;
+    padding: 5px 10px;
+    border:1px solid #fff;
+    margin-top: 15px;
+
+}
+
+.row2 .box:nth-child(3){
+    display: flex;
+    margin-top: 15px;
+}
+.row2 .box:nth-child(3) img{
+    width: 100%;
+}
+.row2 .box:nth-child(3) .photo{
+    width:50%;
+    order:2
+}
+.row2 .box:nth-child(3) .txt{
+    width:50%;
+    background-color:#7b704d;
+    order:1;
+    display: flex;
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+.row2 .box:nth-child(3) a{
+    padding:5px 10px;
+    margin-top: 10px;
+    border:1px solid #fff;
+}
+
+.row3{
+    padding:0 15px;
+    margin-top: 15px;
+    position: relative;
+}
+.row3 img{
+    width: 100%;
+}
+
+.row3 .txt{
+    background-color: rgba(16,46,39,0.9);
+    color:#fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-size: 14px;
+    padding:20px 35px;
+}
+
+.row3 a{
+    display: inline-block;
+    padding:5px 10px;
+    margin-top: 15px;
+    border:1px solid #fff;
+}
+body{height: 3000px;}
+
+
+footer{
+    background-color: #0d1714;
+    color: #eee;
+    font-size: 12px;
+    padding: 15px;
+    position: relative;
+}
+
+.fmenu{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #223c32;
+    padding-bottom: 10px;
+}
+.fmenu li{
+    margin:0 5px;
+}
+address{
+    font-style: normal;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.lang{
+    width: 130px;
+    height: 30px;
+    line-height: 30px;
+    border:1px solid #666;
+    box-sizing: border-box;
+    padding-left: 4px;
+    margin:15px auto 0;
+    position: relative;
+}
+
+.lang:after{
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    transition: all 1s;
+}
+
+.lang:hover:after{
+    transform:rotate(225deg);
+}
+
+.copyright{
+    margin-top: 15px;
+    text-align: center;
+}
+
+.mark{
+    transform: scale(0.5);
+    /* 
+    여태까지 모든 img들은 width값을 직접 줄여줬는데
+    마크 이미지의 경우
+    주변의 것들과 겹칠 이유도 없고,
+    position:aboslute될거고,
+    이 이미지 하나만으로 어떤 기능도 가지고 있지 않기 때문에
+    그냥 transform:scale로 줄였음 
+    */
+    position: absolute;
+    /* footer한테 position:relative 주세요  */
+    top:50%;
+    left:50%;
+    margin-left: 80px;
+}
+
+@media all and (min-width:768px){
+
+    .pc_bn{display: block;}
+    .mo_bn{display: none;}
+
+
+    .mainBn .txt{
+        text-align: left;
+        position: absolute;
+        left: 50%;
+        margin-left: 30px;
+        width:auto;
+        margin-top:-50px;
+    }
+
+    
+    main{
+        margin-top: 60px;
+    }
+    .row1{
+        max-width: 1200px;
+        margin:0 auto;
+        display: flex;
+    }
+
+    .row1 .box{
+        /* width: 50%; */
+        flex-grow: 1;
+        /* flex-grow : 해당 아이템이 컨테이너내부에서
+        차지할 공간의 비율 */
+    }
+
+    .pc{display: block;}
+    .mo{display: none;}
+
+
+    .row2{
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .row2 .box{
+        width: 32%;
+        flex-direction: column;
+    }
+
+    .row2 .box:nth-child(1) .photo{
+        width: 100%;
+    }
+
+    .row2 .box:nth-child(1) .txt{
+        width: 100%;
+        font-size: 14px;
+        box-sizing: border-box;
+        padding: 20px 15px;
+        text-align: center;
+    }
+
+    .row2 .box:nth-child(2){
+        background-image: url(../images/img_news_2.jpg);
+        background-repeat: no-repeat;
+        background-position: center top;
+        margin-top: 0;
+        background-size: cover;
+    }
+
+    .row2 .box:nth-child(3){
+        margin-top: 0;
+    }
+    .row2 .box:nth-child(3) .photo{
+        width: 100%;
+        order:1
+    }
+    .row2 .box:nth-child(3) .txt{
+        width: 100%;
+        order:2;
+        padding:20px 15px;
+        box-sizing: border-box;
+    }
+
+    .row2 .box:nth-child(3) img{
+        vertical-align: top;
+    }
+
+    /* 768px영역에서 이거 하나 추가 해주세요 */
+    .row3{
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 40px;
+    }
+
+
+    .row3 .txt p:nth-child(1){
+        margin-bottom: 10px;
+    }
+
+    
+}
+
+
+
+@media all and (min-width:1200px){
+
+    header{
+        height: 147px;
+    }
+
+    header button{
+        display: none;
+    }
+
+    h1{
+        padding-top:35px;
+    }
+
+    h1 img{
+        width: auto;
+    }
+
+    .hWrap{
+        position: relative;
+        width: 1200px;
+        margin:0 auto;
+    }
+    aside{
+        position: static;
+        background-color:transparent;
+        height: auto;
+        overflow-y: visible;
+    }
+    .util{
+        position: absolute;
+        top: 42px;
+        right: 0;
+    }
+
+    .srch a{display: none;}
+    .srch input{
+        display: block;
+        width: 141px;
+        height: 20px;
+        color: #fff;
+        background-image: url(../images/btn_util_search.png);
+        background-repeat: no-repeat;
+        background-position:right center;
+        background-color: transparent;
+        border:0;
+        border-bottom: 1px solid #8e9996;
+    }
+
+    .gnb>li>a:hover{
+        background-color: transparent;
+    }
+
+    .sub{display: none;}
+
+    nav{
+        margin-top: 30px;
+    }
+    .gnb{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    /* 마우스 갖다대면 아래에서 진행되는 바 만들기 */
+    .gnb>li{
+        position: relative;
+        line-height: normal;
+    }
+
+    .gnb>li:after{
+        content: '';
+        width: 0;
+        display: block;
+        height: 2px;
+        background-color:#7b704d;
+        position: absolute;
+        left:0;
+        bottom: -4px;
+    }
+    
+    .gnb>li:hover:after{
+        transition: all 0.5s linear;
+        width: 100%;
+    }
+
+
+
+    .fWrap{
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
+    .fmenu{
+        justify-content: flex-start;
+    }
+
+    address{
+        display: flex;
+    }
+    address p:nth-child(1){
+        margin-right: 40px;
+    }
+
+    .fmenu{
+        padding-bottom: 25px;
+        padding-top: 10px;
+    }
+
+    .lang{
+        width: 180px;
+        position: absolute;
+        top: 0px;
+        right: 0;
+        margin-top:0;
+    }
+    .copyright{
+        position: absolute;
+        top: 45px;
+        right: 0;
+    }
+
+    footer{
+        padding-bottom: 45px;
+    }
+
+    .mark{
+        left: 100%;
+        margin-left: 20px;
+        margin-top: -20px;
+    }
+
+}

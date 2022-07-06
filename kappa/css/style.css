@@ -1,0 +1,330 @@
+/*
+반응형 코딩할 때는 
+- mo -> 768 -> 1200에 가면서 살을 붙여 나간다고 생각.
+- mo에선 필요최소단위로 코딩한다.
+- 그리고 .sns img{}이렇게 선택자를 잡기보다는
+.sns .mo{}이렇게 모바일만 잡는다는 식으로 선택자를 잡아야 한다.
+
+*/
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.pc{
+    display: none;
+}
+
+header{
+    height: 63px;
+    background-color: #e70404;
+   
+   
+    
+}
+header h1{
+    text-align: center;
+     
+}
+h1 img{
+    width: 112px;
+}
+header button{
+    background-color: transparent;
+    border:0;
+}
+.allBtn{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+
+    height: 63px;
+    width: 65px;
+    background-color: #333;
+}
+.allBtn img, .myBtn img{
+    width: 25px;
+}
+.myBtn{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    height: 63px;
+    width: 65px;
+    background-color: #333;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 999;
+}
+.close{
+
+    height: 65px;
+    width: 65px;
+    border: 0;
+    background-color: white;
+}
+.close img{
+    width: 22px;
+
+}
+
+form{
+    position: absolute;
+    top:0;
+    left: 65px;
+    display: flex;
+    width: calc(100% - 65px);
+    height: 65px;
+    border-bottom: 1px solid #666;
+
+}
+form input{
+    
+    width: calc(100% - 65px);
+
+    box-sizing: border-box;
+    padding-left: 15px;
+    border: none;    
+    background-color: #333;
+}
+
+form button{
+    width: 65px;
+    height: 65px;
+    background-color: #333;
+}
+
+form button img{
+    width: 23px;
+}
+
+.gnb{
+   
+    background-color: #333;
+    font-size: 12px;
+    color: #f4f4f4;
+    
+}
+.gnb li{
+    border-bottom: 1px solid #444;
+    line-height: 50px;
+    padding-left: 20px;
+  }
+
+.gnb .red{
+    background-color: #e70404; 
+    border-bottom: 1px solid #444;
+}
+.mainBn img{
+    width: 100%;
+}
+.pc_bn{display: none;}
+
+main{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+main .box{
+    width: 50%;
+    position: relative;
+}
+
+main .box img{
+width: 100%;
+vertical-align: top;
+}
+
+.over{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        text-align: center;
+      opacity: 0;
+        transition: all 0.8s;
+}
+
+.over i img{
+    width: 30px;
+}
+.over i{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+.box:hover .over{
+    opacity: 1;
+
+}
+
+footer{
+    background-color: #333;
+    padding: 20px;
+
+    
+}
+.fWrap{
+    color: #777;
+}
+footer .fmenu{
+    display: flex;
+      margin-bottom: 10px;
+   
+}
+.fmenu li{
+    font-size: 14px;
+}
+.fmenu li::after{
+    content: '|';
+    margin-left: 7px;
+    margin-right: 7px;
+}
+.fmenu li:last-child:after{
+    content: none;
+    
+}
+.sns{
+    display: flex;
+    margin-bottom: 15px;
+ 
+}
+.sns li{
+    margin: 0 15px;
+}
+.sns li:first-child{
+    margin-left: 0;
+}
+.sns li .mo{ 
+    /* .sns li img{}로 하기보단
+        .sns li .mo{}로 해서 모바일만 먹히도록 한다.
+
+    */
+    height: 27px;
+}
+.fmenu .red{
+    color: #e41e25;
+}
+.fmenu .red:after{
+    color: #666;
+}
+
+
+/***********************************************768시작*************************/
+@media all and (min-width:768px){
+.mo_bn{
+    display: none;
+}
+.pc_bn{display: block;}
+
+.fWrap{
+    display: flex;
+}
+}
+/***********************************************768ㄲ*************************/
+/***********************************************1200시작*************************/
+@media all and (min-width : 1200px){
+    .mo{
+        display: none;
+    }
+    .pc{
+        display: block;
+    }
+
+    header{
+        border-bottom: 1px solid #e41e25;
+    }
+    header h1{
+        width: 10%;
+        height: 63px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+
+    nav{
+        position: absolute;
+        top: 0;
+        left: 10% !important;
+         height: auto;
+        background-color: transparent;
+        width: calc(90% - 130px);
+     
+       
+    }
+    nav .gnb{
+        display: flex;
+        width: 100%;
+    }
+.gnb li{
+        display: block;
+        width: 12.5%;
+        padding: 0;
+        border: 0;
+        text-align: center;
+        line-height: 63px;
+        width: 12.5%;
+
+        border-right: 1px solid #666;
+  
+    }
+
+.srchBtn2{
+    width: 65px;
+    height: 63px;
+    background-color: #333;
+    border: 0;
+    position: absolute;
+    right:65px;
+    z-index: 5;
+    top: 0;
+}
+.myBtn{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+}
+.sns{
+    margin-top: 0;
+}
+.pcOver{
+    display: none;
+}
+.sns li:hover .pc{
+    display: none;
+}
+.sns li:hover .pcOver{display: block;}
+
+
+
+}
+/***********************************************1200끝*************************/

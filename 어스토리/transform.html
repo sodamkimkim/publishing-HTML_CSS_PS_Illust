@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+
+    <style>
+        .con1{
+            display: flex;
+        }
+        .con1 .box{
+            width: 200px;
+            height: 200px;
+            border:5px solid#000;
+            background-color: pink;
+            transition: all 2s;
+           
+        }
+        .con1 .box:hover{
+           
+           
+           transform:rotate(720deg);
+           /*
+           * transform : 변형
+           - scale(): 값을 키운다. 배수를 입력.
+           - skew(): 기울이기, 각도를 입력, deg단위사용
+           - rotate(): 회전시키기, 단위사용
+           ...
+
+           ※ 실제 요소가 차지하고 있는 공간값과
+           브라우저에서 인식되는 실제 요소의 위치는 변화하지 않는다.
+           => 우리 눈에 보이는 것만 변화되어서 보인다.
+
+           - 그렇기 때문에 레이아웃을 짜는 용도로써 사용하기는 부적합.
+           장식적인 요소에 많이 사용.
+           */
+
+            /*
+            
+            * transform: scale(2); 
+            - 크기 변형.
+            -()에 단위 없이 숫자만 넣는다.
+            숫자는 배수로 적용된다.
+           
+            ㄴ transform: scaleX(2)
+            - 가로값만 변형
+            
+            ㄴ transform: scaleY(0.4)
+            - 세로만 변형
+           
+            */
+
+            /*
+            
+            * transform: skew(-45deg);
+            - 기울이기
+            - ()에 deg단위를 사용해서 각도지정
+
+            ㄴ skewX()
+            ㄴ skewY()
+
+            * transform:rotateX(360deg);
+            - 회전
+            
+            ㄴ rotateX -> x축 기준으로 회전
+            ㄴ rotateY -> y축 기준으로 회전
+            
+            */
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="con1">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div><!--con1-->
+</body>
+</html>
