@@ -1,0 +1,762 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+.hWrap{
+   
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    height: 100px;
+  
+    padding: 30px;
+    position: relative;
+}
+h1, h2{
+    padding-left: 30px;
+    padding-top: 30px;
+    font-size: 30px;
+}
+h3{
+    font-size: 20px;
+    margin-left: 30px;
+    line-height: 2;
+}
+
+.gnb{
+    display: flex;
+    position: absolute;
+    top: 25px;
+    left: 40%;
+    width: 720px;
+   
+}
+.gnb .aboutMe{
+    width: 60%;
+}
+.gnb .works{
+    width: 40%;  
+}
+.gnb>li>a{
+    /* font-weight: bold; */
+    font-size: 14px;
+
+}
+.gnbliBtns{
+    position: relative;
+    margin-top: 5px;
+}
+
+
+.gnbliBtn{
+    background-color: rgba(0,0,0,0.8);
+ 
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;    
+}
+.gnbliBtns.active1 .gnbliBtn2{
+    
+    animation-name: gnbliBtnAnim;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    animation-duration:1.5s;
+    animation-delay:0;
+}
+.gnbliBtns.active1 .gnbliBtn3{
+    
+    animation-name: gnbliBtnAnim;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    animation-duration:1.5s;
+    animation-delay:0.5s
+}
+
+@keyframes gnbliBtnAnim{
+    0%{
+        opacity:1;
+        transform: scale(1);
+        
+    }
+    100%{
+        opacity: 0;
+        transform:scale(1.5)
+    }
+}
+
+
+.gnb .gnbliBtns1:after{
+    content: '';
+    display: block;
+    border-bottom: 2px dashed rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 432px;
+    margin-top: 10px;
+    margin-left: 10px;
+   
+}
+
+
+.sub{
+    font-size: 12px;
+    margin-top: 20px;
+   
+    margin-left: 0;
+    
+    position: relative;
+    
+}
+ .sub1:before, .sub2:before{
+    content: '';
+    display: block;
+    border-right: 2px dashed rgba(0,0,0,0.3);
+   
+    width: 0px;
+    height: 85px;
+  
+    margin-left: 9px;
+    position: absolute;
+    top: 0;
+    left: 0;
+ 
+}
+.sub2:before{
+    height: 60px;
+}
+
+.sub li{
+    line-height: 2;
+ 
+    display: flex;
+
+  
+  
+}
+
+.sub li::before{
+    content: '';
+    display: block;
+   border-bottom: 2px dashed rgba(0,0,0,0.3);
+   /* border-left: 2px dashed rgba(0,0,0,0.3); */
+  
+    width: 10px;
+ 
+    
+    height: 12px;
+    margin-left: 9px;
+    margin-right: 5px;
+}
+section{
+    height: 100vh;
+    
+    border-bottom: 2px solid #333;
+    position: relative;
+   
+        width: 1200px;
+        margin-right: auto;
+        margin-left: auto;
+        overflow: hidden;
+
+}
+.sec1{
+    
+   
+}
+.sec1 .sec1Wrap{
+display: flex;
+}
+.sec1 .photoBox{
+width: 50%;
+
+text-align: center;
+}
+.sec1 .photoBox img{
+    /* width: 70%; */
+    height: 50vh;
+    position: relative;
+    top: 30%;
+}
+.sec1 .txtBox{
+  
+   width: 50%;
+  
+}
+.sec1 .txtBox .txtWrap{
+    position: relative;
+    top: 35%;
+    left: 0;
+    padding-left: 50px;
+    text-align: left;
+  
+    
+}
+.sec1 .txtBox .txtWrap .p1{
+    font-size: 70px;
+    font-weight: bold;
+}
+.sec1 .txtBox .txtWrap .p2{
+    margin-left: 20px;
+    font-size: 30px;
+    margin-bottom: 80px;
+ 
+}
+.sec1 .p3,.sec1 .p4{
+    margin-left: 20px;
+    font-size: 18px;
+    line-height: 2;
+    
+}
+.sec1 .p3 span,.sec1 .p4 span{
+ 
+ margin-right: 30px;
+}
+
+.sec1 button{
+  border: none;
+  background-color: transparent;
+   margin-left: 20px;
+   margin-top: 50px;
+  font-size: 18px;
+ cursor: pointer;
+  
+}
+.sec1 button:hover{
+    text-decoration: underline;
+}
+.pageNum{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 10px;
+}
+.active1>a{
+font-weight: bold;
+transition: all 0.5s;
+}
+.gnb li.active1>a{
+    font-weight: bold;
+    /* 버튼 애니메이션 구현하기*/
+    transition: all 0.5s;
+}
+.sec3 .rowWrap{
+    margin-right: auto;
+    margin-left: auto;
+    padding: 30px;
+  
+}
+.sec3 h3{
+ margin-top: 100px;
+ line-height: 1.5;
+}
+.sec3 .rowWrap .row1{
+    width: 800px;
+   
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0px;
+ 
+    margin-right: auto;
+    margin-left: auto;
+
+}
+.sec3 .rowWrap .row2{
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+    margin-top:10px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.sec3 .rowWrap .box{
+    width: 25%;
+  
+    text-align: left;
+    line-height: 2;
+}
+.sec3 .box img{
+    height: 120px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 10px;
+}
+.sec4 .box{
+    margin-top: 20px;
+}
+.sec4 .box:nth-child(2){
+    margin-top: 80px;
+}
+.sec4 p{
+    text-indent: 60px;
+    line-height: 1.5;
+    font-size: 14px;
+}
+.sec4 .pTitle{
+    line-height: 2;
+    font-size: 18px;
+}
+.sec5Wrap{
+    width: 100%;
+    height: 70vh;
+    background-color: none;
+    margin-top: 80px;
+    position: relative;
+  
+}
+.sec5 .sld{
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+ 
+   
+    
+}
+.sec5 .pageThumb{
+    width: 100%;
+    height: 70vh;
+    border-radius: 10px;
+
+}
+.sec5 .pageThumb1{
+    background-color: pink;
+}
+.sec5 .pageThumb2{
+    background-color: bisque;
+}
+.sec5 .pageThumb3{
+    background-color: skyblue;
+}
+
+.sec5 .prv{
+    width: 50px;
+    height: 70vh;
+    background-color: rgba(0,0,0,0);
+    border: none;
+    position: absolute;
+    top:0;
+    left: 60px;
+    z-index: 99;
+    transition: all 0.5s; 
+
+}
+.sec5 .nxt{
+    width: 50px;
+    height: 70vh;
+    background-color: rgba(0,0,0,0);
+    border: none;
+    position: absolute;
+    top:0;
+    right: 60px;
+    z-index: 99;
+    transition: all 0.5s;
+}
+
+.sec5 .prv:after{
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-top: 4px solid #333;
+    border-left: 4px solid #333;
+ 
+    transform: rotate(-45deg);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+.sec5 .nxt:after{
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-top: 4px solid #333;
+    border-right: 4px solid #333;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 50%;
+    top: 50%;
+}
+.sec5 .slick-dots{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+   
+}
+.sec5 .slick-dots li{
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.sec5 .slick-dots li button{
+    width: 15px;
+    height: 15px;
+    border: 0;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 50%;
+    font-size: 0;
+}
+.sec5 .slick-dots li button:before{
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+}
+.sec5 .slick-dots li:nth-child(1):before{
+    content: '페이지 이름';
+    display: block;
+    font-size: 10px;
+    margin-bottom: 10px;
+}/*제작한 웹페이지 갯수만큼 수정*/
+.sec5 .slick-dots li:nth-child(2):before{
+    content: '페이지 이름';
+    display: block;
+    font-size: 10px;
+    margin-bottom: 10px;
+}/*제작한 웹페이지 갯수만큼 수정*/
+.sec5 .slick-dots li:nth-child(3):before{
+    content: '페이지 이름';
+    display: block;
+    font-size: 10px;
+    margin-bottom: 10px;
+}/*제작한 웹페이지 갯수만큼 수정*/
+.slick-dots li.slick-active button{
+    background-color: rgba(0,0,0,0.8);
+}
+/* ////////////////////////////////////////////////////////// */
+.sec6 .sec6Wrap{
+    width: 100%;
+    height: 70vh;
+    position: relative;
+}
+.sec6 .prv{
+    width: 50px;
+    height: 40vh;
+    background-color: rgba(0,0,0,0);
+  
+    border: none;
+    position: absolute;
+    top:40px;
+    left: 70px;
+    z-index: 99;
+    transition: all 0.5s; 
+}
+.sec6 .nxt{
+    width: 50px;
+    height: 40vh;
+    background-color: rgba(0,0,0,0);
+    border: none;
+    position: absolute;
+    top:40px;
+    right: 70px;
+    z-index: 99;
+    transition: all 0.5s;
+}
+
+.sec6 .prv:after{
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-top: 4px solid #000;
+    border-left: 4px solid #000;
+  
+ 
+    transform: rotate(-45deg);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+.sec6 .nxt:after{
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-top: 4px solid #000;
+    border-right: 4px solid #000;
+
+
+    transform: rotate(45deg);
+    position: absolute;
+    right: 50%;
+    top: 50%;
+}
+.sec6Wrap{
+    margin-top: 18vh;
+    width: 100%;
+ 
+}
+.sec6 .sld{
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+
+    border-radius: 10px;
+    display: flex;
+  
+
+}
+.sec6 .box{
+    width: 31%;
+    height: 400px;
+ 
+    /* margin-top: 70px; */
+    border-radius: 10px;
+    overflow: hidden;
+
+
+    margin-right: 10px;
+    margin-left: 10px;
+
+}
+
+.sec6 .box:hover{
+    transform: translate(-5px, -5px);
+    box-shadow: 5px 15px 20px rgba(0,0,0,0.1);
+    transition: all 1s;
+}
+.sec6 .box:hover .photo img{
+    transform: scale(1.2);
+    transition: all 1s;
+}
+
+.sec6 .box .photo{
+    height: 80%;
+    overflow: hidden;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+
+}
+.sec6 .box .photo img{
+    width: 100%;
+    /* transition: all 1s; */
+}
+
+.sec6 .box .txt{
+    height: 20%;
+    text-align: center;
+    background-color: rgba(0,0,0,0.8);
+    color: #fff;
+   
+}
+.sec6 .box .txt p{
+    line-height: 3;
+    font-size:20px
+}
+.sec6 .view{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    display: none;
+    z-index: 1000;
+    
+}
+.sec6 figure{
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.sec6 figure img{
+    width: 100%;
+}
+
+.sec6 .closeBtn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: 0;
+    background-color: transparent;
+    color: #fff;
+    font-style: italic;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.sec6 .closeWrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.sec7 .sec7Wrap{
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+}
+.sec7 .sld{
+    margin-top: 20vh;
+    display: flex;
+
+}
+.sec7 .box{
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+    background-color: #000;
+    margin-right: 10px;
+    margin-left: 10px;
+
+    padding-top: 20px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.sec7 .vid{
+
+width: 100%;
+
+}
+.sec7 .vid video{
+    width: 100%;
+}
+.sec7 .txt{
+
+ text-align: center;
+ font-size: 20px;
+ color: #fff;
+ margin-top: 20px;
+ background-color: #333;
+ height: 100px;
+ padding-top: 20px;
+ opacity: 0.8;
+ 
+ 
+}
+.sec7 .prv{
+    width: 50px;
+    height: 35vh;
+    background-color: rgba(0,0,0,0);
+    border: none;
+    position: absolute;
+    top:0px;
+    left: 10px;
+    z-index: 99;
+    transition: all 0.5s; 
+}
+.sec7 .nxt{
+    width: 50px;
+    height: 35vh;
+    background-color: rgba(0,0,0,0);
+
+    border: none;
+    position: absolute;
+    top:0px;
+    right: 10px;
+    z-index: 99;
+    transition: all 0.5s;
+}
+
+.sec7 .prv:after{
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-top: 4px solid #fff;
+    border-left: 4px solid #fff;
+    opacity: 0.5;
+ 
+    transform: rotate(-45deg);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+.sec7 .nxt:after{
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-top: 4px solid #fff;
+    border-right: 4px solid #fff;
+    opacity: 0.5;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 50%;
+    top: 50%;
+}
+
+.sec7 .view{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    display: none;
+    z-index: 1000;
+    
+}
+.sec7 figure{
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.sec7 figure video{
+    width: 100%;
+}
+
+.sec7 .closeBtn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: 0;
+    background-color: transparent;
+    color: #fff;
+    font-style: italic;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.sec7 .closeWrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.sec8{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sec8 p{
+    font-size: 70px;
+    text-align: center;
+  
+}

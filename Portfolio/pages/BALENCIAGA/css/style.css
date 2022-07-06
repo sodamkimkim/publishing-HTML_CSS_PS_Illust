@@ -1,0 +1,668 @@
+*{
+   margin: 0;
+   padding: 0;
+
+}
+
+.pc{
+   display: none;
+}
+
+ul{
+   list-style: none;
+}
+a{
+   text-decoration: none;
+   color: inherit;
+}
+body{
+   overflow-y: scroll;
+   overflow-x: hidden;
+}
+
+.bold{
+   font-weight: bold;
+ 
+   font-size: 12px;
+}
+.underline{
+   text-decoration: underline;
+}
+.AvailableTime{
+   color: #777;
+   font-size: 10px;
+   font-weight: lighter;
+}
+.line{
+   display: block;
+   padding-top: 5px;
+}
+header{
+   width: 100%;
+   border: 1px solid #333;
+   z-index: 1;
+position: fixed;
+  background-color: rgba(255,255,255,0.8);
+
+}
+
+
+.hWrap{
+   margin-right: auto;
+   margin-left: auto;
+   width: 100%;
+   max-width: 1200px;
+   height: 50px;
+
+   padding-left:15px;
+   padding-right: 15px;
+   display: flex;
+   background-color: transparent;
+   position: relative;
+  
+
+}
+.hCloseWrap{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+
+}
+h1{
+   margin-right: 10px;
+   position: relative;
+   z-index: 5;
+
+}
+h1 img{
+   width: 130px;
+}
+
+
+.gnb1{
+   display: flex;
+   margin-right: auto;
+   position: relative;
+   z-index: 5;
+
+}
+.gnb1 li{
+   font-size: 12px;
+   margin-right: 10px;
+   margin-left: 10px;
+   padding-top: 20px;
+
+}
+.gnb2{
+   display: none;
+   position: relative;
+   z-index: 5;
+
+}
+
+
+.util{
+   display: flex;
+   margin-left: auto;
+   padding-top: 20px;
+   position: relative;
+   z-index: 5;
+}
+.util li{
+   font-size: 12px;
+   margin-left: 10px;
+   margin-right: 10px;
+
+}
+.util li:last-child{
+
+}
+.util li img{
+   height: 14px;
+
+}
+.srchBtn{
+   padding-right:40px;
+}
+.subBackground{
+position: fixed;
+
+
+height: 95vh;
+background-color: rgba(244,244,246,0.5);
+   width: 100%;
+display: none;
+
+}
+.subBackground .subWrap{
+   position: relative;
+   z-index: 2;
+  width: 600px;
+   margin-right: auto;
+   margin-left: auto;
+}
+.subBackground .closeWrap{
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+
+}
+.subWrap .row1, .subWrap .row2{
+
+   display: flex;
+  justify-content: center;
+}
+.subWrap4, .subWrap5, .subWrap6, .subWrap7, .subWrap8{
+
+   width: 60%;
+   min-width: 500px;
+   margin-right: auto;
+   margin-left: auto;
+ display: flex;
+   justify-content: center;
+   border: 1px solid #111;
+   background-color: rgba(244,244,246,1); 
+
+}
+
+.sub{
+   border: 1px solid #333;
+   width: 150px;
+   box-sizing: border-box;
+   background-color: #fff;
+   padding-top: 10px;
+   padding-bottom: 20px;
+   padding-left: 10px; 
+   height: 350px;
+}
+.subWrap .sub{
+   /* height: 300px;
+   overflow-y: scroll; */
+
+}
+.sub li{
+   font-size: 12px;
+   line-height: 2;
+}
+.subSld1{
+   width: 300px;
+   height: 300px;
+   overflow: hidden;
+
+   margin-right: 20px;
+   }
+.subWrap .subSld1 .imgBack{
+   width: 300px;
+  /* animation-name: imgBackAnim; */
+   animation-iteration-count: 1;
+   animation-timing-function: linear;
+   animation-duration:1s;
+   animation-delay: 0s;
+   /* opacity: 0; */
+ position: relative;
+ left: -100%;
+ transition: all 2s;
+
+}
+.imgBack.on{
+   animation-name: imgBackAnim;
+}
+@keyframes imgBackAnim{
+   0%{
+/* opacity: 0; */
+left: -100%;
+   }
+   1%{
+      /* opacity: 1; */
+      left: 0;
+   }
+   70%{
+      /* opacity:1; */
+      left: 0;
+   }
+   100%{
+      /* opacity: 0; */
+      left: -100%;
+   }
+}
+
+
+.subWrap4 .sub, .subWrap5 .sub, .subWrap7 .sub, .subWrap8  .sub{
+   border: none;
+   margin-left: 20px;
+
+   margin-top: 20px;
+   background-color: rgba(244,244,246,1); 
+
+}
+.subWrap6 .sub{
+   border: none;
+   margin-left: 20px;
+
+   margin-top: 0px;
+   background-color: rgba(244,244,246,1); 
+}
+.subWrap4 .sub>a, .subWrap5 .sub>a, .subWrap6 .sub>a, .subWrap7 .sub>a, .subWrap8  .sub>a{
+   padding-bottom: 5px;
+   display: block;
+}
+
+
+.campaign section{
+   width: 100%;
+   position: relative;
+
+   margin-right: auto;
+   margin-left: auto;
+   max-width: 2200px;
+
+}
+
+.campaign .cam1{
+   background: url(../images/Large-IsabelleHuppert_balenciaga_look01_2200x1100.jpg);
+
+   height: 800px;
+
+   background-repeat: no-repeat;
+background-position-x: center;
+   /* background-position-y: center; */
+   background-position: fixed;
+
+
+
+   /* background-position: center center; */
+}
+.campaign button{
+   position: absolute;
+   bottom: 35px;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 250px;
+   height: 30px;
+   border-radius: 30px;
+   background-color: transparent;
+   border: 1px solid #111;
+   overflow: hidden;
+   font-weight: bold;
+
+   
+}
+
+.cam1 .cam1Btn{
+   line-height: 30px;
+   width: 250px;
+   display: block;
+}
+.cam1 .cam1Btn span{
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 250px;
+   height: 30px;
+}
+
+.cam1 .cam1Btn .cam1Bg{
+   background-color: #fff;
+   width: 0;
+   transition: all 1s linear;
+   overflow: hidden;
+}
+.cam1:hover .cam1Bg{
+   width: 100%;
+}
+
+.cam2{
+ 
+   max-width: 1200px;
+   position: relative;
+
+  
+}
+.cam2 .left{
+  
+   width: 100%;
+   overflow: hidden;
+
+  
+
+}
+.cam2 .left img{
+ vertical-align: bottom;
+ width: 50%;
+}
+.cam2 .right{
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 50%;
+   height: 100%;
+}
+.cam2 .right img{
+   width: 20%;
+   max-width: 150px;
+   position: absolute;
+   top: 25px;
+   right: 40px;
+   mix-blend-mode: difference;
+}
+.cam2 .right .rightBg{
+   background-color: #13242c;
+   opacity: 0.15;
+   
+   width: 100%;
+   position: absolute;
+   top: 0;
+   right: 0;
+   height: 0%;
+   transition: all 3s linear;
+
+}
+.cam2 .cam2Btn{
+   line-height: 30px;
+   width: 250px;
+   mix-blend-mode:exclusion;
+   border: 1px solid #fff;
+   color: #fff;
+
+}
+.cam2 .cam2Btn span{
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 250px;
+   height: 30px;
+
+}
+.cam2 .cam2Btn .cam2Bg{
+   background-color: #fff;
+   color: #111;
+   width: 100%;
+   transition: all 1s linear;
+
+}
+.cam2:hover .cam2Bg{
+   width: 100%;
+
+}
+.cam3{
+   display: flex;
+   justify-content: center;
+   max-width: 1200px;
+   position: relative;
+   background-color: rgba(244,244,246,1);
+   overflow: hidden;
+   
+}
+
+.cam3 .left{
+  width: 37%;
+
+}
+.cam3 .left img{
+   width: 100%;
+   vertical-align: bottom;
+  
+
+}
+.cam3 .middle{
+width: 26%;
+position: relative;
+}
+.cam3 .middle .cam3Logo{
+
+  height: 30%;
+   margin-top:40%;
+   overflow: hidden;
+ text-align: center;
+ /* background-color: rgba(244,244,246,1); */
+
+}
+.cam3 .middle .cam3Logo img{
+   width: 80%;
+}
+.cam3 .middle .sld{
+width: 100%;
+position: absolute;
+bottom: 45px;
+left: 0;
+vertical-align: bottom;
+}
+.cam3 .middle .sld img{
+   width: 100%;
+   
+}
+
+.cam3 .right{
+width: 37%;
+
+}
+.cam3 .right img{
+   width:100%;
+   vertical-align: bottom;
+
+   }
+
+.cam3 .cam3Btn{
+   line-height: 30px;
+   width: 250px;
+   mix-blend-mode: difference;
+}
+.cam3 .cam3Btn span{
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 250px;
+   height: 30px;
+
+}
+.cam3 .cam3Btn .cam3Bg{
+   background-color: #fff;
+   color: #111;
+   width: 100%;
+   transition: all 1s linear;
+
+}
+.new{
+   background-color: rgba(7,7,7,0.1);
+}
+.new .top{
+ 
+   height: 60px;
+   width: 100%;
+background-color: transparent;
+   /* background-color: rgba(244,244,246,1); */
+
+   font-weight: bold;
+   text-align: center;
+   line-height: 60px;
+   font-size: 18px;
+}
+.new .sld{
+   background-color: rgba(7,7,7,0.1);
+   display: flex;
+   width: 95%;
+ max-width: 1200px;
+   margin-right: auto;
+   margin-left: auto;
+
+overflow: hidden;
+
+}
+.new .sld img{
+/* width: 400px; */
+width: 100%;
+   border: 1px solid #333;
+   box-sizing: border-box;
+}
+footer{
+   background-color: rgba(7,7,7,0.1);
+
+
+}
+footer .ftTop{
+   height: 40vh;
+
+   text-align: center;
+   line-height: 40vh;
+
+
+
+}
+footer .ftTop img{
+   width: 16%;
+   min-width: 150px;
+}
+footer .ftBottom{
+
+   width: 100%;
+   max-width: 1200px;
+   margin-right: auto;
+   margin-left: auto;
+}
+footer .ftBottom .fWrap{
+   display: flex;
+   justify-content: center;
+}
+footer .ftBottom .box{
+
+   box-sizing: border-box;
+   width: 200px;
+   font-size: 12px;
+   height: 260px;
+   padding: 15px;
+   line-height: 2;
+
+}
+footer .ftBottom .box span{
+font-weight: bold;
+padding-bottom: 15px;
+display: block;
+}
+footer .copyright{
+   width: 1200px;
+   margin-right: auto;
+   margin-left: auto;
+   line-height: 3;
+   padding-bottom: 20px;
+   padding-left: 15px;
+}
+/* ---------------------------------------------------------------------- */
+@media all and (min-width:800px){
+   .subWrap{
+      display: flex;
+      justify-content: center;
+      width: 900px;
+
+   }
+   .subWrap .sub{
+      width: 150px;
+   }
+}
+/* ---------------------------------------------------------------------- */
+@media all and (min-width:1200px){
+   .hWrap{
+      height: 100px;
+      display: block;
+      position: relative;
+   }
+   header h1{
+      margin-right: 0px;
+      position: absolute;
+      left: 50%;
+      top: 10px;
+      transform: translateX(-50%);
+   }
+   header .gnb1{
+      position: absolute;
+      left: 50%;
+      top: 12px;
+      margin-left: 100px;
+
+   }
+   header .util{
+      position: absolute;
+      top: 12px;
+      right: 15px;
+   }
+
+   .gnb2{
+      display: flex;
+   }
+   .gnb2{
+      font-size: 12px;
+      
+     
+      position: relative;
+      display: flex;
+      justify-content: center;
+      top: 70px;
+      left: 50%;
+      transform: translate(-50%);
+      width: 70%;
+      padding-bottom: 20px;
+      
+      }
+
+      .gnb2 li{
+         margin-left: 5px;
+         margin-right: 5px;
+      
+         text-align: center;
+      }
+      .gnb2 .bar{
+         display: block;
+         position: absolute;
+         width: 0px;
+         height: 4px;
+         background-color: #333;
+         left: 20%;
+         top: 83px;
+         transition: all 0.6s linear;
+      
+      }
+      .gnb2 .Wrap:first-child{
+         margin-right: 60px;
+       
+      }
+      .gnb2 .Wrap:first-child li{
+         display: block;
+         width: 120px;
+      
+      }
+      .gnb2 .Wrap{
+      display: flex;
+      }
+      .gnb2 .Wrap li{
+      
+         display: block;
+         width: 120px;
+      
+      
+      }
+      .gnb2 .Wrap:last-child{
+         margin-left: 40px;
+      }
+      .gnb2 .Wrap:last-child li{
+         width: 80px;
+      }
+      .subWrap{
+         width: 1200px;
+      }
+      .subWrap .sub{
+         width: 200px;
+      }
+
+   footer .ftBottom{
+      display: flex;
+      justify-content: center;
+   }
+   footer .ftBottom .box{
+      border:1px solid #333;
+
+   
+   }
+}
