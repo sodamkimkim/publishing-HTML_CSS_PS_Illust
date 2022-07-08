@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:0; padding: 0;}
+        .wrap{
+            width: 100%;
+            height:565px;
+            position: relative;
+        }
+        
+        .wrap .slider{
+            width:100%;
+            height:100%;
+            font-family: arial;
+            font-weight: 900;
+            font-size:120px;
+            text-align: center;
+            line-height: 565px;
+            position: absolute;
+            left:0; top:0;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+    
+        <div class="slider">RED</div>
+        <div class="slider">ORANGE</div>
+        <div class="slider">YELLOW</div>
+        <div class="slider">GREEN</div>
+        <div class="slider">BLUE</div>
+        <div class="slider">NAVY</div>
+        <div class="slider">DARKVIOLET</div>
+         
+    </div>  
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $('.slider').each(function(){
+
+        let txt  = $(this).text();
+        $(this).css({'backgroundColor': txt});
+            
+    });
+
+        let i = 0;
+        let slider = $('.slider').length; //슬라이드의 개수 : 7
+        
+        setInterval(function(){
+
+        let ns = i % slider;  //i와 slider개수를 나눈 값의 나머지  
+    
+    
+        $('.slider').eq(ns-1).fadeOut();
+        $('.slider').eq(ns).fadeIn();
+        
+            i++;
+        
+        },1000);
+    </script>
+</body>
+</html>

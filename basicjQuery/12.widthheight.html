@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>widthheight</title>
+    <style>
+        .box1{
+            width: 326px;
+            height: 450px;
+            background-color: paleturquoise;
+        }
+        .box2{
+            width: 110px;
+            height: 280px;
+            background-color: palegreen;
+        }
+        .box3{
+            width: 300px;
+            height: 450px;
+            background-color: palegoldenrod;
+        }
+        .box4{
+            width: 180px;
+            height: 330px;
+            background-color: palevioletred;
+        }
+        .box5{
+            width: 222px;
+            height: 666px;
+            background-color: powderblue;
+        }
+        .box6{
+            width: 116px;
+            height: 280px;
+            background-color: lavender;
+        }
+        .output{
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <p class="output">
+        <span class="wid"></span>px,<br>
+        <span class="hig"></span>px
+    </p><!--output-->
+
+    <section>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6"></div>
+</section>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script>
+//     $('.box1').width(420).height(500);
+// let wid=$('.box1').width();
+// let hig=$('.box1').height();
+// alert(wid+','+hig)
+// let wid;
+// let hig;
+$('div').on('click',function(){
+
+    wid = $(this).width();
+    hig = $(this).height();
+    $(this).width(hig);
+    $(this).height(wid);
+    $('.wid').text(wid);
+    $('.hig').text(hig);
+
+//     $('div').text(wid+'px, '+hig+'px');
+
+                //each(function(e)) - > 인덱스 넘버
+$('div').each(function(e){
+    let w = $(this).width();
+    let h = $(this).height();
+    // $(this).text(w + 'px, '+h+'px');
+    $(this).html('<h3>'+e+'</h3>')
+})
+/*
+html 문서 내부에서 해당 선택자와 일치하는
+모든 선택자를 찾은 다음,
+각각 한번씩, 해당 function(){}을 실행시켜줌
+*/
+})
+let bg = ['red','orange','gold','forestgreen','skyblue','navy'];
+
+$('div').each(function(i){
+ $(this).css({'backgroundColor':bg[i]});
+})
+
+$('div').each(function(){
+    let i = $(this).index();
+    $(this).css({'backgroundColor':bg[i]});
+})
+/*클래스 제어
+@ addClass()
+- $(선택자).addCloass('클레스네임')
+: 선택자에게 해당 클레스를 추가
+- 주의 ) 클레스 네임 적을 때 앞에 .붙이면 안됨
+
+@ removeClass()
+- $(선택자).removeClass()
+:선택자에게 달려있는 모든 클래스 삭제
+- $(선택자).removeClass('클레스네임');
+- 선택자에게서 클래스 네임에 해당하는 클래스만 삭제
+
+@toggleClass()
+- $(선택자).toggleClass('클레스 네임')
+- 선택자에게 클레스 네임 뗏다 붙였다
+
+@ html()
+- $(선택자).html()
+- 선택자 내부의 html을 가져옴
+
+* $(선택자).html('<h3></h3>')
+- 선택자 내부에 html을 삽입
+
+@ text()
+- $(선택자).text()
+- 선택자 내부의 텍스트를 가져옴
+- $(선택자).text('텍스트')
+- 선택자 내부에 text 삽입
+- 크기 제어
+
+@ width()
+@ height()
+- $(선택자).width(숫자)
+- 해당 선택자에게 숫자만큼 너비값을 줌
+
+* $(선택자).width()
+- 해당 선택자의 너비를 가져옴
+
+* $(선택자).height(숫자) 
+- 해당 선택자에게 숫자만큼 높이값을 줌
+- $(선택자).height()
+- 해당 선택자의 높이를 가져옴
+
+@ each()
+- $(선택자).each(function(){})
+- html 문서 내에서 선택자에 해당하는 모든 요소를 찾은 다음, 각각에게 모두 한번씩 function()내부의 모든 기능을 실행시켜줌
+- 딱히 이벤트 없이도 this 바인딩이 가능함.
+- 이벤트는 필요 없지만 모든 html에게 css혹은 함수를 각기 적용시켜야 할 경우 사용하면 편리
+*/
+</script>
+</body>
+
+</html>

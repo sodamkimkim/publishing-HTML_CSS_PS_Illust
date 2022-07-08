@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        header{
+            background-color: aqua;
+            height: 50px;
+
+        }
+        h1{
+            color: #fff;
+            text-align: center;
+        }
+        button{
+            width: 50px;
+            height: 50px;
+            border: 0;
+            background-color: transparent;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        button span{
+            display: block;
+            width: 22px;
+            height: 3px;
+            background-color: #fff;
+            border-radius: 22px;
+            margin: 0 auto 4px;
+        }
+        button span:last-child{
+            margin-bottom: 0;
+        }
+        nav{
+            position: fixed;
+            width: 80%;
+            left: -80%;
+            top: 0;
+            height: 100%;
+            background-color: #000;
+            color: #fff;
+            z-index: 99;
+        }
+        .closeWrap{
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(0,0,0,0.4);
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+        i{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            text-decoration: underline;
+        }
+        @media all and (min-width:1200px){
+            header{
+                height: 100px;
+
+            }
+            button,i,.closeWrap{
+                display: none;
+            }
+            .hWrap{
+                max-width: 1200px;
+                margin: 0 auto;
+                height: 100%;
+                position: relative;
+            }
+            nav{
+                position: absolute;
+                background-color: transparent;
+               left: 120px;
+               top: 35px;
+       
+            }
+            .gnb{
+                display: flex;
+   
+                color:#333;
+            }
+            .gnb li{
+                margin-left: 40px;
+            }
+            h1{
+                padding-top: 20px;
+                text-align: left;
+            }
+         }/*1200px */
+    </style>
+</head>
+<body>
+    <header>
+        <div class="hWrap">
+            <h1>logo</h1>
+            <div class="closeWrap"></div>
+            <nav>
+                <i>close</i>
+                <ul class="gnb">
+                    <li>gnb1</li>
+                    <li>gnb2</li>
+                    <li>gnb3</li>
+                    <li>gnb4</li>
+                    <li>gnb5</li>
+                </ul>
+            </nav>
+            <button>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+<pre>
+    1. 브라우저 사이즈에 따라서 적용될 js가
+    다를 수 있도록 먼저 브라우저 사이즈를 구한 다음
+    필요한 함수를 필요한 때 적용시키도록 한다.
+    let winWidth = $(window).width();
+    이 너비 값에 따라서 적용될 기능들이 다르도록,
+    if(winWidth&gt;1200){}else{}
+    if구문을 사용해서 범위를 정해준다.
+
+    2. 윈도우가 리사이징 될 때마다, 1번의 일들이 또 반복될 수 있도록,
+    $(window).on('resize',function(){})
+    이 이벤트 내부에 1번과 같은 것을 또 한세트 적용시켜 준다.
+    (이거 하지 않으면 새로고침할 때만 모니터 사이즈를 기반으로 한 제이쿼리가 작동됨.)
+
+    2-1. 선택사항!
+    function(){} 함수를 사용해서 mobile과 pc에 적용될 것들을 나눠두면 여러가지로 편리하다.
+
+    3. jQuery나 js로 css값을 변경할 경우, 
+    html 엘리먼트에 직접적으로 적용된다. 
+    ex) &lt;h1 style = "color:red"&gt;
+    - 이 경우 우선순위가 굉장히 높기 때문에 (사실상 !important의 바로 아래단계)
+    - 기존css에 적용시켜둔 것들을 다 무시하고 이것만 적용될 때가 많다.
+    - 그래서 이러한 것들을 개발자 도구를 사용해 확인하고, 
+    jQuery상에서 리셋시키도록 한다.
+</pre>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        function mobile(){
+            $('nav').css({
+                'left':'-80%'
+            })
+
+            $('button').on('click',function(){
+                $('.closeWrap').show();
+                $('nav').show();
+                $('nav').stop().animate({'left':'0%'});
+            })
+            $('.closeWrap').on('click',function(){
+                $('nav').hide();
+                $('.closeWrap').hide();
+            })
+            $('i').on('click',function(){
+                $('nav').css({'left':'-100%'})
+                $('.closeWrap').hide();
+            })
+        }//mobile.func
+        function pc(){
+            $('nav').css({'left':'120px'})
+        }//pc.func
+        let winWidth = $(window).width();
+        if(winWidth <1200){
+        //모바일 영역
+        mobile();
+        }else{
+        //pc 영역
+       pc();
+        }
+
+        $(window).on('resize',function(){
+                    let winWidth2 = $(window).width();
+                if(winWidth2 <1200){
+                //모바일 영역
+                mobile();
+                }else{
+                //pc 영역
+            pc();
+                }
+
+        })
+    </script>
+</body>
+</html>

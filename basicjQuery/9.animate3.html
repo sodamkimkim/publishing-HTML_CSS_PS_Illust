@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animate3</title>
+    <style>
+        .ctrl{
+            border: 5px solid #000;
+            padding: 20px;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            text-align: center;
+        }
+        .in:first-child{
+            border-bottom: 1px solid #000;
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+        }
+        .box{
+            width: 600px;
+            height: 600px;
+            margin:10px auto;
+            background-color: skyblue;
+        }
+        .test{
+            width: 50px;
+            height: 30px;
+            background-color: beige;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="ctrl">
+        <div class="in">
+            <button class="fadeIn">fade In</button>
+            <button class="fadeOut">fade Out</button>
+            <button class="fadeToggle">fade Toggle</button>
+        </div><!--in-->
+        <div class="in">
+            <button class="slideUp">slideUp</button>
+            <button class="slideDown">slideDown</button>
+            <button class="slideToggle">slideToggle</button>
+        </div><!--in-->
+        
+    </div><!--ctrl-->
+    <div class="box">
+        <div class="test"></div>
+    </div>
+  
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+        $('.fadeOut').on('click',function(){
+            $('.box').fadeOut(2000);
+        });//빠르게 opacity값이 줄어들다가 0이 되는 순간 display:none 됨
+        $('.fadeIn').on('click',function(){
+            $('.box').fadeIn();
+        });
+        //display:none제거되고,
+        //opacity값이 0 -> 1로 빠르게 증가
+        $('.fadeToggle').on('click',function(){
+            $('.box').stop().fadeToggle(0.5);
+            //toggle: 뗏다 붙였다/껐다 켰다.
+            //fadeToggle(1000)은 1초. => 0.5는 0.0005초
+        });
+        $('.slideUp').on('click',function(){
+            $('.box').slideUp();
+        });
+        $('.slideDown').on('click',function(){
+            $('.box').slideDown();
+        });
+        $('.slideToggle').on('click',function(){
+            $('.box').stop().slideToggle();
+        })
+        $('.box').on('click',function(){
+            $('.test').fadeIn();
+            //초기값을 css에서 display:none을 해 두면
+            //fadeIn()과 slideDown()이 작동한다.
+        })
+
+        
+    </script>
+</body>
+</html>

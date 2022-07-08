@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>data</title>
+</head>
+<body>
+    <script>
+        //
+        /* <1. 숫자형 데이터>
+        ; 숫자 (Number)
+        - ex) 1, 2, 3, 4, 5, 0.24, -20, 132.84
+        - 숫자형 데이터다 보니, 연산에 아주 자유롭다.
+        */
+        let num1 = 123;
+        let num2 = -20;
+        let num3 = 0.45;
+
+        document.write(num1+num2);
+        document.write( num2+num3 );
+        //html문서안에다가 쓰시오
+
+        /* <2. 문자형 데이터>
+        ; 문자(string)
+
+        */
+        let str1 = ' <br><br>안녕하세요';
+        let str2 = " <br>학교종이 땡떙땡";
+
+        document.writeln(str1);
+        document.write('<hr>');
+    
+        //<hr>은 분할선 넣는 html
+        //document.write()로 문자열로 html태그 넣으면 넣어짐.
+        document.write(str1 + str2);
+        //문자를 더할 경우 하나의  문자열로 합쳐진다.
+        document.write(str1 + num1);
+        //문자형 데이터 + 다른 데이터 => 하나의 문자형 데이터로 그냥 묶여버린다.
+
+        let a1 = '123';
+        let a2 = 32;
+        let a3 = 123;
+        document.write(a1 + a2); //12332
+        document.write(a2 + a3); //155
+        //alert(a1-a2); //91 -> 암시적 형 변환
+        /*
+        문자에서 숫자를 곱하거나 나누거나 뺴는 등
+        덧셈을 제외한 모든 연산을 시도하면
+        자바스크립트가 해당 문자를 숫자로 변환
+        */
+       //alert(str1 - a1);//NaN. 연산할 수 없음을 나타내는 데이터 값
+
+    /*  <3. 논리형 데이터>
+        ; 논리형. Boolean
+        값이 두개밖에 없다.
+        - true, false
+    */
+   let boo1 = true;
+   //참, 값이 없음, 1
+   let boo2 = false;
+   //거짓, 값이 없음, 0
+
+   /*   <4. 비어있음>
+   ; 없음, 비어있음: null,
+    정의되지 않음: undefined.
+   
+   */
+  let b;//undefined상태. 
+  //비어있음을 나타내는 데이터
+  //변수를 만든 뒤 아무 값도 저장하지 않으면 이렇게됨.
+  document.write(b);
+
+
+  let c = null; //고의로 변수를 비울 때 씀.
+  let d = '안녕하세요';
+  d=undefined; // (x). undefined는 자연스럽게 비어있는 상태. ex) 변수를 만들었는데 어떤 값도 저장하지 않음
+  d= null; // (ㅇ)
+  document.write(d);
+
+    /* 
+    null의 경우, 고의로 비우기 위해 사용
+    프로그래밍을 진행하다 보면 어떠한 변수 혹은 함수를 리셋시켜야 하는 시점이 발생. 이때 null사용
+
+    <undefined를 쓰지 말아야 하는 이유>
+    : 자연스럽게 비어있는 건지, 아니면 고의로 비운건지 헷갈리기 때문에
+
+    */
+
+        
+
+    </script>
+</body>
+</html>

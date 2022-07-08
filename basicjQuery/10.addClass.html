@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addClass</title>
+    <style>
+        .box{
+            width: 400px;
+            height: 400px;
+            background-color: turquoise;
+            margin: 40px auto;
+        }
+        .on{
+            border: 10px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <button>on 제거</button>
+    <div class="box"></div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+        let onOff=true;
+        $('.box').on('click',function(){
+            // $(this).addClass('on');
+            $(this).toggleClass('on');
+            // onOff=!onOff
+            // if(onOff==false){
+            //     $('.on').css({'border':'0'})
+            // }else{
+            //     $('.on').css({'border':'10px solid #000'})
+            // }
+        });
+        $('button').on('click',function(){  
+            $('.box').removeClass('on');
+        })
+
+        /*
+        @ .addClass('on')//붙
+        @ .removeClass('on')// 뗏
+        @ .toggleClass('on')//붙 뗏 붙
+        */
+    </script>
+</body>
+</html>

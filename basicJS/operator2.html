@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대입/할당연산자</title>
+    <style>
+        .bar{
+            width: 30px;
+            height: 100px;
+            background-color: turquoise;
+        }
+        .num{
+            width: 200px;
+            height: 200px;
+            background-color: #f06;
+            color: fff;
+            font-size: 80px;
+            font-weight: 900;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            line-height: 200px;
+            border-radius: 50%;
+            margin: 40px auto;
+            user-select:none; 
+            /*클릭해도 블록지정 안됨*/
+            cursor:pointer;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+
+        }
+        .num:active{
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+            transform: translate(2px, 2px);
+            background-color: #d03;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="bar"></div><!--bar-->
+    <div class="num">0</div><!--num-->
+    <script>
+        let a = 3;
+        a=a+2;//5
+        a=a+2;//7
+        a +=2;//9
+
+        document.write(a);
+        let bar =document.querySelector('.bar');
+        //.bar 선택해서 변수 bar에 저장
+        let width=30;//bar의 초기값 width. 클릭할 때마다 커질 예정.
+        bar.addEventListener('click', function(){
+            width = width+10;
+            //width += 10;
+            bar.style. width=width+'px';
+        });
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------*/
+        let num = document.querySelector('.num');
+        let txt = 0;
+     
+        num.addEventListener('click', function(){
+           
+             //1씩 증가하거나 감소. 증감시킨 후 해당 변수에 다시 저장됨
+            
+     
+             num.innerHTML = txt;
+             txt++;
+            
+            if(txt==1){
+
+             num.style.width = 500 + 'px';
+             num.innerHTML = '누르지마굿간';
+             txt++;
+           
+
+            }else if(txt>5){
+                num.style.width = 700 + 'px';
+                num.innerHTML = '누르지마두기';
+                txt=5;
+                txt--;
+            }
+            else{
+                txt--;
+            }
+           
+
+        })
+
+
+
+    </script>
+
+</body>
+</html>

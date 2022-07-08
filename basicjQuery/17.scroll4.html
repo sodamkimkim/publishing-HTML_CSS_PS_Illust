@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+            display: flex;
+            color: #fff;
+            position: fixed;
+            right: 20px;
+            top: 20px;
+            z-index: 90;
+        }
+        .s1{
+            height: 100vh;
+            background-color: slateblue;
+        }
+        .s2{
+            height: 1200px;
+            background-color: darksalmon;
+        }
+        .s3{
+            height: 1800px;
+            background-color: darkgoldenrod;
+        }
+        .s4{
+            height: 800px;
+            background-color: darkturquoise;
+        }
+        .s5{
+            height: 2000px;
+            background-color: mediumpurple;
+        }
+        li{
+            margin: 0 20px;
+                     z-index: 90;
+        }
+        li.active{
+            background-color: rgba(0,0,0,0.3);
+            mix-blend-mode: multiply;
+        }
+        section{
+            font-size: 200px;
+            text-align: center;
+            line-height: 100vh;
+            color: #fff;
+            font-weight: 900;
+            font-family: Arial, Helvetica, sans-serif;
+            position: relative;
+   
+
+        }
+        button{
+            width: 100px;
+            line-height: 35px;
+            border: 2px solid #fff;
+            background-color: rgba(255,255,255,0.4);
+            text-align: center;
+            color: #fff;
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            margin-left: -50px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="active">s1</li>
+        <li>s2</li>
+        <li>s3</li>
+        <li>s4</li>
+        <li>s5</li>
+    </ul>
+    <div id="wrap">
+        <section class="s1">s1
+            <button>아래로</button>
+        </section>
+        <section class="s2">s2
+            <button>아래로</button>
+        </section>
+        <section class="s3">s3
+            <button>아래로</button>
+        </section>
+        <section class="s4">s4
+            <button>아래로</button>
+        </section>
+        <section class="s5">s5
+        </section>
+    </div><!--wrap-->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+        // $('button').on('click',function(){
+           
+        //     let hig = $(this).parent().height();
+        //     $('html,body').animate({'scrollTop':hig});
+        // })
+        $('button').on('click',function(){
+           
+            let movePoint = $(this).parent().next().offset().top;
+            $('html,body').animate({'scrollTop':movePoint})
+            // let i=$(this).parent().index();
+            // $('ul li').eq(i+1).addClass('active').siblings().removeClass();
+            
+        })
+        $('ul li').on('click',function(){
+            let i = $(this).index();
+            let moveP = $('section').eq(i).offset().top;
+            $('html,body').stop().animate({
+                'scrollTop':moveP
+            })
+            $(this).addClass('active').siblings().removeClass();
+        })
+        
+        $(window).on('scroll',function(){
+            let scr = $(window).scrollTop();
+            let of1 = $('.s1').offset().top;
+            let of2 = $('.s2').offset().top;
+            let of3 = $('.s3').offset().top;
+            let of4 = $('.s4').offset().top;
+            let of5 = $('.s5').offset().top;
+            if(scr>=of1 && scr<of2){
+                $('ul li').eq(0).addClass('active').siblings().removeClass();
+            }else if(scr>=of2 && scr<of3){
+                $('ul li').eq(1).addClass('active').siblings().removeClass();
+            }else if(scr>=of3&& scr<of4){
+                $('ul li').eq(2).addClass('active').siblings().removeClass();
+            }else if(scr>=of4 && scr<of5){
+                $('ul li').eq(3).addClass('active').siblings().removeClass();
+            }else{
+                $('ul li').eq(4).addClass('active').siblings().removeClass();
+            }
+           
+            
+        })
+
+        
+    </script>
+
+</body>
+</html>

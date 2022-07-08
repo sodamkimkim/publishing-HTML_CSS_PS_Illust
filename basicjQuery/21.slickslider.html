@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="js/slick.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .con{}
+        .box{
+            height: 500px;
+
+        }
+        .slick-dots{
+            display: flex;
+            list-style: none;
+            justify-content: center;
+
+        }
+        .slick-dots li{
+            margin: 0 20px;
+        }
+        .slick-dots li button{
+            width: 20px;
+            height: 20px;
+            border: 0;
+            background-color: springgreen;
+            border-radius: 50%;
+            font-size: 0;
+        }
+        .slick-dots li.slick-active button{
+            background-color: darkgreen;
+        }
+        .item{
+            
+        }
+        .itemWrap{
+            width: 200px;
+            height: 400px;
+            line-height: 400px;
+            font-size: 100px;
+            font-weight: 900;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            color: #fff;
+            background: darkturquoise;
+         /* margin-right: 20px;  
+         margin-left: 20px;   */
+        }
+        .slideWrap{
+            position: relative;
+        }
+        .nxt, .prv{
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            border: 1px solid #ccc;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%);
+            z-index: 20;
+        }
+        .prv{
+            left: 20%;
+
+        }
+        .prv:after{
+            content: '';
+            display: block;
+            width: 20px;
+            height: 20px;
+            border-top: 2px solid #aaa;
+            border-left: 2px solid #aaa;
+            transform: rotate(-45deg);
+            position: absolute;
+            left: 18px;
+            top: 13px;
+        }
+        .nxt{
+            right: 20%;
+        }
+        .nxt:after{
+            content: '';
+            display: block;
+            width: 20px;
+            height: 20px;
+            border-top: 2px solid #aaa;
+            border-right: 2px solid #aaa;
+            transform: rotate(45deg);
+            position: absolute;
+            right: 18px;
+            top: 13px;
+        }
+        .wrap{
+            position: relative;
+            margin: 100px 0;
+        }
+
+        .sld1{
+            width: 800px;
+        }
+        .sld1 .color{
+            height: 400px;
+        }
+        .color1{background-color: red;}
+        .color2{background-color: orange;}
+        .color3{background-color: gold;}
+        .color4{background-color: orangered;}
+        .color5{background-color: crimson;}
+        .sld2{
+            width: 400px;
+            border: 10px solid #000;
+        }
+        .sld2 .txt{
+
+            line-height: 250px;
+            font-size: 60px;
+            font-weight: 900;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div class="box">RED</div>
+        <div class="box">ORANGE</div>
+        <div class="box">GOLD</div>
+        <div class="box">ORANGERED</div>
+        <div class="box">CRIMSON</div>
+    </div><!--con-->
+
+    <div class="slideWrap">
+        <button class="nxt"></button>
+        <button class="prv"></button>
+    <div class="slide">
+        <div class="item">
+            <div class="itemWrap">1</div>
+        </div>
+        <div class="item">
+            <div class="itemWrap">2</div>
+        </div>
+        <div class="item">
+            <div class="itemWrap">3</div>
+        </div>
+        <div class="item">
+            <div class="itemWrap">4</div>
+        </div>
+        <div class="item">
+            <div class="itemWrap">5</div>
+        </div>
+        <div class="item">
+            <div class="itemWrap">6</div>
+        </div>
+        <div class="item">
+            <div class="itemWrap">7</div>
+        </div>
+        <div class="item">
+            <div class="itemWrap">8</div>
+        </div>
+        <div class="item">
+            <div class="itemWrap">9</div>
+        </div>
+        <div class="item">
+            <div class="itemWrap">10</div>
+        </div>
+        <div class="item">
+            <div class="itemWrap">11</div>
+        </div>
+        <div class="item">
+            <div class="itemWrap">12</div>
+        </div>
+    </div><!--slide-->
+</div><!--slideWrap-->
+
+<div class="wrap">
+    <div class="sld1">
+        <div class="color color1"></div>
+        <div class="color color2"></div>
+        <div class="color color3"></div>
+        <div class="color color4"></div>
+        <div class="color color5"></div>
+    </div><!--sld1-->
+
+    <div class="sld2">
+        <div class="txt">RED</div>
+        <div class="txt">ORANGE</div>
+        <div class="txt">GOLD</div>
+        <div class="txt">ORANGERED</div>
+        <div class="txt">CRIMSON</div>
+    </div><!--sld2-->
+</div><!--wrap-->
+     <pre>
+        <!-- 
+            슬릭슬라이더!
+            1. 반드시 css파일과 js파일을 다 넣어야 한다.
+            2. 슬라이더화 시킬 object들을 하나의 부모로 감싼다.
+            3. 반드시 css파일과 js 파일을 각각 연결시켜야 함.
+            <link rel="stylesheet" href="js/slick.css">
+            <script src="js/slick.min.js"></script>
+
+            4. $('부모').slick();
+            5.페이저버튼을 사용하기 위해서는 옵션에서
+            'dots' : true
+            6.생성된 버튼들은 css에서 꾸민다.
+            ul.slilck-dots
+li 
+             >button 
+             li를 정렬시키고 모양은 button으로 꾸며주면 됨
+
+             7.활성화된 페이저버튼을 구분시키고 싶으면
+             li.slick-active button의 모양을 바꿔주면 됨
+
+
+         -->
+    </pre>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script>
+        /*
+        거의 모든 슬라이드 라이브러리는
+        실행시키면 대상의 안밖으로 여러 레이어의 div를 생성시킨다.
+        
+        따라서 css에서 슬라이드를 커스텀할 때
+        .con div(x)이렇게 선택자 잡지말고
+        하나하나에게 클레스 달아줘서 속성지정해줘야함.
+        .con .box(o)
+        */
+        $('.box').each(function(){
+            let txt = $(this).text();
+            $(this).css({'backgroundColor':txt});
+        })
+        $('.con').slick({
+            'dots':true,//페이저버튼 생성
+            'arrows':false//next/prev 버튼
+        }); 
+        $('.slide').slick({
+            'slidesToShow':5, //한 화면에서 보여줄 개수
+            'slidesToScroll':3, //한 번 스크롤에 넘어가는 슬라이드 개수
+            // 'autoplay':true, //자동 플레이
+            'autoplaySpeed':1000, //1초
+            'nextArrow':'.nxt',
+            'prevArrow':'.prv'
+            
+        });
+        $('.sld1').slick({
+            'asNavFor':'.sld2',//다른 슬라이드와 연결. 쌍방연결 되어야함
+            'infinite':false
+        });
+        //slick 옵션 궁금하면 
+        //https://kenwheeler.github.io/slick/  검색해보기
+        $('.sld2').slick({
+            'asNavFor':'.sld1',
+            'arrows':false
+        });
+    </script>
+</body>
+</html>

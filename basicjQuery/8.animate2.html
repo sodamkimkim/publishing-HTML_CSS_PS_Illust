@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>animate2</title>
+    <style>
+        body{
+            height: 5000px;
+        }
+        .top{
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 50px;
+            height: 50px;
+            border: 0;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+        }
+        .list{
+            list-style:none;
+            display: flex;
+            justify-content: center;
+        }
+        .list li{
+            width: 80px;
+            height: 35px;
+            background-color: darkblue;
+            margin-right: 5px;
+        }
+        .box{
+            width: 50px;
+            height: 50px;
+            border: 1px solid #000;
+            translate: all 1s;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <button class="top">
+        top
+    </button>
+
+    <ul class="list">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <div class="con">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+        <div class="box box5"></div>
+        <div class="box box6"></div>
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+        $('.top').on('click',function(){
+            $('body,html').stop().animate({'scrollTop':0});
+        })
+        $('.list li').on('mouseover',function(){
+            $(this).stop().animate({'width':'120px'}).text('120px');
+            $(this).prev().stop().animate({'width':'20px'}).text('20px');
+            $(this).next().stop().animate({'width':'60px'}).text('60px');
+            }).on('mouseout',function(){
+                $('.list li').stop().animate({'width':'80px'}).text('80px');
+            })
+     
+      
+        $('.box').on('click',function(){
+            let arr = $(this).index();
+            let color=['deeppink','darkviolet','dodgerblue','forestgreen','orange','darkblue'];
+            $(this).css({'backgroundColor':color[arr]});
+            //.stop().animate({'backgroundColor':'color[arr]'});
+            //.stop().animate({'backgroundColor':color[arr]},1000);
+      
+        });
+       $('.box').on('mouseover',function(){
+        let arr = $(this).index();
+            let color=['deeppink','darkviolet','dodgerblue','forestgreen','orange','darkblue'];
+            $(this).css({'backgroundColor':color[arr]});
+            $(this).stop().animate({'left':'50px'},500)
+            //.css({'transform':'translateX(50px)'});
+ 
+       }).on('mouseout',function(){
+        $(this).stop().animate({'left':'0px'},500);
+        $(this).css({'backgroundColor':'transparent'});
+        //.css({'transform':'translateX(0px)'});
+       });
+       /*
+       position:relative
+       ;있는 자리에서 움직이는 속성
+       - 일반적인 흐름에 따라 배치 되어있고,
+       position:relative만 적용되었을 때는 -> 아무런 일도 일어나지 않는다. 
+       - 요소의 위치가 바뀌어도 주변의 다른 요소들은
+       여전히 원래자리에 그 요소가 있다고 인식하고 있으므로 
+       레이아웃이나 전체적인 흐름이 뒤틀리지 않는다. 
+       - vertical-align: middle해도 뭔가 안맞을 때 쓰셈
+        
+        - cf) position:absolute, fixed는 완전 다른일이 생겨남
+       - transform: translate() 와 거의, 완전 흡사
+       ㄴ이거는 position:absolute랑 같이 쓸 수 있음.
+       ㄴposition:relative는 absolute못씀. 밑에 쓴거 적용됨.
+       - position:relative도 있던 자리에서 움직이고
+    
+       
+       */
+        
+    </script>
+</body>
+</html>

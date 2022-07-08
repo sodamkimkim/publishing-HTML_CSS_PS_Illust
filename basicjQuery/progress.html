@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            margin-top: 1100px;
+            margin-bottom: 1300px;
+        }
+        .bar{
+            width: 300px;
+            height: 20px;
+            border: 1px solid #ccc;
+            margin:0 auto 10px;
+            
+        }
+        .bar2 .bg{
+            transition-delay: 0.2s;
+        }
+
+        .bar3 .bg{
+            transition-delay: 0.4s;
+        }
+
+        .bar4 .bg{
+            transition-delay: 0.6s;
+        }
+        .bg{
+            display: block;
+            width: 0;
+            height: 100%;
+            background-color: #f06;
+            transition: all 1s linear;
+        }
+        .bar.on .bg{
+            width: 80%;
+
+        }
+        .space{
+            margin-bottom:1300px;
+
+        }
+        .progress{
+            border: 1px solid #ccc;
+            border-radius: 350px;
+            width: 300px;
+            height: 30px;
+            margin: 0 auto 20px;
+            overflow: hidden;
+        }
+        .progress span{
+            width: 0;
+            height: 100%;
+            background-color: darkviolet;
+            display: block;
+          
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-timing-function: linear;
+
+        }
+        .progress.on span{
+            animation-name:progress;
+        }
+        .pr2 span{
+            animation-delay: 0.2s;
+        }
+        .pr3 span{
+            animation-delay: 0.4s;
+        }
+        .pr4 span{
+            animation-delay: 0.6s;
+        }
+        @keyframes progress{
+            0%{width:0;}
+            100%{width:100%;}
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="bar bar1">
+            <span class="bg">
+                <span class="num">80</span>
+            </span>
+        </div><!--bar-->
+
+        <div class="bar bar2">
+            <span class="bg">
+                <span class="num">60</span>
+            </span>
+        </div><!--bar-->
+
+
+        <div class="bar bar3">
+            <span class="bg">
+                <span class="num">40</span>
+            </span>
+        </div><!--bar-->
+
+
+        <div class="bar bar4">
+            <span class="bg">
+                <span class="num">100</span>
+            </span>
+        </div><!--bar-->
+
+   
+
+    </div><!--box-->
+    <div class="space">
+        <div class="progress pr1">
+            <span></span>
+        </div><!--progress-->
+
+        <div class="progress pr2">
+            <span></span>
+        </div><!--progress-->
+
+        <div class="progress pr3">
+            <span></span>
+        </div><!--progress-->
+
+        <div class="progress pr4">
+            <span></span>
+        </div><!--progress-->
+    </div><!--space-->
+
+
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+      
+      let bar = $('.bar').offset().top;
+ let progress = $('.progress').offset().top;
+        $(window).on('scroll',function(){
+            let scr = $(window).scrollTop();
+           
+            if(scr >= barof-100){
+                $('.bar').addClass('on');
+            }
+            
+            if(scr >= progress-200){
+                $('.progress').addClass('on');
+            }
+        });
+//         let bar = $('.bar').offset().top;
+// let progress = $('.progress').offset().top;
+
+// $(window).on('scroll',function(){
+//     let scr = $(window).scrollTop();
+
+//     if(scr >= bar-100){
+//         $('.bar').addClass('on');
+//     }
+
+//     if(scr >= progress-100){
+//         $('.progress').addClass('on');
+//     }
+// });
+    </script>
+
+</body>
+</html>

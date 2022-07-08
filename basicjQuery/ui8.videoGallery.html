@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            color: inherit;
+            text-decoration: none;
+        }
+        .con{
+            width: 1200px;;
+            margin: 100px auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        .box{
+            width: 31%;
+
+        }
+        .vid{
+            height: 200px;
+            overflow: hidden;
+            background-color: #000;
+            display: flex;
+            align-items: center;
+        }
+        video{
+            width: 100%;
+        }
+        .show{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            color: #fff;
+            display: none;
+        }
+        figure{
+            width: 800px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .txtBox{
+            position: absolute;
+            left: 50%;
+            bottom: 200px;
+            transform: translateX(-50%);
+            text-align:center;
+
+
+        }
+        .close{
+            color: #fff;
+            background-color: transparent;
+            border: 0;
+            font-style: italic;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            text-decoration: underline;
+        }
+        .closeWrap{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        #container{
+            background-color: #eee;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            padding: 40px 0;
+        }
+        .wrap{
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        .card{
+            width: 31%;
+            background: #fff;
+            border: 1px solid #ddd;
+        }
+        .thumb{
+            height: 200px;
+            background-color: violet;
+        }
+        .card .txt{
+            padding: 15px;
+            box-sizing: border-box;
+        }
+        .key{
+            display: none;
+        }
+        .detail{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            display: none;
+
+        }
+        figure{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 800px;
+        }
+        .closeBtn{
+            border: 0;
+            background-color: transparent;
+            color: #fff;
+            font-style: italic;
+            text-decoration: underline;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .closeBox{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+        }
+        figure iframe{
+            width: 100%;
+        }
+        .context{
+            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom: 20px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="con">
+            <div class="box">
+                <a href="#">
+                    <div class="vid">
+                        <video muted>
+                            <source src="videos/Islands - 2119.mp4">
+                        </video>
+                    </div><!--vid-->
+
+                    <div class="txt">
+                        <h4>첫번째 비디오</h4>
+                        <p>갤러리 내 첫번째 비디오 입니다.</p>
+                    </div><!--txt-->
+                </a>
+            </div><!--첫번째 박스-->
+
+            <div class="box">
+                <a href="#">
+                    <div class="vid">
+                        <video muted>
+                            <source src="videos/Ocean - 62249.mp4">
+                        </video>
+                    </div><!--vid-->
+
+                    <div class="txt">
+                        <h4>2번째 비디오</h4>
+                        <p>갤러리 내 2번째 비디오 입니다.</p>
+                    </div><!--txt-->
+                </a>
+            </div><!--2번째 박스-->
+
+            <div class="box">
+                <a href="#">
+                    <div class="vid">
+                        <video muted>
+                            <source src="videos/River - 85373.mp4">
+                        </video>
+                    </div><!--vid-->
+
+                    <div class="txt">
+                        <h4>3번째 비디오</h4>
+                        <p>갤러리 내 3번째 비디오 입니다.</p>
+                    </div><!--txt-->
+                </a>
+            </div><!--3번째 박스-->
+
+            <div class="box">
+                <a href="#">
+                    <div class="vid">
+                        <video muted>
+                            <source src="videos/Waves - 70796.mp4">
+                        </video>
+                    </div><!--vid-->
+
+                    <div class="txt">
+                        <h4>4번째 비디오</h4>
+                        <p>갤러리 내 4번째 비디오 입니다.</p>
+                    </div><!--txt-->
+                </a>
+            </div><!--4번째 박스-->
+
+        </div><!--con-->
+
+        <div class="show">
+            <div class="closeWrap"></div>
+            <button class="close">close</button>
+
+            <figure></figure>
+            <div class="txtBox">
+                <h4></h4>
+                <p></p>
+            </div><!--txtBox-->
+        </div><!--show-->
+    </div><!--wrap-->
+
+    <div id="container">
+       <div class="wrap">
+           <div class="card">
+               <a href="#">
+                   <div class="thumb"></div>
+                   <div class="txt">
+                       <h4>첫번째카드 설명글</h4>
+                       <p>첫번째 유튜브 영상입니다.</p>
+                       <span class="key">Juih3KyEw-Y</span>
+                   </div><!--txt-->
+               </a>
+           </div><!--card-->
+
+           <div class="card">
+            <a href="#">
+                <div class="thumb"></div>
+                <div class="txt">
+                    <h4>2번째카드 설명글</h4>
+                    <p>2번째 유튜브 영상입니다.</p>
+                    <span class="key">wdHW23RuFWU?list=RDCMUCw-kXdzxMdMdLNI0ZlFFbmA</span>
+                </div><!--txt-->
+            </a>
+        </div><!--card-->
+
+        <div class="card">
+            <a href="#">
+                <div class="thumb"></div>
+                <div class="txt">
+                    <h4>3번째카드 설명글</h4>
+                    <p>3번째 유튜브 영상입니다.</p>
+                    <span class="key">blkVkFEvnwA?list=RDCMUCw-kXdzxMdMdLNI0ZlFFbmA</span>
+                </div><!--txt-->
+            </a>
+        </div><!--card-->
+       </div><!--wrap-->
+
+       <div class="detail">
+            <div class="closeBox"></div>
+            <button class="closeBtn">close</button>
+
+            <figure></figure>
+
+            <div class="context">
+                <h4></h4>
+                <p></p>
+            </div><!--context-->
+       </div><!--detail-->
+    </div><!--container-->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+        $('.box').on('mouseover',function(){
+            $(this).find('video').get(0).play();
+        }).on('mouseout',function(){
+            $(this).find('video').get(0).pause();
+            $(this).find('video').get(0).currentTime=0;
+
+        }).on('click',function(){
+            $('.show').fadeIn();
+            let vid = $(this).find('.vid').html();
+            let txth4 = $(this).find('.txt h4').html();
+            let txtp = $(this).find('.txt p').html();
+            $('figure').html(vid);
+            $('.txtBox h4').html(txth4);
+            $('.txtBox p').html(txtp);
+
+            //attr() 어트리뷰트
+            // html상의 속성을 주는 것
+            // <video muted = 'false'>
+            $('figure video').attr('muted','false');
+            $('figure video').get(0).play();
+           
+
+        })
+
+        $('.close').on('click',function(){
+            $('figure video').get(0).pause();
+            $('.show').fadeOut();
+        })
+        $('.closeWrap').on('click',function(){
+            $('figure video').get(0).pause();
+            $('.show').fadeOut();
+        })
+
+        let onOff=true;
+        $('figure').on('click',function(){
+          
+            onOff=!onOff;
+
+            if(onOff==false){
+               $('figure video').get(0).pause();
+            }else{
+                $('figure video').get(0).play();
+            }
+        })
+
+
+
+      
+        $('.card').on('click',function(){
+            let key=$(this).find('.key').text();
+            let iframe = '<iframe width="640" height="360" src="https://www.youtube.com/embed/'+key+'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+            // console.log(iframe);
+            $('.detail').fadeIn();
+            $('.detail figure').html(iframe);
+        })
+        $('.detail .closeBtn').on('click',function(){
+            $('.detail').fadeOut();
+        })
+        $('.detail .closeBox').on('click',function(){
+            $('.detail').fadeOut();
+        })
+        $('.thumb').get(iframe);
+
+    </script>
+</body>
+</html>

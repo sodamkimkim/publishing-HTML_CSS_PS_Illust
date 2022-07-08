@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+</head>
+<body>
+    <script>
+        let dog = {
+            name:'뽀삐',
+            age:4,
+            color:'white',
+            cute:true,
+            weight:5,
+            bark : function(){alert('멍멍')}
+        }
+        document.write(dog.name);
+        if(dog.cute==true){
+            document.write('는 뽀삐뽀삐');
+        }
+        dog.bark();
+        /*
+        document.write();
+        location.replace();
+        colsole.log();
+        */
+        /*
+        - 우리가 자바스크립트로 다루는 대부분은 객체로 이루어져 있다.
+        그중 대표적인 것들
+        @ location - 주소표시줄가 관련된 명령어, 값들이 저장된 객체
+        @ document - html 내부의 요소들과 관련된 명령어값들이 저장된 객체
+        @ console - 개발자도구와 관련된 명령어, 값들이 저장된 객체
+
+        - 객체는 자바스크립트가 사물을 인식하는 단위
+        - '.' : 접근연산자.
+
+        */
+        
+    </script>
+</body>
+</html>

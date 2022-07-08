@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    button{
+        border: 0;
+        width: 14px;
+        height: 14px;
+       
+        display: block;
+        border-radius: 50%;
+        background-color: #eee;
+        margin-bottom: 20px;
+        position: relative;
+        
+    }
+    nav{
+        position: fixed;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    button span{
+        background-color: #fff;
+        font-size: 12px;
+        border: 1px solid #eee;
+        padding: 2px;
+        position: absolute;
+        top: 0;
+        right: -60px;
+        opacity: 0;
+        transition: all 0.4s;
+    }
+    button:hover span{
+        opacity: 1;
+        right: 20px;
+    }
+    #wrap{}
+    section{
+ 
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 900;
+        color: #fff;
+    }
+    .s1{background-color: tomato;}
+    .s2{background-color: cornflowerblue;}
+    .s3{background-color: slateblue;}
+    .s4{background-color: darksalmon;}
+    .s5{background-color: lightblue;}
+    button.active{
+        background-color: #000;
+    }
+    button.active span{
+        opacity: 1;
+        right: 20px;
+    }
+    </style>
+</head>
+<body>
+    <nav>
+        <button class="active"><span>TOMATO</span></button>
+        <button><span>CORNFLOWERBLUE</span></button>
+        <button><span>SLATEBLUE</span></button>
+        <button><span>DARKSALMON</span></button>
+        <button><span>LIGHTBLUE</span></button>
+    </nav>
+    <div id="wrap">
+        <section class="s1">TOMATO</section>
+        <section class="s2">CORNFLOWERBLUE</section>
+        <section class="s3">SLATEBLUE</section>
+        <section class="s4">DARKSALMON</section>
+        <section class="s5">LIGHTBLUE</section>
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
+    <script>
+        $('section').on('mousewheel',function(e,d){
+            if(d>0){
+                let movePoint = $(this).prev().offset().top;
+                $('html,body').stop().animate({'scrollTop':movePoint})
+                let ind=$(this).index();
+                $('nav').children().eq(ind).prev().addClass('active').siblings().removeClass();
+            }else if(d<0){
+                let movePoint = $(this).next().offset().top;
+                $('html,body').stop().animate({'scrollTop':movePoint})
+                let ind=$(this).index();
+                $('nav').children().eq(ind).next().addClass('active').siblings().removeClass();
+            }
+        })
+        $('nav button').on('click',function(){
+            let ind = $(this).index();
+            let secmoP = $('section').eq(ind).offset().top;
+            $('html,body').stop().animate({'scrollTop':secmoP})
+            $(this).addClass('active').siblings().removeClass();
+
+        })
+    </script>
+</body>
+</html>

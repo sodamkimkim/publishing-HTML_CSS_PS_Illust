@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+/* <scroll 제어>
+1. scrollTop()
+; 스크롤의 위치값을 구하는 매서드
+- 보통 선택자는 $(window)
+- 대다수의 스크롤은 브라우저에 달려있다.
+- 브라우저 = window
+- 객체 이름이기 때문에 'window'써서는 안된다.
+
+
+2. animate('scrollTop':not()
+; 스크롤 위치까지 애니메이트 되기
+- 선택자는 $('html,body')
+- html과 body를 윈도우내에서 스크롤 위치 0되는 지점까지 애니메이트 시키시오.
+
+3.on('scroll',function())
+;스크롤 이벤트
+- 선택자는 보통 $(window)
+
+4. mouseWheel.js
+;마우스 휠의 움직임을 인식하는 이벤트로,
+제이쿼리 상에는 존재하지 않기 때문에
+외부 라이브러리 (서드 파티) 연결해서 씀.
+*/
+*{
+    margin: 0;
+    padding: 0;
+}
+.num{
+    width: 300px;
+    height: 300px;
+    line-height: 300px;
+    border-radius: 50%;
+    background-color: powderblue;
+    position: fixed;
+    right: 40px;
+    top: 40px;
+    font-size: 28px;
+    text-align: center;
+    font-weight: bold;
+}
+body{
+    height: 10000px;
+}
+    </style>
+
+</head>
+
+<body>
+    <div class="num">0</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+
+        
+        $(window).on('scroll',function(){
+            let scr = $(window).scrollTop();
+            //스크롤의 위치값을 구하는 매서드
+        //스크롤은 기본적으로 선택자를 $(window)잡음.
+        $('.num').text(scr);
+        
+        if(scr>='3000'&&scr<='3999'){
+            $('body').css({'backgroundColor':'skyblue'})
+        }else if(scr>='4000'&&scr<='5999'){
+            $('body').css({'backgroundColor':'blue'})
+        }else if(scr>='6000'){
+            $('body').css({'backgroundColor':'midnightblue'})
+        }else{
+            $('body').css({'backgroundColor':'powderblue'})
+        }
+        })
+        $('.num').on('click',function(){
+            $('html,body').animate({
+                'scrollTop':0
+            })
+        })
+     
+        
+    </script>
+</body>
+</html>

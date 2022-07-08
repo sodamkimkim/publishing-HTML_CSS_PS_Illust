@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch</title>
+</head>
+<body>
+    <script>
+        // let txt=prompt('경품번호를 입력해주세요');
+        // let result;
+        // if(txt=='1111'){
+        //     result='청소기당첨';
+        // }else if(txt=='2222'){
+        //     result='컴터';
+        // }else if(txt=='3333'){
+        //     result='tv당첨';
+        // }else if(txt=='4444'){
+        //     result='상품권당첨';
+        // }else if(txt=='5555'){
+        //     result='아우디당첨';
+        // }else{
+        //     result='꽝그레츄레이션';
+        // }
+        // document.write(result);
+
+        // let txt=prompt('경품번호를 입력해주세요');
+        // let result;
+
+        // switch(txt){
+        //     case "1111" : {result = '청소기당첨';}
+        //     break;
+        //     case "2222" : {result = '컴터당첨';}
+        //     break;
+        //     case "3333" : {result = 'tv당첨';}
+        //     break;
+        //     case "4444" : {result = '상품권당첨';}
+        //     break;
+        //     case "5555" : {result = '아우디당첨';}
+        //     break;
+        //     default:{result='꽝그레추레이션';}  
+        // }
+        // document.write(result);
+
+        // let season=prompt('계절입력해주시요');
+        // let result;
+
+        // switch(season){
+        //     case "봄": result='아메리케노 원플원';
+        //     break;
+        //     case "여름": result='생과일주스 40퍼할인';
+        //     break;
+        //     case "가을": result= '비오는날 쿠키 증정이벤트';
+        //     break;
+        //     case "겨울":result = '케이크 예약시 쿠폰 증정';
+        //     break;
+        //     default: result='제대로 입력해주세요'
+        // }
+        // document.write(result);
+
+        // location.replace('https://naver.com');
+
+        let site=prompt('자주접속하는 포털사이트는?');
+        let url;
+
+        switch(site){
+            case '네이버': url='https://naver.com';
+                    break;
+            case '다음': url='https://daum.net';
+                    break;
+            case 'caute': url='https://caute.co.kr';
+                    break;
+            case '구글': url='https://google.com';
+                    break;
+            default:document.write('제대로된 값을 입력해주세요');
+        }
+        if(url){ //data가 있으면 실행. 또는 url==true
+            location.replace(url);
+        }
+     
+</script>
+</body>
+</html>

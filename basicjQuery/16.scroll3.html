@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll3</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+            position: fixed;
+            right: 20px;
+            top: 20px;
+            font-size: 18px;
+            display: flex;
+            color: #eee;
+        }
+        li{
+            margin: 0 20px;
+        }
+        li.active{
+            background-color: #000;
+            color: #fff;
+            border-radius: 2px;
+            font-weight: bold;
+        }
+        section{height: 100vh;
+        font-size: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-weight: 900;
+            font-family: Arial, Helvetica, sans-serif;
+    }
+        
+        section:nth-child(1){background-color: darkblue;}
+        section:nth-child(2){background-color: forestgreen;}
+        section:nth-child(3){background-color: crimson;}
+        section:nth-child(4){background-color: dimgray;}
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li class="active">DARKBLUE</li>
+        <li>FORESTGREEN</li>
+        <li>CRIMSON</li>
+        <li>DIMGRAY</li>
+    </ul>
+
+    <div id="wrap">
+        <section>DARKBLUE</section>
+        <section>FORESTGREEN</section>
+        <section>CRIMSON</section>
+        <section>DIMGRAY</section>
+    </div><!--wrap-->
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+        //   $('ul li').on('click',function(){
+    
+        //     let i = $(this).index();
+        //     let movePoint = $('section').eq(i).offset().top;
+
+        //     $('html,body').stop().animate({
+        //         'scrollTop':movePoint
+        //     });
+            
+        // });
+
+        $('ul li').on('click',function(){
+    
+            let i = $(this).index();
+            let hig = $('section').height();
+            // let movePoint = $('section').eq(i).offset().top;
+
+            $('html,body').stop().animate({
+                'scrollTop':hig*i
+            });
+    
+        });
+
+       $(window).on('scroll',function(){
+           let scr = $(window).scrollTop();
+           function liActive(x){
+               $('ul li').eq(x).addClass('active').siblings().removeClass();
+           }
+           let hig = $(window).height();
+           for(i=0;i<=$('ul').children().length;i++){
+               if(scr>=(i*hig) && scr<=(i+1)*(i*hig)){
+                liActive(i);
+               }
+           }
+
+           
+       })
+
+    </script>
+</body>
+</html>

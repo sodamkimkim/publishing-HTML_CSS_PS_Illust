@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 4px solid black;
+           
+        }
+        .box:after{
+            content: '';
+            display: block;
+          
+            width: 50px;
+            height: 50px;
+            border: 4px dotted black;
+            border-radius: 50%;
+            transform: translateX(40px);
+           
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+   <script>
+       let color=['pink', 'orange', 'blue', 'orangered','gold','yellow'];
+        let box = document.querySelectorAll('.box');
+        let circle = document.querySelectorAll('.box');
+
+        for(let i=0;i<color.length;i++){
+    box[i].style.backgroundColor=color[i];
+    for(let j=color.length;j>=0;j-=1){
+
+circle[i].style.backgroundColor=color[j];
+}
+
+}
+
+
+   </script>
+</body>
+</html>

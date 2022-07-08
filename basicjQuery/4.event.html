@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box4개</title>
+
+    <style>
+        *{margin:0;
+        padding: 0;}
+
+        .box{
+            width: 200px;
+            height: 200px;
+            margin: 40px auto;
+            border: 5px solid #000;
+            transition: all 1s;
+        }
+
+        ul{
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 100px 0;
+        }
+        li{
+            width: 50px;
+            height: 50px;
+            background: aquamarine;
+            border-radius: 50%;
+            margin: 0 20px;
+            transition: all 0.01s;
+        }
+        .item{
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            color: #ccc;
+        }
+        .item:before{
+            content: '* ';
+            
+        }
+
+    </style>
+</head>
+<body>
+<div class="list">
+    <div class="item">item1</div>
+    <div class="item">item2</div>
+    <div class="item">item3</div>
+    <div class="item">item4</div>
+    <div class="item">item5</div>
+</div><!--list-->
+
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+</body>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+    /*
+    event! 트리거임
+    .bind() ; 옛날 제이쿼리에서 쓰던ㄴ거
+    
+    @ on() ; 이벤트를 거는 매서드
+    - on()은 두개의 매개변수를 가지고 있다.
+    - 첫번째 값: 어떤 이벤트가 될 것인가.
+    - 두번째 값: 무슨일이 일어날 것인가 function(){}
+    */
+  
+    $('.box1').off('click').on("click", function(){
+        $('.box1').css({'backgroundColor':'pink'});
+    });
+
+
+
+
+    
+
+
+
+  
+/*
+@ function(){}
+; 익명함수
+- 저장 후 여러번 쓸 필요가 없는 것들
+- 기능들을 묶어주는 주머니용도로 사용
+
+@ 이전형태
+-> function pls(x){
+     document.write(x+2);
+ }
+*/
+$('.box2').on('click',function(){
+    $('.box2').css({
+        'width':'400px',
+        'backgroundColor':'skyblue'
+    });
+});
+$('.box2').on('mouseover',function(){
+    $('.box2').css({
+        'backgroundColor':'green'
+    });
+    $('.box2').text('안녕하시렵니까');
+    $('.box2').css({'color':'white',
+    'font-size':'50px',
+    'border-radius':'50px',
+ 
+    });
+}).on('mouseout',function(){
+    $('.box2').css({
+        'backgroundColor':'cornflowerblue',
+        'border':'20px dotted green',
+        'color':'blue',
+        'font-size':'100px'
+     
+    })
+    .text('껄껄껄');
+});
+
+$('.box3').on('mouseover',function(){
+    $('.box3').css({'backgroundColor':'red'});
+}).on('mouseout',function(){
+    $('.box3').css({'backgroundColor':'orange'});
+}).on('click',function(){
+    $('.box3').css({'width':'400px'});
+})
+
+$('.box4').on('mouseover',function(){
+    $('.box4').css({
+        'width':'400px',
+    
+    })
+}).on('mouseout',function(){
+    $('.box4').css({
+        'width':'200px'
+    });
+});
+
+$('ul li').on('click',function(){
+    $(this).css({'backgroundColor':'navy'});
+    $(this).siblings().css({'backgroundColor':'aquamarine'});
+}).on('mouseover',function(){
+    $(this).siblings().css({
+        // 'width':'25px',
+        // 'height':'25px',
+        'transform':'scale(0.5)'
+        
+    }).on('mouseout',function(){
+        $(this).siblings().css({
+        // 'width':'50px',
+        // 'height':'50px',
+        'transform':'scale(1)'
+            })
+});});
+
+
+
+$('.item').on('click',function(){
+    $(this).css({
+        'borderColor':'#000',
+        'color':'#000',
+        'fontWeight':'bold'
+    })
+    $(this).siblings().css({
+        'borderColor':'#ccc',
+        'color':'#ccc',
+        'fontWeight':'normal'
+    })
+
+
+}).on('mouseover',function(){
+    $(this).css({
+        'height':'42px',
+        'borderColor':'#000',
+        'color':'#000',
+        'fontWeight':'bold'
+    })
+    $(this).siblings().css({
+        'height':'24px',
+        'borderColor':'#ccc',
+        'color':'#ccc',
+        'fontWeight':'normal'
+    })
+})
+
+
+</script>
+</html>

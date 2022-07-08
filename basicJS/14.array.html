@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+    <style>
+        .box{
+            width: 500px;
+            height: 400px;
+            border:5px solid #000;
+            margin:40px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  
+    <script>
+        // let arr=['철수','영희','바둑이','성민','지우','민지','혜원','경수'];
+    // document.write(arr[3]);
+    /*0부터 시작한다.
+    - index number라고 부른다.
+    - 이 배열은 인덱스를 사용해서 필요한 데이터를 꺼내쓸 수 있는 리스트
+    - 배열 변수명 뒤에 []를 쓰고 원하는 인덱스 넘버를 써서 
+    -꺼내 쓸 수 있다.
+    */
+
+    // for(let i=0;i<arr.length;i++){
+    //     document.write((i+1)+'. '+arr[i]+'<br>');
+    // }
+
+// let flw=['할미꽃','호박꽃','장미','국화','민들레꽃','개나리'];
+// for(let i=0;i<flw.length;i++){
+//     document.write((i+1) + '. '+ flw[i] + '<br>');
+// }
+let color=['red','orange','orangered','gold','yellow'];
+let box=document.querySelectorAll('.box');
+                // 같은 클래스나 태그를 가진 모든 것들을 선택
+                //배열(Node-collection)로 만드는 것
+//box[3].style.backgroundColor='blue';
+
+for(let i=0;i<color.length;i++){
+    box[i].style.backgroundColor=color[i];
+}
+
+//-------------------------------------
+
+    </script>
+</body>
+</html>

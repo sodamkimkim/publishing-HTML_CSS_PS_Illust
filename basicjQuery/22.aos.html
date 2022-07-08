@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aos</title>
+    <link rel="stylesheet" href="js/aos.css">
+    <!-- https://michalsnik.github.io/aos/ -->
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 400px;
+            height: 250px;
+            border: 2px solid cyan;
+            background-color: #000085;
+            margin-top: 600px;
+            color:aliceblue;
+            font-size: 40px;
+        }
+        .box1{
+            margin-left: 200px;
+        }
+        .box2{
+            margin-left: auto; margin-right: 200px;
+        }
+        .box3{
+            margin-left: 600px;
+        }
+        .box4{
+            margin-left: auto; margin-right: 400px;
+        }
+        .box5{
+            margin-left: 450px;
+        }
+       
+
+    </style>
+</head>
+<body>
+    <div class="box box1" data-aos="fade-right"
+                        data-aos-offset="300"
+                        data-aos-easing="ease-in-sine"></div>
+    <div class="box box2" data-aos="fade-up"></div>
+    <div class="box box3" data-aos="fade-left"
+                        data-aos-anchor="#example-anchor"
+                        data-aos-offset="500"
+                        data-aos-duration="500">
+                    </div>
+    <div class="box box4"></div>
+    <div class="box box5"></div>
+    <!--aos는 제이쿼리 기반 라이브러리가 아니므로 
+    그냥 jQuery 없이 연결만 해도 된다.
+    https://michalsnik.github.io/aos/
+-->
+    <script src="js/aos.js"></script>
+    <script>
+        AOS.init();
+        //모든 라이브러리는 함수 덩어리
+        //해당 함수를 실행시켜줘야 한다.
+    </script>
+</body>
+</html>

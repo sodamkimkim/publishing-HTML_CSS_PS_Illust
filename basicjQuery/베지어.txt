@@ -1,0 +1,9 @@
+@ 베지어곡선 설명
+https://suhak.tistory.com/1211
+@ 포락선 설명
+https://suhak.tistory.com/365
+@ cubic-bezier 설명
+https://kutar37.tistory.com/entry/CSS-cubic-bezier%EB%9E%80
+
+@ easing 함수치트시트
+https://easings.net/ko#easeOutQuint

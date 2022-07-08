@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 300px;
+        }
+        .box1{height: 250px;}
+        .box2{height: 340px;}
+        .box3{height: 600px;}
+        .box4{height: 280px;}
+        .box5{height: 420px;}
+        .box6{height: 150px;}
+        div:nth-child(even){background-color: pink;}
+        div:nth-child(odd){background-color: violet;}
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6"></div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+        $('div').each(function(){
+            let i = $(this).index();
+            $(this).css({'marginLeft' : i*30});
+
+            let hig = $(this).height();
+            $(this).text(hig);
+
+        })
+        let box1 = $('.box1').offset().top;
+        console.log(box1);
+        let box2 = $('.box2').offset().top;
+        console.log(box2);
+
+        let box3 = $('.box3').offset().top;
+        console.log(box3);
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transition: all 0.5s linear;
+           
+        }
+        .box:nth-child(even){
+            background-color: blue;
+        }
+        .num{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: pink;
+            font-size: 40px;
+            text-align: center;
+            line-height: 200px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="num">0</div>
+
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+<script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+
+        let num=0;
+        let numnum = setInterval(function(){
+            if(num<=60){
+            
+            $('.num').html(num)
+            num+=1;
+        }
+        },100)
+        
+
+    //   console.log('안녕하세요');
+    //   let t = setInterval(function(){
+    //             // console.log('안dddd')
+    //             document.write('안녕하시렵니까<br>')
+    //             },1000);
+    //         document.querySelector('div').addEventListener('click',function(){
+    //             clearInterval(t);
+    //         });
+    var i=0;
+
+    var it = setInterval(function(){
+    if(i>=300){clearInterval(it);}
+    else if(i%3==0){
+        document.querySelectorAll('.box');
+        $('.box').eq(0).css({'backgroundColor':'red','marginLeft':'50px'})
+        $('.box').eq(1).css({'backgroundColor':'blue','marginLeft':'100px'})
+        $('.box').eq(2).css({'backgroundColor':'black','marginLeft':'150px'})
+        $('.box').eq(3).css({'backgroundColor':'gray','marginLeft':'100px'})
+        $('.box').eq(4).css({'backgroundColor':'violet','marginLeft':'20px'})
+        $('.box').eq(5).css({'backgroundColor':'red','marginLeft':'10px'})
+        $('.box').eq(6).css({'backgroundColor':'red','marginLeft':'10px'})
+        $('.box').eq(7).css({'backgroundColor':'green','marginLeft':'30px'})
+        $('.box').eq(8).css({'backgroundColor':'black','marginLeft':'50px'})
+        $('.box').eq(9).css({'backgroundColor':'gray','marginLeft':'70px'})
+        $('.box').eq(10).css({'backgroundColor':'pink','marginLeft':'90px'})
+        $('.box').eq(11).css({'backgroundColor':'brown','marginLeft':'70px'})
+
+        i++;
+        }
+    else if(i%3== 1){
+        $('.box').eq(0).css({'backgroundColor':'red','marginLeft':'50px'})
+        $('.box').eq(1).css({'backgroundColor':'green','marginLeft':'30px'})
+        $('.box').eq(2).css({'backgroundColor':'black','marginLeft':'50px'})
+        $('.box').eq(3).css({'backgroundColor':'gray','marginLeft':'70px'})
+        $('.box').eq(4).css({'backgroundColor':'pink','marginLeft':'90px'})
+        $('.box').eq(5).css({'backgroundColor':'brown','marginLeft':'70px'})
+        $('.box').eq(6).css({'backgroundColor':'pink','marginLeft':'0px'})
+        $('.box').eq(7).css({'backgroundColor':'violet','marginLeft':'20px'})
+        $('.box').eq(8).css({'backgroundColor':'red','marginLeft':'0px'})
+        $('.box').eq(9).css({'backgroundColor':'yellow','marginLeft':'30px'})
+        $('.box').eq(10).css({'backgroundColor':'green','marginLeft':'10px'})
+        $('.box').eq(11).css({'backgroundColor':'pink','marginLeft':'50px'})
+        i++;
+        }
+    else if(i%3==2){
+        document.querySelectorAll('.box');
+        $('.box').eq(0).css({'backgroundColor':'pink','marginLeft':'0px'})
+        $('.box').eq(1).css({'backgroundColor':'violet','marginLeft':'20px'})
+        $('.box').eq(2).css({'backgroundColor':'red','marginLeft':'0px'})
+        $('.box').eq(3).css({'backgroundColor':'yellow','marginLeft':'30px'})
+        $('.box').eq(4).css({'backgroundColor':'green','marginLeft':'10px'})
+        $('.box').eq(5).css({'backgroundColor':'pink','marginLeft':'50px'})
+        $('.box').eq(6).css({'backgroundColor':'gray','marginLeft':'70px'})
+        $('.box').eq(7).css({'backgroundColor':'pink','marginLeft':'90px'})
+        $('.box').eq(8).css({'backgroundColor':'brown','marginLeft':'110px'})
+        $('.box').eq(9).css({'backgroundColor':'pink','marginLeft':'0px'})
+        $('.box').eq(10).css({'backgroundColor':'violet','marginLeft':'20px'})
+        $('.box').eq(11).css({'backgroundColor':'red','marginLeft':'0px'})
+        i++;
+
+        }
+    },500);
+
+    </script>
+</body>
+</html>
+<!-- 선생님 코드
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 50px; 
+            height: 50px; 
+            background:red
+        }
+    </style>
+</head>
+<body>
+    
+    <div></div>
+
+
+    <script>
+/*
+
+ setInterval(실행시킬것 , 시간)
+
+ 지정된 시간(1초 = 1000)마다 
+ 실행시킬 function을 재생시킴 
+
+만약 어떤 조건하에 해당 interval을 멈추고
+싶다면
+ setInterval() 자체를 변수하나에 저장을 하고,
+ 어떤 조건이 일어났을 때,
+ clearInterval(setInterval 저장했던 변수이름) 
+
+
+
+*/
+
+
+       let t = setInterval(function(){
+            console.log('안녕하세요 ');
+        },1000);
+
+document.querySelector('div')
+.addEventListener('click',function(){
+    clearInterval(t);
+})
+
+    </script>
+</body>
+</html> -->

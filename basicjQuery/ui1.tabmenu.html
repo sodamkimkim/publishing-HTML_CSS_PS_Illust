@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ui1</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        .tabWrap{
+            border: 10px solid #000;
+            width: 600px;
+            margin: 40px auto;
+        }
+        ul{
+            display: flex;
+            border-bottom: 1px solid #000;
+        }
+        ul li{
+            width: 20%;
+            text-align: center;
+            border-right: 1px solid #000;
+            line-height: 42px;
+        }
+        ul li:last-child{
+            border-right: 0;
+        }
+        .inner{}
+        .inner div{
+            line-height: 350px;
+            font-size: 80px;
+            font-family: arial;
+            font-weight: 900;
+            text-align: center;
+            display: none;
+        }
+        .inner div:first-child{
+            display: block;
+        }
+        li:first-child{
+            background-color: #000;
+            color: #fff;
+        }
+        .darkviolet{background-color: darkviolet;}
+        .orangered{background-color: orangered;}
+        .deeppink{background-color: deeppink;}
+        .dodgerblue{background-color: dodgerblue;}
+        .gold{background-color: gold;}
+
+    </style>
+</head>
+<body>
+    <div class="tabWrap">
+        <ul>
+            <li>darkviolet</li>
+            <li>orangered</li>
+            <li>deeppink</li>
+            <li>dodgerblue</li>
+            <li>gold</li>
+        </ul>
+
+        <div class="inner">
+            <div class="darkviolet">darkviolet</div>
+            <div class="orangered">orangered</div>
+            <div class="deeppink">deeppink</div>
+            <div class="dodgerblue">dodgerblue</div>
+            <div class="gold">gold</div>
+        </div><!--inner-->
+    </div><!--tabWrap-->
+    
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+      $('li').on('click',function(){
+
+            $(this).css({'backgroundColor':'#000',
+            'color':'white'});
+            $(this).siblings().css({
+                'backgroundColor':'transparent',
+                'color':'#000'
+            });
+             
+           // $('.inner div').eq($(this).index()).css({'display':'block'});
+            $('.inner div').eq($(this).index()).show();
+            //$('.inner div').eq($(this).index()).siblings().css({'display':'none'});
+            //$('.inner div').eq($(this).index()).siblings().hide();
+            $('.inner').children().eq($(this).index()).siblings().hide();
+            
+        });
+    </script>
+</body>
+</html>

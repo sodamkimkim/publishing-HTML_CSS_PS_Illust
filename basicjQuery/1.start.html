@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            border:5px solid #000;
+            margin:40px auto;
+        }
+    </style>
+</head>
+<body>
+<div class="box box1"></div>
+<div class="box box2"></div>
+<div class="box box3"></div>
+<div class="box box4"></div>
+<div class="box box5"></div>
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<!-- 이렇게 script태그에 src 속성을 사용하여 외부의 자바스크립트 파일을 연결한다 -->
+<!-- https://jquery.com/ -->
+<!-- 해당 script 태그의 내부에는 아무것도 작성하지 않는다 -->
+<!-- 해당 script 태그는 저걸로 끝!
+하단에 새로운 script 태그를 만든다
+그 안에 원하는 js를 작성한다 -->
+<script>
+// $('.box').css();
+          //매서드
+//해당 선택자의 css값을 바꾸는 jQuery매서드임
+
+// 제이쿼리는 무조건 $()로 시작한다.
+// 혹은 jQuery()
+// jQuery() = $()
+// jQuery는 DOM을 쉽게 조작하게 해주는
+// 자바스크립트 라이브러리임.
+
+// is 거대한 함수덩어리임
+// 라이브러리는 함수덩어리이기 떄문에 해당 함수를 실행시켜줘야하는데,
+// 이때쓰는 함수가
+// jQuery() 혹은 $()
+
+// let box=document.querySelectorAll('.box');
+// for(let i=0;i<=1;i++){
+//     box[i].style.backgroundColor='blue';
+// }
+
+// jQuery의 장점
+// 1. 선택자를 css와 똑같이 잡을 수 있다.
+$('.box1')
+.css('backgroundColor','blue')
+.click(function(){
+    $('.box').css('backgroundColor','green');
+});
+$('.box2').css('backgroundColor','red')
+.click(function(){
+    $('.box2').css('backgroundColor','pink')
+});
+
+$('.box3').css('backgroundColor','skyblue')
+.mouseover(function(){$('.box3').css('backgroundColor','blue')})
+.mouseout(function(){$('.box3').css('backgroundColor','skyblue')});
+$('.box4').css({
+    'backgroundColor':'pink',
+    'width':'500px',
+    'border':'10px dotted blue'
+    });
+// JSON문법이라고 부른다.
+// Java Script Object Notion
+// 자바스크립트의 객체와 흡사한 형태의 문법
+//다량의 데이터를 한번에 처리하기위한 용도의 문법
+$('.box5').css({
+    'backgroundColor':'gold',
+    'width':'500px',
+    'height':'500px',
+    'borderColor':'orangered'
+    })
+    .mouseover(function(){
+        $('.box5').css({
+            'backgroundColor':'blue',
+            'width':'200px',
+            'height':'200px'
+        });
+    })
+    .mouseout(function(){
+        $('.box5').css({
+            'backgroundColor':'gold',
+    'width':'500px',
+    'height':'500px',
+    'borderColor':'orangered'
+        });
+    })
+        
+
+
+
+
+</script>
+</body>
+</html>

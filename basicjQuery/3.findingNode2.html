@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>노드찾기</title>
+    <style>
+        /* body 이하의 모든 태그 선택*/
+        body *{
+            margin:10px;
+            padding: 10px;
+            font-size:16px;
+            border:1px solid #ccc;
+        }
+        .select, .hi, .appe{
+            background-color:#ddd;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        div, #wrap
+          <header>
+              header
+              <h1>h1</h1>
+              <ul class="gnb">
+                ul,.gnb
+                <li>.gnb li1</li>
+                <li>.gnb li2</li>
+                <li>.gnb li3</li>
+                <li>.gnb li4</li>
+                <li>.gnb li5</li>
+              </ul><!--gnb-->
+        
+              <ul class="util">
+                ul,.util
+                <li>.util li1</li>
+                <li class="hi">.util li2, .hi</li>
+                <li>.util li3</li>
+                <li>.util li4</li>
+              </ul><!--util-->
+          </header>
+        
+          <main>
+              main
+             <div class="content">
+            div, .content
+                <div>
+                    div
+                    <p>p</p>
+                    <p>p</p>
+                </div><!--첫번째 div-->
+        
+                <div>
+                    div
+                    <p class="apple">p, .apple</p>
+                    <p>p</p>
+                </div><!--두번째 div-->
+        
+                <div>
+                    div
+                    <p>p</p>
+                    <p>p</p>
+                </div><!--세번째 div-->
+            </div><!--content-->
+        
+            <div class="container">
+                div, .container
+                <div class="space">
+                    div,.space
+                    <div class="thumb">div, .thumb</div>
+                    <div class="txt">
+                        div,.txt
+                        <p>p</p>
+                        <p>p</p>
+                    </div><!--txt-->
+                </div><!--space 첫번째-->
+        
+                <div class="space">
+                    div,.space
+                    <div class="thumb">
+                        div, .thumb
+                    </div><!--thumb-->
+                    <div class="txt">
+                        div, .txt
+                        <p>p</p>
+                        <p>p</p>
+                    </div><!--txt-->
+                </div><!--space 두번째-->
+            </div><!--container-->
+          </main>
+        
+          <footer>
+              footer
+              <h2>h2</h2>
+              <div class="fwrap">
+                  div,.fwrap
+                  <ul>
+                      ul
+                      <li>li1</li>
+                      <li>li2</li>
+                      <li>li3</li>
+                      <li>li4</li>
+                  </ul>
+        
+                  <ul>
+                      ul
+                      <li>li1</li>
+                      <li>li2</li>
+                      <li class="select">li3, .select</li>
+                      <li>li4</li>
+                  </ul>
+              </div><!--fwrap-->
+          </footer>
+        </div><!--wrap-->
+
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script>
+            /*
+            3. 형제노드찾기
+            - siblings() - 모든 형제노드 선택
+                ㄴ siblings(선택자) - 모든 형제노드들 중 해당 선택자 찾기
+            - prev() - 형제노드들 중 이전에 있는 것 찾기
+            - next() - 형제노드들 중 다음에 있는 것 찾기
+
+            - prevAll() - 형제노드들 중 본인 이전 모든 것들
+            - nextAll() - 형제노드들 중 본인 이후 모든 것들
+            
+            */
+            $('.select').prev().css({'backgroundColor':'pink'});
+            $('.select').next().css({'backgroundColor':'yellow'});
+            $('h1').siblings().css({'borderColor':'darkblue'});
+            $('h1').siblings('.util').css({'fontWeight':'bold'});//h1형제중에서 .util만
+            $('.hi').nextAll().css({'borderColor':'deeppink'});
+            $('footer').prevAll().css({'borderColor':'black'});
+            // $('.content').siblings('.container').find('.space').first().find('.txt').find('p').eq(1).css({'backgroundColor':'lawngreen'});
+            // $('.content').next().children('.space').first().children('.txt').children('p').eq(1).css({'backgroundColor':'lawngreen'});
+           
+            $('h2').next().children('ul').eq(1).children('li').eq(1).css({'border':'2px solid dodgerblue'});
+            // $('footer').children('div:nth-child(2)').find('ul').find('li:nth-child(2)').eq(0).css({'backgroundColor':'green'});
+           // $('.container').children('.space:nth-child(2)').children().after('.txt').css('backgroundColor','pink');
+            //$('.fwrap').children().children('li:nth-child(2)').next('.select').css({'backgroundColor':'blue'});
+            $('hi').parent().css({'border':'2px solid red'});
+            // $('.apple').parents().css({'border':'2px solid darkviolet'});
+
+            /*4.부모노드 찾기
+            parent() 바로 위 직접적인 부모찾기
+            parents() 모든 직계 조상 찾기
+            parents(선택자) 모든 직계조상중 해당 선택자 찾기
+            */
+            $('.apple').parents('main').children('.container').children('.space').eq(1).children('.thumb').css({'backgroundColor':'hotpink'});
+            $('.select').parents('footer').siblings('header').children('.gnb').children().last().css({'backgroundColor':'cornflowerblue'});
+         $('.select').parents('#wrap').find('header').children().eq(2).find('.hi').css({'backgroundColor':'pink'});
+            /*
+            @ .find()
+             ;어떤 요소의 ***하위 요소*** 중 특정 요소를 찾을 때 사용.
+
+            ex) $( 'h1' ).find( 'span' )
+            ;h1 요소의 '하위 요소' 중 span 요소를 선택합니다.
+            */
+        </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>operator3</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <script>
+        let a = 30;
+        let b =12;
+        document.write(a>b);
+        /*
+        단순히 어떠한 값이 다른 값보다 크다, 작다를 나타내고 끝나는 것이 아닐,
+        반드시 어떤 결과값을 가짐
+        >true/false
+        a가 b보다 크다 a > b
+        a가 b보다 작다 a < b
+        a가 b보다 크거나 같다 a >= b
+        a가 b보다 작거나 같다 a <= b
+        이때, 등호와 부등호 사이를 띄워선 안된다.
+        */
+        document.write(a > b);
+        document.write(a < b);
+        document.write(a >= 30);
+        document.write(a <= 30);
+document.write("<hr>");
+        let c =20; //숫자형 number
+        let d= "20"; // 문자형 String
+        let e = 123;
+        let f = "123";
+
+        
+        document.write(c==d);//true. 값만 비교
+        document.write(c===d);//false. 데이터형까지 비교
+
+        let g; //undefined
+        let h=null;
+        document.write(g==h);//true
+        document.write(g===h);//false
+        /*
+        같지않다 !=
+        */
+document.write('<hr>');
+       document.write(e != 120); //true
+       document.write(e != f); // false -> e는 숫자 123, f는 문자 123
+       document.write(e !== f); // true. 같지 않다를 보는 거지만 데이터는 같으므로 
+
+document.write('<hr>');
+        let i =true;
+        document.write(!i);//false. 논리부정
+
+/*
+1. 변수
+2. 데이터의 타입
+3. 
+*/
+
+
+    </script>
+</body>
+</html>

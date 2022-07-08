@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ui5class</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        ul{
+            list-style: none;
+        }
+        body{
+            background-color: #ddd;
+        }
+        .view{
+            width: 600px;
+            height: 400px;
+            background-color: rgba(225,225,225,0.4);
+            border:10px solid #fff;
+            margin:40px auto;
+            color: #fff;
+            font-size: 80px;
+            line-height: 400px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 900;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        ul{
+            display: flex;
+            justify-content: center;
+        }
+        ul li{
+            margin: 0 5px;
+            background-color: rgba(255,255,255,0.6);
+            border-radius: 5px;
+            line-height: 35px;
+            padding: 0 15px;
+
+        }
+        ul li.active{
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+         
+        }
+        body{
+            background-color: turquoise;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="view">NONE</div>
+    <ul>
+        <li class="active">turquoise</li>
+        <li>darkviolet</li>
+        <li>dodgerblue</li>
+        <li>deeppink</li>
+        <li>gold</li>
+        <li>orangered</li>
+        
+    </ul>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+        let txt;
+        $('ul li').on('click',function(){
+            txt = $(this).text();
+            $('body').css({'backgroundColor':txt});
+            $('.view').text(txt);
+            $(this).addClass('active');
+            $(this).siblings().removeClass('active');
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>typeofData</title>
+</head>
+<body>
+    <script>
+        // let a='12';
+        // let b = 25;
+        // a=Number(a);//데이터의 형태를 숫자로 변환. N대문자임
+        // Number(a);//여기서 한번만 변화하고 끝임
+        // let c = Number(a) + b;
+        // let c = a+b;
+     
+
+        
+        // console.log(c);
+        // console.log(typeof(c));
+        // //typeof ; 데이터의 형태를 검사
+
+        // let num1=prompt('1번째 숫자입력');
+        // let num2=prompt('2번째 숫자 입력');
+        // let avgNum = (Number(num1)+Number(num2))/2;
+        // let result;
+
+        // if(avgNum==30){
+        //     result='30입니다.';
+        // }else if(avgNum>30){
+        //     result='평균이 30보다 큽니다';
+        // }else if(avgNum<30){
+        //     result='평균이 30보다 작습니다.';
+        // }
+        // document.write(result);
+
+        // let d =123;
+        // d = String(d);
+        // console.log(typeof(d));
+
+        let height =prompt('키를 입력해 주세요');
+        height = parseInt(height);
+        /*parseInt(); 
+        : 자연수 뒤에 붙어있는 다른 것들을 제거
+        1. 소수점 내림임.
+        2. 다른형태의 데이터를 숫자로 바꿈
+        */
+        /* 
+        1. Number()
+        - 숫자로 변환해 주는데 소수점자리는 살림(유효숫자 살림)
+        2. parseInt()
+        - 숫자로 변환, 자연수 아래의 모든 것 제거.
+        
+        */
+        
+        if(height<=150 || height>=200){
+            document.write('탑승할 수 없습니다.');
+        }else{
+            document.write('탑승가능');
+        }
+    </script>
+</body>
+</html>

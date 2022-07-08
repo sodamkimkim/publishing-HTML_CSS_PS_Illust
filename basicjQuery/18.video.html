@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .vid{
+            width: 800px;
+            margin-right: auto;
+            margin-left: auto;
+            display: block;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <video class="vid" autoplay muted>
+        <!--vidoe를 자동재생시킬 때, autoplay옵션은
+        접근성 문제로 muted 없이는 돌아가지 않는다.
+    -->
+        <source src="videos/Islands - 2119.mp4">
+    </video>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+        $('.vid').on('mouseover',function(){
+            $('.vid').get(0).pause();
+        }).on('mouseout',function(){
+            $('.vid').get(0).play();
+
+        }).on('click',function(){
+            $('.vid').get(0).currentTime = 0;
+        })
+        /*
+        @ get()
+        - 제이쿼리로 포장된 선택자의 내부에서
+        html노드를 직접적으로 뽑아오는 것.
+        */
+    </script>
+</body>
+</html>

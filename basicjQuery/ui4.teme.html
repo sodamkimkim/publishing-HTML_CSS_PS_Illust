@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;}
+        ul{
+            list-style: none;
+
+        }
+        header{
+            border-bottom: 2px solid #333;
+        }
+        h1{
+            color: #333;
+            text-align: center;
+            padding-top: 25px;
+            font-size: 40px;
+        }
+        .gnb{
+            display: flex;
+            margin-top: 25px;
+            font-size: 14px;
+            color: #333;
+            justify-content: center;
+            padding-bottom: 20px;
+        }
+        .gnb li{
+            margin: 0 20px;
+        }
+        .theme{
+            position: fixed;
+            right: 20px;
+            top: 20px;
+            display: flex;
+        }
+        .theme button{
+        
+            width: 50px;
+            height: 28px;
+            border-radius: 50px;
+            background-color: #eee;
+            border: 1px solid #ccc;
+            margin: 0 10px;
+            overflow: hidden;
+        }
+        .theme button span{
+            transition: all 1s;
+            display: block;
+            width: 26px;
+            height: 26px;
+            border: 1px solid #aaa;
+            border-radius: 50%;
+            background-color: #fff;
+            box-shadow: 3px 2px 5px rgba(0,0,0,0.2);
+        }
+        /*dark라는 클래스를 가진 body*/
+        body.dark{
+            background-color: #333;
+            color: #fff;
+        }
+        body.dark h1{
+            color:#fff;
+        }
+        body.dark .gnb{
+            color: #fff;
+        }
+        body.dark header{
+            border-bottom: 2px solid #fff;
+        }
+        body.dark .theme button span{
+            transform:translateX(20px);
+            box-shadow: -3px 0 5px rgba(0,0,0,0.2);
+        }
+        body.dark .theme{
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="theme">
+        
+        <strong>light</strong>
+        <button>
+            <span></span>
+        </button>
+        <strong>dark</strong>
+    </div><!--them-->
+    <header>
+        <div class="hWrap">
+            <h1>logo</h1>
+            <ul class="gnb">
+                <li>gnb1</li>
+                <li>gnb2</li>
+                <li>gnb3</li>
+                <li>gnb4</li>
+                <li>gnb5</li>
+            </ul><!--gnb-->
+        </div><!--hWrap-->
+    </header>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+        let onOff=true;
+        $('.theme button').on('click',function(){
+            $('body').toggleClass('dark');
+          
+        })
+    </script>
+</body>
+</html>

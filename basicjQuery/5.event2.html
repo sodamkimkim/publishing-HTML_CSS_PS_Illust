@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event2</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            height: 50px;
+            background-color: #000;
+        }
+        h1{
+            color: #fff;
+            text-align: center;
+        }
+        .allBtn{
+            border: 0;
+            background-color: #333;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .allBtn span{
+            display: block;
+            width: 22px;
+            height: 4px;
+            margin-bottom: 6px;
+            background-color: #fff;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .allBtn span:last-child{
+            margin-bottom:0;
+        }
+        aside{
+            position: fixed;
+            top: 0;
+            left: -100%;
+            background-color: #fff;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: all 1s linear;
+        }
+        aside li{
+            list-style: none;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        aside .gnb{
+            margin-top: 40px;
+        }
+        .close{
+            border: 0;
+            background-color: transparent;
+            font-size: 40px;
+            color: #000;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>logo</h1>
+        <button class="allBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button><!--allBtn-->
+    </header>
+    <aside>
+        <button class="close">X</button>
+        <ul class="gnb">
+            <li>gnb1</li>
+            <li>gnb2</li>
+            <li>gnb3</li>
+            <li>gnb4</li>
+            <li>gnb5</li>
+        </ul>
+    </aside>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $('.allBtn').on('click',function(){
+            $('aside').css({
+                'left':'0px'
+            })
+        })
+        $('.close').on('click',function(){
+            $('aside').css({
+                'left':'-100%'
+            })
+        })
+        $('.gnb li').on('click',function(){
+            $(this).css({
+                'color':'blue',
+                'text-decoration':'line-through'
+            }),
+            $(this).siblings().css({
+                'color':'#333',
+                'text-decoration':'none'
+            });
+        })
+
+    </script>
+</body>
+</html>

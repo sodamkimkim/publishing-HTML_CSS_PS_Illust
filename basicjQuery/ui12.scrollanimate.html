@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 6000px;
+            position: relative;
+        }
+        .box{
+
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            position: absolute;
+            top: 3000px;
+            left: 800px;
+            opacity: 0;
+            transition: all 1s;
+
+        }
+        .box.on{
+            opacity: 1;
+            transform: translateY(-50px);
+            background-color: aqua;
+
+        }
+        .space{
+            position: absolute;
+            top: 2000px;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            border-radius: 50%;
+            /* animation-name: move; */
+            animation-duration: 10s;
+            animation-fill-mode: forwards;/*긑났을때 처음모양*/
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        @keyframes move{
+            0%{right:0}
+            100%{right:2300px}
+        }
+        .space.on{
+            animation-name:move;
+        }
+    </style>
+</head>
+<body>
+    <div class="space"></div>
+    <div class="box"></div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+      
+      let ofB = $('.box').offset().top;
+        $(window).on('scroll',function(){
+       
+            let scr = $(window).scrollTop();
+            ofB-=100;
+            if(scr >= ofB){
+                $('.box').addClass('on')
+            }else{
+                $('.box').removeClass('on')
+            }
+
+            let ofS = $('.space').offset().top;
+            if(scr >= ofS-300){
+                $('.space').addClass('on')
+            }else{
+                $('.space').removeClass('on')
+            }
+        })
+
+
+        
+    </script>
+</body>
+</html>

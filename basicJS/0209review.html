@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // for(let i=0; i<=150; i+=3){
+        //     document.write(i+'&nbsp');
+        // }
+        // document.write('<br>')
+        // for(let i=0; i<=150;i++){
+        //     if(i%3==0){
+        //         document.write(i+'&nbsp');
+        //     }
+        // }
+        // let song = ['노래제목','노래제목', '노래제목','노래제목', '노래제목'];
+        // for(let i=0;i<song.length;i++){
+        //     document.write((i+1) + '. '+song[i] +(i+1)+ '<br>');
+        // }
+
+
+        function dan(x){
+            document.write('<h3>'+'<<'+x+'단'+'>>'+'<br>'+'</h3>');
+            for(i=0;i<=9;i++){
+                document.write(x + ' X '+(i+1)+' = '+(x*(i+1))+'<br>');
+              
+            }
+            document.write('<br>');
+        }
+        dan(2);
+        dan(3);
+        dan(4);
+        dan(5);
+        dan(13);
+        dan(26);
+        
+    </script>
+</body>
+</html>

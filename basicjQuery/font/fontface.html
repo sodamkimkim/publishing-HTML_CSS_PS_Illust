@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- fontface는 css상에서 폰트 연결하는거임
+    
+    https://convertio.co/kr/ttf-woff/
+TTF WOFF 변환 (온라인 무료) — Convertio
+몇 초 만에 TTF 파일은 WOFF 파일로 변환하세요. 100% 무료, 쉽고 안전하게 사용하세요! Convertio — 어떤 파일에 문제가 생기더라도 해결가능한 고급 온라인 툴.
+폰트파일을 받으면
+TTF (트루타입폰트)
+OTF(오픈타입폰트)
+둘중 하나를 웹변환기 사용해서
+WOFF 로 변환!
+어떤 브라우저든 깨짐없이 글꼴을 보여주기 위해서
+
+
+@ text-shadow
+가로 세로 번짐 색상
+text-shadow:1px 1px 20px rgba(0,0,0,0.5)
+마우스 움직일때
+pageX값이랑 pageY값을 구한 다음에
+그 x값이랑 y 값을
+$(뭔가).css({'textShadow' : x+'px '+y+'px 20px rgba(0,0,0,0.5'})
+
+-->
+    <style>
+    @font-face {
+        font-family:lemon-tea;
+        src:url(Lemon-Tea.ttf) format('woff');
+        
+        /* src:url(font/Lemon-Tea.woff); */
+    }
+    h1{
+        font-family: lemon-tea;
+    }
+    /* @font-face{
+        font-family:소환할 때 쓸 이름;
+        src: url(경로) format(확장자);
+
+        - 필요한 상황에 font-family: 아까 지은 이름
+        - 이렇게 하면 폰트가 적용됨
+
+        - 폰트는 WOFF형식이 가장 안정적
+        : 모든 브라우저에서 다 적용됨.
+        => 받은 폰트가 TTF 혹은 OTF일 경우, WOFF로 변환해서 쓴다.
+        - TTF의 경우 사파리/크롬/안드로이드/IOS에서만 사용되고,
+        ㄴ 파이어폭스, 오페라 등 다른 브라우저에서는 호환 안됨.
+
+        * 저작권!! > 임베딩 저작권이 가장 비쌈
+        KOPUB 돋움체 같은 경우, 완전 무료 폰트이나, 한국 출판인회의 (폰트제작자)에서 
+        웹이나 앱등 스크린 미디어에 임베딩을 허용하지 않고있다. 
+        -> 따라서 제작자가 임베딩을 허용하지 않은 경우, 함부로 웹이나 앱 등에 써서는 안된다.
+        - 임베딩 저작권은 따로 명시되어 있는 경우가 종종 있으므로, 
+        반드시 폰트 라이선스 파일을 꼼꼼하게 확인하고 씀.
+    } */
+    </style>
+</head>
+<body>
+    <h1>logo</h1>
+    <p>hi</p>
+</body>
+</html>

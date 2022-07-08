@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>노드찾기</title>
+    <style>
+        /* body 이하의 모든 태그 선택*/
+        body *{
+            margin:10px;
+            padding: 10px;
+            font-size:16px;
+            border:1px solid #ccc;
+        }
+        .select, .hi, .appe{
+            background-color:#ddd;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        div, #wrap
+          <header>
+              header
+              <h1>h1</h1>
+              <ul class="gnb">
+                ul,.gnb
+                <li>.gnb li1</li>
+                <li>.gnb li2</li>
+                <li>.gnb li3</li>
+                <li>.gnb li4</li>
+                <li>.gnb li5</li>
+              </ul><!--gnb-->
+        
+              <ul class="util">
+                ul,.util
+                <li>.util li1</li>
+                <li class="hi">.util li2, .hi</li>
+                <li>.util li3</li>
+                <li>.util li4</li>
+              </ul><!--util-->
+          </header>
+        
+          <main>
+              main
+             <div class="content">
+            div, .content
+                <div>
+                    div
+                    <p>p</p>
+                    <p>p</p>
+                </div><!--첫번째 div-->
+        
+                <div>
+                    div
+                    <p class="apple">p, .apple</p>
+                    <p>p</p>
+                </div><!--두번째 div-->
+        
+                <div>
+                    div
+                    <p>p</p>
+                    <p>p</p>
+                </div><!--세번째 div-->
+            </div><!--content-->
+        
+            <div class="container">
+                div, .container
+                <div class="space">
+                    div,.space
+                    <div class="thumb">div, .thumb</div>
+                    <div class="txt">
+                        div,.txt
+                        <p>p</p>
+                        <p>p</p>
+                    </div><!--txt-->
+                </div><!--space 첫번째-->
+        
+                <div class="space">
+                    <div class="thumb">
+                        div, .thumb
+                    </div><!--thumb-->
+                    <div class="txt">
+                        div, .txt
+                        <p>p</p>
+                        <p>p</p>
+                    </div><!--txt-->
+                </div><!--space 두번째-->
+            </div><!--container-->
+          </main>
+        
+          <footer>
+              footer
+              <h2>h2</h2>
+              <div class="fwrap">
+                  div,.fwrap
+                  <ul>
+                      ul
+                      <li>li1</li>
+                      <li>li2</li>
+                      <li>li3</li>
+                      <li>li4</li>
+                  </ul>
+        
+                  <ul>
+                      ul
+                      <li>li1</li>
+                      <li>li2</li>
+                      <li class="select">li3, .select</li>
+                      <li>li4</li>
+                  </ul>
+              </div><!--fwrap-->
+          </footer>
+        </div><!--wrap-->
+
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script>
+            //정적으로 선택자 잡기 > css와 아주 유사함
+            $('.fwrap ul:first-child').css({'borderColor':'red'});
+            $('.fwrap').children().last()
+            .css({'borderColor':'blue'});
+        </script>
+</body>
+</html>

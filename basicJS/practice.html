@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+</head>
+<body>
+<script>
+
+let a;
+let b;
+let c;
+let input=prompt('피라미드 층수를 입력해주세요');
+
+for(a=0;a<input;a++){
+    for(b=a;w<input;b++){
+        document.write('&nbsp');
+    }//a가 하나씩 증가하니까 결국 b의 갯수가 줄어든다(b--됨)
+    for(c=0;c<=(a*2);c++){
+        document.write('*');
+    }//c=0일 때 c=a=0*2 즉0까지, 즉 * 1개 찍힘
+    document.write('<br>');
+}
+
+
+</script>
+</body>
+</html>

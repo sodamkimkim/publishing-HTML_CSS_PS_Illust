@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .output{
+        width: 180px;
+        line-height: 45px;
+        background-color: #000;
+        color: lawngreen;
+        border: 5px inset #ccc;
+        text-indent: 10px;
+        font-size: 20px;
+        margin: 40px auto;
+    }
+    .txtBox button{
+        width: 100px;
+        line-height: 35px;
+        display: block;
+        margin: 20px auto;
+        border-radius: 0;
+        border: 5px outset #ccc;
+        background-color: #ddd;
+        color: #333;
+
+    }
+    .txtBox button:active{
+        background-color: #bbb;
+        border: 5px inset #aaa;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="output">_</div>
+    <div class="txtBox">
+        <button class="btn1">안녕하세요</button>
+        <button class="btn2"><h3>안녕하세요플레</h3></button>
+        <button class="btn3">CLICK</h3></button>
+        <button class="btn4">CLICK</h3></button>
+    </div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+        //.text() 텍스트 삽입 > 기존 존재했던 컨텐츠들 삭제
+        //.html() html삽입 > 기존 존재했던 컨텐츠들 삭제
+        $('.btn3').text('삭제완료');
+        $('.btn4').html('<h3>삭제취소</h3>')
+        let txt
+        $('.btn1').on('click',function(){
+            txt = $(this).text()
+            $('.output').text(txt);
+        })
+        $('.btn2').on('click',function(){
+            txt = $(this).html()
+            $('.output').html(txt);
+        })
+        $('.btn3').on('click',function(){
+            $('.output').text('_');
+        })
+        $('.btn4').on('click',function(){
+            $('.output').html(txt);
+        })
+
+
+    </script>
+</body>
+</html>

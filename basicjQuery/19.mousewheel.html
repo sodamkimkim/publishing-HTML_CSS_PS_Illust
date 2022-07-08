@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mousewheel</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            color: inherit;
+            text-decoration: none;
+        }
+        
+        #wrap{
+            background-color: pink;
+            width: 100%;
+            height: 100vh;
+        }
+        p{
+            font-size: 100px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <p></p>
+    </div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
+    <!-- https://github.com/jquery/jquery-mousewheel -->
+    <script>
+        $('#wrap').on('mousewheel',function(e,d){
+            if(d>0){
+                //마우스휠을 올렸을 때 일어나는 일
+                $('#wrap').css({'backgroundColor':'deeppink'});
+                $('p').text('마우스휠을 올렸습네다.');
+            }else if(d<0){
+                //마우스휠을 내렸을 때 일어나는 일
+                $('#wrap').css({'backgroundColor':'dodgerblue'});
+                $('p').text('마우스휠을 내렸습네다');
+            }});
+       
+    </script>
+</body>
+</html>
