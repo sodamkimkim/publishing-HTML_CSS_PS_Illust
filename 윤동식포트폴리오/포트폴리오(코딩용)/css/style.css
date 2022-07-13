@@ -1,0 +1,592 @@
+*{padding: 0;margin: 0;}
+a{color: inherit; text-decoration: none;}
+ul{list-style: none;}
+
+
+body{
+    background-color: #111;
+}
+.Wrap{
+   
+}
+
+header{
+    background-image: url(../images/backimg1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 1200px;
+    height: 1000px;
+    margin: 0 auto;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.8);
+    position: relative;
+}
+
+.gnb{
+    display: flex;
+    position: absolute;
+    top: 35px;
+    right: 80px;
+    
+}
+
+.gnb li{
+    color: #fff;
+    font-family: arial;
+    font-weight: bold;
+    margin: 0 18px;
+    font-size: 16px;
+    transition: all 0.5s ease-in;
+}
+
+.gnb li:hover{
+    color: #a4161a;
+}
+
+.me{
+    background-color: #121212;
+    width: 589px;
+    height: 665px;
+    position: absolute;
+    left: 0;
+    bottom: 0;  
+    z-index: 2;
+}
+
+.meWrap{
+    background-color: rgba(0,0,0,0.6);
+    opacity: 0.8;
+    width: 598px;
+    height: 674px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.introtxt{
+    display: flex;
+    color: #fff;
+    margin-top: 7px;
+}
+
+.introtxt .adj{
+    margin-right: 325px;
+    margin-left: 63px;
+}
+
+
+.me::before{
+    content: '';
+    border-bottom: 1px solid #666;
+    display: block;
+    width: 95px;
+    position: absolute;
+    left: 52px;
+    top: 40px;
+}
+
+.me::after{
+    content: '';
+    border-bottom: 1px solid #666;
+    display: block;
+    width: 99px;
+    position: absolute;
+    left: 450px;
+    top: 40px;
+}
+
+.profile{
+    background-color: transparent;
+    position: absolute;
+    left: 165px;
+    top: -125px;
+}
+
+.me p{
+    margin-top: 150px;
+    margin-left: 10px;
+    color: #fff;
+}
+
+.linkcon{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 615px;
+    height: 670px;
+    
+   
+}
+
+.linkcon .box{
+    width: 285px;
+    height: 160px;
+    background-color:rgba(0,0,0,0.8);
+    border-radius: 20px;
+    border: 1px solid #666 ;
+    color: #fff;
+    box-shadow: 3px 9px 5px rgba(0,0,0,0.8);
+}
+
+.linkcon .box p{
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.linkcon .box1{
+    width: 200px;
+    height: 270px;
+    position: absolute;
+    top: 0;
+    left: 186px;
+    transition: all 1s;
+}
+
+.linkcon .box1:hover{
+    transform: scale(1.1) translateX(-10px);
+    z-index: 5;
+}
+
+.linkcon .box2{
+    position: absolute;
+    left: 65px;
+    bottom: 320px;
+    transition: all 1s;
+}
+
+.linkcon .box2:hover{
+    transform: scale(1.1) translateX(10px);
+    z-index: 5;
+}
+
+.linkcon .box2 img{
+    display: block;
+    margin: 20px auto;
+}
+
+.linkcon .box3{
+    position: absolute;
+    left: 258px;
+    bottom: 260px;
+    transition: all 1s;
+}
+
+.linkcon .box3:hover{
+    transform: scale(1.1) translateY(-10px);
+    z-index: 5;
+}
+
+.contact{
+    position: absolute;
+    right: 43px;
+    bottom: 40px;
+    width: 140px;
+    height: 65px;
+    color: #fff;
+    
+}
+
+.iconbox{
+    margin-top: 17px;
+}
+
+.iconbox i{
+    margin-right: 10px;
+}
+
+.iconbox i:last-child{
+    margin-right: 0;
+}
+
+.iconover{
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+}
+
+
+.iconover .coicon1{
+    opacity: 0;
+    transform: scale(1.2);
+}
+
+.iconover .coicon1:hover{
+    opacity: 1;
+    transition: all 0.5s;
+}
+.iconover .coicon2{
+    opacity: 0;
+}
+
+.iconover .coicon2:hover{
+    opacity: 1;
+    transition: all 0.5s;
+}
+.iconover .coicon3{
+    opacity: 0;
+}
+
+.iconover .coicon3:hover{
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+main{
+    background-image: url(../images/scbackimg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1200px;
+    height: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slideWrap{
+    
+    width: 1045px;
+    padding-right: 50px;
+    height: 611px;
+   position: absolute;
+    bottom: 200px;
+    left: 52px;
+
+    overflow: hidden;
+    
+    
+}
+
+
+.slide{
+    margin-top: 88px;
+    margin-left: 58px;
+    position: relative;
+    /* overflow: hidden; */
+    
+  
+    
+}
+
+.nxt,.prv{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 25%;
+    transform: translate(-50%);
+    background: transparent;
+    border: none;
+    z-index: 11;
+}
+
+.prv{
+    left: 32px;
+}
+.nxt{
+    right: -15px;
+}
+
+.prv::after{
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-top: 4px solid #aaa;
+    border-left: 4px solid #aaa;
+    transform: rotate(-45deg);
+}
+
+.nxt::after{
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-top: 4px solid #aaa;
+    border-right: 4px solid #aaa;
+    transform: rotate(45deg);
+}
+
+.videosld1{
+    display: flex;
+    justify-content: center;
+    z-index: 11;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.picsld1{
+    display: flex;
+    justify-content: center;
+    z-index: 11;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+/*-----------------------------------------------------------------------------------*/
+.item{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 3px;
+}
+.itemWrap{
+    width: 320px;
+    height: 180px;
+    background-color: rgba(0,0,0,0.6);
+    color: #fff;
+    /* transition: all 1s; */
+} 
+
+/* .itemWrap:hover{
+    transform: scale(1.05);
+    background-color: #000;
+} -> 이코드 잠깐 죽여놓겠음 총총.*/ 
+
+.noneheeWrap{
+    
+    position: relative;
+}
+.previewWrap{
+    display: flex;
+  
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.Preview{
+    width: 320px;
+    height: 180px;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 3px;
+    z-index:0;
+
+}
+
+/* 
+@Preview에 해당하는 영상 view해주기.
+- itemWrap에 mouseover 하면 Preview에 띄워주기
+- prv or nxt 버튼 클릭할 때마다 
+
+- 처음 상태) videosld1의 직계 자식(item) 0번 1번 2번 -> preview 1번 2번 3번
+- nxt 1번클) videosld1의 직계 자식(item) 1번 2번 3번 -> preview 1번 2번 3번
+- nxt 2번클) videosld1의 직계 자식(item) 2번 3번 4번 -> preview 1번 2번 3번
+- nxt 3번클) videosld1의 직계 자식(item) 3번 4번 5번 -> preview 1번 2번 3번
+- nxt 4번클) videosld1의 직계 자식(item) 4번 5번 0번 -> preview 1번 2번 3번
+- nxt 5번클) videosld1의 직계 자식(item) 5번 0번 1번 -> preview 1번 2번 3번
+- nxt 6번클) videosld1의 직계 자식(item) 0번 1번 2번 -> preview 1번 2번 3번
+-> 변수 let a, let b, let c 의 범위가 다름
+=> 0~(n-1) // 1~(n-1),0 ->  // 2~(n-1),0,1
+-> n은 sld.length(슬라이드 자식갯수. 즉 item 갯수=6), 3은 previewWrap.length(previeWrap자식 갯수. 즉 Preview 갯수=3)임
+
+- 처음 상태) videosld1의 직계 자식(item) 0번 1번 2번 -> preview 1번 2번 3번
+- prv 1번클) videosld1의 직계 자식(item) 5번 0번 1번 -> preview 1번 2번 3번
+- prv 2번클) videosld1의 직계 자식(item) 4번 5번 0번 -> preview 1번 2번 3번
+- prv 3번클) videosld1의 직계 자식(item) 3번 4번 5번 -> preview 1번 2번 3번
+- prv 4번클) videosld1의 직계 자식(item) 2번 3번 4번 -> preview 1번 2번 3번
+- prv 5번클) videosld1의 직계 자식(item) 1번 2번 3번 -> preview 1번 2번 3번
+
+- prv 6번클) videosld1의 직계 자식(item) 0번 1번 2번 -> preview 1번 2번 3번
+-> 클릭횟수는 1~5(sld.length)까지만 변경되고 이후엔 reset됨. 
+v -> 클릭횟수 % sld.length(여기선 6) ==0 -> reset
+
+*/
+
+/* .videosld1{
+    overflow:unset !important;
+}
+.slick-initialized{
+    overflow:unset !important;
+}
+.slick-slider{
+    overflow:unset !important;
+}
+.slick-list{
+    overflow:unset !important;
+}
+.draggable{
+    overflow:visible !important;
+}
+.slick-track{
+    overflow:unset !important;
+} */
+
+.itemWrap2{
+    width: 320px;
+    height: 180px;
+    background-color: #000;
+    color: #fff;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.item2{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 3px;
+}
+
+.itemWrap2{
+    width: 320px;
+    height: 180px;
+    background-color: rgba(0,0,0,0.6);
+    color: #fff;
+    transition: all 1s;
+} 
+
+.itemWrap2:hover{
+    transform: scale(1.05);
+    background-color: #000;
+}
+
+
+.picsld1{
+    margin-top: 40px;
+}
+
+.nxt2,.prv2{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 75%;
+    transform: translate(-50%);
+    background: transparent;
+    z-index: 11;
+    border: none;
+}
+
+.prv2{
+    left: -23px;
+}
+.nxt2{
+    right: -68px;
+}
+
+.prv2::after{
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-top: 4px solid #aaa;
+    border-left: 4px solid #aaa;
+    transform: rotate(-45deg);
+}
+
+
+.nxt2::after{
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-top: 4px solid #aaa;
+    border-right: 4px solid #aaa;
+    transform: rotate(45deg);
+}
+
+.cover{
+    position: absolute;
+    right: 0px;
+    bottom: -5px;
+}
+/* 백그라운드이미지 커버 */
+
+
+
+.thirdpg{
+    position: relative;
+    margin: 0 auto;
+    width: 1200px;
+    height: 1000px;
+    background-color: #0d0c0c;
+}
+
+.thirdWrap{
+
+}
+
+.thirdcover{
+
+width: 1200px;
+height: 1000px;
+position: absolute;
+top: 0;
+left: 0;
+}
+
+.thirdcon{
+width: 990px;
+height: 586px;
+background-color: #777;
+position: absolute;
+bottom: 100px;
+left: 105px;
+display: flex;
+flex-wrap: wrap;
+}
+
+.thirdcon .box{
+width: 495px;
+height: 293px;
+background-color: #121417;
+color: #fff;
+position: relative;
+}
+
+.thirdcon .deep{
+    background-color: #0b090a;
+}
+
+.thirdicon{
+    position: absolute;
+    top: 40%;
+    left: 20px;
+    text-align: center;
+    width: 118px;
+
+}
+
+.thirdicon p{
+    margin-top: 10px;
+}
+
+.thirdcon .barWrap{
+    position: absolute;
+    top: 35%;
+    right: 5%;
+    
+}
+
+.barWrap p{
+    margin-left: 30px;
+}
+
+.barWrap .bar{
+    margin-top: 10px;
+
+}
+
+.vid{
+    
+    overflow: hidden;
+    background-color: #aaa;
+}
+
+video{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
