@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>12월22일 복습</title>
+        <style>
+            .con{
+                width: 940px;
+                height: 230px;
+                background-color: gray;
+                margin-left: auto;
+                margin-right:auto;
+            }
+            .box{
+                float: left;
+                width: 205px;
+                height: 230px;
+                background-color: black;
+                margin-right: 35px;
+
+            }
+            .box:last-child{
+                margin-right: 15px;
+                width: 430px;
+                height: 230px;
+
+            }
+            .box:first-child{
+                margin-left:15px;
+            }
+            .con:after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+            /*
+            가로정렬을 위한 속성 float:left는 반드시
+            가로로 정렬할 대상한테 줘야함
+            그 다음, 부모에게 
+            부모: after{
+                content:'';
+                clear:both;
+                display:block;
+            }
+            */
+           pre{text-align: center;}
+
+        </style>
+
+    </head>
+    <body>
+        <div class="con">
+
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+
+        <pre>
+            어제 했던 것:
+            font 폰트
+            - font-family 글씨체 바꾸기
+            - line-height 행간조절
+            - letter-spacing 자간조절
+            width 너비
+            height 높이
+            margin 외부간격(top, bottom, right, left)
+            float 가로정렬
+        </pre>
+    </body>
+</html>

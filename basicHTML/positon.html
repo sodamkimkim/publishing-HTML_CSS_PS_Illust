@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>position</title>
+    </head>
+    <style>
+        .con{
+            width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #ccc;
+            border:10px solid #000;
+            height: 5000px;
+        }
+
+        .con div{
+            width: 200px;
+            height:200px;
+            font-size:20px;
+            font-weight: bold;
+            background: cornflowerblue;
+            border:2px solid #000;
+        }
+        /*
+        @ position
+        좌표값으로 요소를 가져다 놓는 속성
+        
+        @ positon:absolute
+        절대값으로 가져다 놓기
+        position:absolute를 적용한 요소는 주변 요소들이 인식하지 못하게 된다.
+        => - 레이어 자체가 달라진다.
+           - 존재하는 채널이 달라진다.
+
+        좌표값은 
+        top or bottom
+        left or right
+        둘 중 하나만 줄 수 있다.
+
+        원래 position:absolute를 적용시키면,
+        브라우저를 중심으로 움직이게 된다.
+
+        이런 상황에서는 복잡한 레이아웃 및 가변환경에서의 작업이 불가능하다.
+        => 요소는 반드시 부모를 기준으로 움직이게 만들어야 한다.
+        =>부모에게 position:relative를 준다.
+
+        sol) 
+                .con{
+                 position:relative;
+                }
+
+        */
+
+        .con{
+            position:relative;
+        }
+        
+
+        .box1{
+            position:absolute;
+            opacity:0.5;
+            top:40px;
+            left:50px;
+        
+        }
+
+        .box2{
+            position:absolute;
+            bottom:300px;
+            right: 400px;
+        }
+
+        .box3{
+            position:absolute;
+            right: 500px;
+            top: 150px;
+        }
+
+        .box4{
+            position:absolute;
+            left:350px;
+            bottom: 450px;
+
+        }
+
+        .box5{
+            position:absolute;
+            right: 180px;
+            bottom: 320px;
+        }
+
+        .box6{
+            position: fixed;
+            bottom:0;
+            right:0;
+            /*
+            position: fixed
+            브라우저에 해당 요소를 고정
+            그렇기 때문에 브라우저를 기준으로 움직일 수밖에 없다.
+
+            position:fixed를 적용시키면 
+            해당 요소는 브라우저의 자식으로 귀속된다.(스타일이)
+
+            */
+        }
+
+
+        /*
+        .box2는 .con을 기준으로 아래에서 300px, 
+        오른쪽에서 400px 자리에 위치
+
+        .box3은 .con을 기준으로 오른쪽에서 500px,
+        위에서 150px 자리에 위치
+
+        .box4는 .con을 기준으로 왼쪽에서 350px,
+        아래에서 450px 자리에서 위치
+
+        .box5는 .con을 기준으로 오른쪽에서 180px,
+        아래에서 320px 자리에 위치
+
+        .box6은 냅두시오.
+        */
+
+
+    </style>
+    <body>
+        <div class="con">
+            <div class="box1">box1</div>
+            <div class="box2">box2</div>
+            <div class="box3">box3</div>
+            <div class="box4">box4</div>
+            <div class="box5">box5</div>
+            <div class="box6">box6</div>
+        </div><!--con-->
+
+    </body>
+</html>

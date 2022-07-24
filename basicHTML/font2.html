@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            font2
+        </title>
+        <style>
+           /*웹폰트 가져오기 url: fonts.google.com*/
+           @import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Gamja+Flower&display=swap');
+            .txt1{
+                letter-spacing: 8px;
+                /*letter-spacing 자간조절
+                사이를 좁히고 싶을 땐 -를 쓰면 된다.*/
+                line-height:3;
+                /*
+                line-height는 행간조절
+                기본적으로 글자크기의 1.34배 정도로 지정되어있다.
+                (브라우저마다 다름)
+
+                원래 px값등 단위를 가진 절대값으로 줄 수도 있지만,
+                뒤에 단위가 없이 쓸 경우 지정된 폰트값의 배수로 적용된다.
+                
+                브라우저 기본 폰트사이즈는 16px
+
+                ex) line-height: 32px = line-height: 2;
+                */
+            }
+
+            .txt2{
+                font-family: 'East Sea Dokdo', cursive;
+                font-size: 50px;
+            }
+
+            .txt3{
+                font-family: 'Gamja Flower', cursive, sans-serif, arial, impact;
+                font-size: 50px;
+            }
+
+            .txt4{
+                text-transform: uppercase;
+                text-shadow: 3px 3px 10px skyblue;
+                /* text-shadow: x값 y값 크기 색상*/
+                /* 크기는 증가시킬수록 크기가 커짐*/
+                text-indent: 15px;
+                /*들여쓰기*/
+
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+        <p class="txt1">
+            동해물과 백두산이 마르고 닳도록<br>
+            하느님이 보우하사 우리나라 만세<br>
+            무궁화 삼천리 화려강산<br>
+            대한사람 대한으로 길이 보전하세
+        </p>
+
+        <p class="txt2">
+            폰트를 변경해 보기
+        </p>
+
+        <p class="txt3">
+           감자꽃 폰트 스스로 변경해 보기
+        </p>
+
+        <p class="txt4">
+            have a nice day
+        </p>
+
+    </body>
+</html>
+
+<!-- 컴퓨터내 저장되어있는 폰트를 사용하여 font-family를 지정할 경우, 클라이언트의 컴퓨터에 해당 폰트가 존재하지 않을 시 그 폰트가 적용되지 않는다
+
+그래서 웹폰트를 사용하여 이미 서버상에 올라가있는 폰트파일을 끌어다 적용시킨다!!!!
+
+1. fonts.google.com 접속
+2. 목적과 디자인에 알맞는 폰트를 찾는다
+3. 클릭해서 들어간다
+4. select this style 을 클릭하여 담는다
+5. 사이드메뉴에서 import를 클릭한 후,
+6. <style>태그 사이의 @import 주소를 복사하고
+7. 내가 작업중인 css파일 최상단에 해당 주소를 붙여넣는다
+8. 폰트를 적용시키고 싶은 선택자에게 font-family속성을 준다 -->

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>너비와 높이, 공간값</title>
+        <style>
+            .box1{
+                background-color: powderblue;
+                width: 500px;
+                height: 240px;
+            }
+
+            .box2{
+                background-color: turquoise;
+                width: 350px;
+                height: 450px;
+            }
+
+            .box3{
+                background-color: deeppink;
+                width: 500px;
+                height: 380px;
+                text-align: center;
+            }
+
+            .box4{
+                background-color: limegreen;
+                width: 600px;
+                height: 530px;
+                font-weight: bold;
+            }
+
+            .space{
+                width: 600px;
+                height: 400px;
+                background-color: palevioletred;
+                
+            }
+
+            .nemo{
+                background-color: black;
+                width: 700;
+                color: #fff;
+            }
+
+        </style>
+    </head>
+    <body>
+        <!--
+            모든 블록요소들은 처음 만들어졌을때 (width나 height를 가지고 있지 않을 때),
+            항상
+            너비는 감싸고 있는 부모사이즈를 가득 채우고,
+            높이는 안에 들어있는 내용물만틈으로 자동생성된다.
+        -->
+
+        <div class="box1">안녕하세요.</div>
+        <div class="box2">반갑습니다.</div>
+        <div class="box3">
+            너비가 500px<br>
+            높이가 380px<br>
+            박스색상은 deeppink<br>
+            내부의 텍스트들 가운데 정렬
+        </div>
+        <div class="box4">
+            너비가 600px<br>
+            높이가 530px<br>
+            박스색상은 limegreen<br>
+            글씨들 굵게 해주세용
+        </div>
+
+        <div class="space">
+            <div class="nemo">
+                네모한테 텍스트를 줬습니다. 우하하
+            </div>
+
+        </div>
+
+        <!--
+            이 경우, space는 nemo의 "부모요소"
+            nemo는 space의 "자식요소"
+        -->
+
+    </body>
+</html>

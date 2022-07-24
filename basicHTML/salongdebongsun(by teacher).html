@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>layout13</title>
+
+        <style>
+/* reset css */
+*{
+    margin:0;
+    padding:0;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+/* header css */
+
+.header{
+    border-bottom: 2px solid darkviolet;
+}
+.hWrap{
+    width: 1000px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: lavender;
+    position: relative;
+}
+
+.header a{color:#666;}
+
+h1{
+    text-align: center;
+    padding-top: 30px;
+}
+
+.util{
+    position: absolute;
+    top: 10px;
+    right: 0;
+}
+.util li{
+    float: left;
+    font-size: 12px;
+    margin-left: 20px;
+}
+
+.gnb{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0;
+}
+.gnb li{
+    text-transform:uppercase;
+    display: inline-block;
+    font-size: 16px;
+    margin:0 15px;
+}
+
+.gnb li:first-child a{
+    color:darkviolet
+}
+
+.bn{
+    height: 450px;
+    background-color:deeppink;
+}
+
+.bn a{
+    display: block;
+    height: 450px;
+    /* 
+    1. a는 인라인 요소다
+    2. a는 인라인 요소이기 때문에 높이값을 가질 수 없다
+    3. 그래서 block으로 바꿔준다
+    4. a가 block요소로 전환이 되면, 자연스럽게
+    부모의 너비를 가득채우게 된다
+    5. 그 다음 height를 준다!!!
+    */
+}
+
+
+.content{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: palegoldenrod;
+}
+
+.row1{}
+.row1 .box{
+    float: left;
+    margin-right: 33.33px;
+}
+
+.row1 .box:last-child{
+    margin-right:0;
+}
+
+.row1 .con:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.row1 .box .thumb{
+    width: 225px;
+    height: 225px;
+    background-color: darkviolet;
+}
+
+.price{
+    font-size: 14px;
+    color:#666;
+}
+
+.row1{
+    margin-top: 40px;
+}
+h3{
+    color:darkviolet;
+    margin-bottom: 10px;
+}
+
+.row2{
+    margin-top: 40px;
+}
+
+.row2 .con:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.row2 .box{
+    float: left;
+    margin-right: 33.33px;
+}
+.row2 .box:last-child{
+    margin-right:0;
+}
+.row2 .thumb{
+    width: 225px;
+    height: 225px;
+    background-color: darkviolet;
+}
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <div class="hWrap">
+                <h1><a href="#">
+                    <img src="images/bongseonlogo.png">
+                </a></h1> 
+
+                <ul class="util">
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">장바구니</a></li>
+                </ul><!--util-->
+
+                <ul class="gnb">
+                    <li><a href="#">sale</a></li>
+                    <li><a href="#">top</a></li>
+                    <li><a href="#">bottom</a></li>
+                    <li><a href="#">dress</a></li>
+                    <li><a href="#">accessories</a></li>
+                    <li><a href="#">etc</a></li>
+                </ul><!--gnb-->
+            </div><!--hWrap-->
+        </div><!--header-->
+
+        <div class="bn">
+            <a href="#"></a>
+        </div><!--bn-->
+
+        <div class="content">
+
+            <div class="row1">
+                <h3>인기상품</h3>
+                <!-- 
+                    가로정렬을 할 때는 반드시
+                    가로로 정렬될 것들끼리
+                    하나의 부모로 묶어줘야한다
+                    (float를 하든 display:flex를 하든
+                    아니면 display:inline-block을 하든
+                    어쨌든 반드시 지켜야 할 룰)
+                 -->
+                <div class="con">
+                    <div class="box">
+                    <a href="#">
+                        <div class="thumb"></div>
+                        <p>카키&블랙 투톤 스커트</p>
+                        <p class="price">28,000원</p>
+                    </a>
+                    </div><!--box-->
+
+                    <div class="box">
+                        <div class="thumb"></div>
+                        <p>New 라인 스티치 청바지</p>
+                        <p class="price">58,000원</p>
+                    </div><!--box-->
+
+                    <div class="box">
+                        <div class="thumb"></div>
+                        <p>A라인 슬릿 스커트</p>
+                        <p class="price">48,000원</p>
+                    </div><!--세번째 box-->
+
+                    <div class="box">
+                        <div class="thumb"></div>
+                        <p>봄 퍼플 플레어 스커트</p>
+                        <p class="price">62,000원</p>
+                    </div><!--네번째 box-->
+                    
+                </div><!--con-->
+            </div><!--row1-->
+
+
+
+        <div class="row2">
+            <h3>신상품</h3>
+            <div class="con">
+                <div class="box">
+                    <div class="thumb"></div>
+                    <p>레터링 라인 힙색</p>
+                    <p class="price">36,000원</p>
+                </div><!--box-->
+
+                <div class="box">
+                    <div class="thumb"></div>
+                    <p>써지컬 해골 체인 목걸이</p>
+                    <p class="price">12,000원</p>
+                </div><!--box-->
+
+                <div class="box">
+                    <div class="thumb"></div>
+                    <p>슬림라인 브이넥 티</p>
+                    <p class="price">48,000원</p>
+                </div><!--box-->
+
+                <div class="box">
+                    <div class="thumb"></div>
+                    <p>홀로그램 프린팅 오버핏 티셔츠</p>
+                    <p class="price">49,000원</p>
+                </div><!--box-->
+            </div><!--con float될 애들 묶어주는 용도-->
+        </div><!--row2-->
+
+
+    </div><!--content, wrap역할을 할것임 -->
+
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!-- 가로정렬을 하기 위한 다양한 속성
+v1. float (구버전-2014년도 명세)
+x2. display:inline-block
+v3. display:flex (최신버전)
+x4. display:grid  -->
+
+<!--웹표준화(cross-browsing)
+모든 웹브라우저에서 동일한 형태로 웹을 볼 수 있게 하는 룰.  -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>float</title>
+    <style>
+        .con{
+            background-color: gray;
+
+
+        }
+        .box{
+            width: 200px;
+            height: 250px;
+            background-color: cyan;
+            float: left;
+            margin-right: 30px;
+        }
+        .space{
+            width: 800px;
+            height: 500px;
+            background-color: navy;
+        }
+        .con:after{
+            content:'';
+            display:block;
+            clear: both;
+
+        }
+        }
+    </style>
+</head>
+<body>
+    <!-- 1.가로정렬할 대상(.box)끼리 반드시 하나의 부모태그로 묶어준다.
+        2. 가로정렬할 대상(.box)에게 float:left를 준다.  -> con에 주는게 아님.
+        3. float:left를 사용하면 
+        부모요소(.con)는 내부의 자식들을 인식하지 못한다.
+        4. 부모요소:after{
+            content:'';
+            display:block;
+            clear:both;
+        }이거 넣으면 해결됨.
+
+        -->
+    <div class="con">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <div class="space"></div>
+
+</body>
+
+</html>

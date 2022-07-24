@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            layout10
+        </title>
+        <style>
+            .wrap{
+                width: 1200px;
+                margin-left: auto;
+                margin-right: auto;
+                height: 800px;
+                
+
+            }
+            .wrap:after{
+                content: '';
+                display: block;
+                clear: both;
+
+            }
+            .header{
+                width: 170px;
+                height: 800px;
+                float:left;
+                /*padding-top: 20px;*/
+                background-color: #222;
+                
+            }
+            h1{
+                font-size: 23px;
+                color: #eee;
+                text-align: center;
+
+
+            }
+            h3{
+                font-size: 14px;
+                color: #eee;
+                
+                margin-left: 15px;
+            }
+            .menu{
+                height: 20px;
+                border-bottom: 1px solid #ccc;
+            }
+            .con{
+                float:left;
+                width: 1030px;
+                
+                background-color: #00f;
+                height: 800px;
+
+            }
+            .con:after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .bn{
+                height: 500px;
+                background-color: #00f;
+                float:left;
+                width: 1030px;
+
+            }
+           /* .bn:after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .line_bn{
+                height:460px;
+                width: 3px;
+                background-color: #ccc;
+                float: left;
+            }*/
+
+            .row{
+                float:left;
+                background-color: beige;
+                width: 1030px;
+                height: 300px;
+                margin-top: 500px;
+            }
+            .row:after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .box{
+                background-color: black;
+                border-radius: 50%;
+                float:left;
+                margin-top: 60px;
+               
+                margin-left: 28px;
+                margin-right:28px;
+                width: 150px;
+                height: 150px;
+            }
+
+
+
+
+
+        </style>
+    </head>
+    <body>
+    <div class="wrap">
+        <div class="header">
+            <h1>로고</h1>
+            <div class="menu"><h3>메뉴1</h3></div><!--menu-->
+            <div class="menu"><h3>메뉴2</h3></div><!--menu-->
+            <div class="menu"><h3>메뉴3</h3></div><!--menu-->
+            <div class="menu"><h3>메뉴4</h3></div><!--menu-->
+        
+        </div><!--header-->
+        <div class="con">
+            <div bn>
+                <div class="line_bn"></div>
+            </div><!--bn-->
+            <div class="row">
+                <div class="box">
+                    <div class="line_box"></div>
+                </div><!--첫번째box-->
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div><!--row-->
+
+        </div><!--con-->
+
+    </div><!--wrap-->
+    </body>
+    </html>

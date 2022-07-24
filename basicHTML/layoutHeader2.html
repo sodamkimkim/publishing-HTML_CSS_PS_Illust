@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>layoutHeader2</title>
+        <style>
+            *{
+                margin:0;
+                padding:0;
+            }
+            ul{
+                list-style: none;
+            }
+            .header{
+                position: relative;
+                width: 1000px;
+                height: 140px;
+                background-color: pink;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            h1{
+                padding-top: 40px;
+                /*
+                부모랑 top이 겹쳐져있는 첫번째 자식(여기서 h1)
+                margin-top을 가지면, 부모랑 통째로 떨어진다.
+                그래서 padding 처리를 한다.
+                */
+
+                
+                text-align: center;
+            }
+
+            .gnb li{
+
+                float:left;
+                text-align: center;
+
+               
+                width: 200px;
+                
+
+                
+
+            }
+
+            .gnb{
+                margin-top:32px;
+               /* position: absolute; 적용 x
+               왜냐하면 32px정보를 활용하기 위해서..
+               */
+
+            }
+            .gnb:after{
+                content: '';
+                display: block;
+                clear: both;
+
+            }
+
+            .util li{
+             
+                margin-left: 20px;
+                float: left;
+
+
+            }
+            .util{
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                
+
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="header">
+            <h1>LOGO</h1>
+            <ul class="gnb">
+                <li>list1</li>
+                <li>list2</li>
+                <li>list3</li>
+                <li>list4</li>
+                <li>list5</li>
+            </ul><!--gnb-->
+
+            <ul class="util">
+                <li>util1</li>
+                <li>util2</li>
+                <li>util3</li>
+                <li>util4</li>
+            </ul><!--util-->
+
+        </div><!--header-->
+    </body>
+</html>

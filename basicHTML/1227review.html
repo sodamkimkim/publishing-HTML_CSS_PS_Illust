@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            1227review
+        </title>
+        <style>
+            *{
+                margin:0;
+                padding:0;
+            }
+            ul{
+                list-style:none;
+            }
+            .header{
+                height: 110px;
+                border-bottom: 1px solid black;
+
+            }
+            .wrap{
+
+                height: 110px;
+                width: 940px;
+                margin-left: auto;
+                margin-right: auto;
+                position: relative;
+                text-align: center;
+
+            }
+            .wrap:after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+            h1{
+                font-size: 40px;
+                color: black;
+                padding-top: 30px;
+
+               padding-left: auto;
+               padding-right: auto;
+               text-align: center;
+
+
+            }
+            .util{
+                position: absolute;
+                top: 10px;
+                right: 0;
+
+
+
+            }
+            .util li{
+                border-right: 1px solid #ccc;
+                float: left;
+                font-size: 12px;
+                padding-right: 7px;
+                padding-left: 7px;
+
+            }
+            .util li:last-child{
+                border-right: none;
+            }
+            .gnb{
+                text-align: center;
+                font-size: 0;
+                display: inline-block;
+            }
+            .gnb li{
+                font-size: 20px;
+                display: inline-block;
+                /*
+                블록요소의 형질(너비, 높이 등을 가짐)을 유지하면서 
+                정렬만 인라인(가로정렬, 텍스트정렬)처럼 정렬
+                => text-align : center영향받음
+                */
+
+                margin: 0 35px;
+                /*상 좌우 하*/
+               
+            }
+            .bn{
+                background-color: cyan;
+                height: 480px;
+            }
+            .con{
+
+
+                width: 940px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top:40px;
+
+            }
+            .con:after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .box1{
+                background-color: black;
+                width: 205px;
+                height: 220px;
+                margin-right: 35px;
+                float:left;
+
+            }
+            .box1:last-child{
+                margin-right: 0;
+            }
+            .box1:nth-child(2){
+                width: 460px;
+            }
+            .box2{
+                background-color: cornflowerblue;
+                height: 220px;
+                width: 240px;
+                float: left;
+                margin-top: 20px;
+            }
+            .box2:nth-child(2){
+                width: 460px;
+                background-color: black;
+            }
+            .row2{
+
+                padding-bottom: 80px;
+                border-bottom: 5px solid cornflowerblue;
+
+            }
+            .row2:after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .box3{
+                width: 212px;
+                height: 80px;
+                margin-right:30px;
+                background-color: royalblue;
+                float: left;
+                margin-top: 60px;
+
+            }
+            .box3:last-child{
+                margin-right: 0;
+            }
+            .footer{
+                margin-top: 100px;
+                height: 280px;
+                background-color: slateblue;
+            }
+
+            
+
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <div class="wrap">
+                <h1>Logo</h1>
+                <ul class="util">
+                    <li>log in</li>
+                    <li>Join</li>
+                    <li>cart</li>
+    
+                </ul><!--util-->
+                <ul class="gnb">
+                    <li>Brand</li>
+                    <li>News</li>
+                    <li>Products</li>
+                    <li>Q&A</li>
+                </ul><!--gnb-->
+            </div><!--wrap-->
+        </div><!--header-->
+
+        <div class="bn">
+
+        </div><!--bn-->
+        <div class="con">
+            <div class="row1">
+                <div class="box1"></div>
+                <div class="box1"></div>
+                <div class="box1"></div>
+            </div><!--row1-->
+            <div class="row2">
+                <div class="box2"></div>
+                <div class="box2"></div>
+                <div class="box2"></div>
+            </div><!--row2-->
+            <div class="row3">
+                <div class="box3"></div>
+                <div class="box3"></div>
+                <div class="box3"></div>
+                <div class="box3"></div>
+            </div><!--row3-->
+
+        </div><!--con-->
+        <div class="footer">
+
+        </div><!--footer-->
+    </body>
+</html>

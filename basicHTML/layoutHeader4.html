@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>layoutHeader4</title>
+        <style>
+            *{
+                margin:0;
+                padding:0;
+            }
+            ul{
+                list-style: none;
+            }
+            .header{
+                width:860px;
+                height: 180px;
+                background-color: black;
+                color: #fff;
+                margin-left: auto;
+                margin-right: auto;
+                position: relative;
+            }
+            h1{
+                text-align: center;
+                padding-top: 60px;
+                font-size:40px;
+                font-weight: normal;
+
+            }
+            .util{
+                background-color: pink;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+
+            }
+            
+            .util li{
+                float: left;
+                font-size: 12px;
+                margin-left: 20px;
+                /*margin: 0 20;
+                해도 가운데정렬 됨, 좌우 20px들어가니까.*/
+            }
+            .gnb{
+                background-color: skyblue;
+
+                font-size: 0;
+                margin-top:20px;
+                line-height: 2;
+                text-align: center;
+                /*
+                * text-align
+                - center는 공간안에 줘야함. 정렬 대상에 주는 것이 x
+                - 이 경우, gnb li가 아니라 gnb에게 주는게 맞음
+                    ㄴ beca, 우리는 block화된 li를 정렬할 것이기 때문
+                */
+
+
+            }
+            .gnb li{
+                font-size: 18px;
+                /*
+                gnb 의 폰트사이즈는 0이었지만 18로 되살려줌
+                */
+                display: inline-block;
+                /*
+                display: inline-block자체가 가로정렬하는 속성.
+                float:left와 둘중 하나만 써야한다.
+
+                간단한 형태의 구조를 가운데 정렬시키기 위해서 
+                display:inline-block 
+                (beca, text-algn center)
+                */
+                margin-right:40px;
+                /*
+              
+                * margin: 0 20px; 
+                = margin-right: 40px; & last-child 마진값0
+
+                ㄴ beca,
+                margin: 0 20px하면 좌우 20+20 = 40px이기 때문 
+
+                */
+
+            }
+
+            .gnb li:last-child{
+                margin-right:0;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Logo</h1>
+        <ul class="util">
+            <li>util1</li>
+            <li>util2</li>
+            <li>util3</li>
+            <li>util4</li>
+        </ul><!--util-->
+
+        <ul class="gnb">
+            <li>list</li>
+            <li>list2</li>
+            <li>list3</li>
+            <li>list4</li>
+            <li>list5</li>
+        </ul><!--gnb-->
+    </div><!--header-->
+
+    </body>
+</html>

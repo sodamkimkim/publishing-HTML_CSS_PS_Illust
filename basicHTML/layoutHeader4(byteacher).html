@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>header4</title>
+        <style>
+            *{
+                margin:0;
+                padding:0;
+            }
+            ul{list-style: none;}
+            .header{
+                width: 860px;
+                height: 180px;
+                background-color:#000;
+                color: #fff;
+                margin-left: auto;
+                margin-right: auto;
+                position: relative;
+            }
+            h1{
+                text-align: center;
+                padding-top: 60px;
+                font-size: 40px;
+                font-weight: normal;
+            }
+
+            .util{
+                background-color:pink;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+            }
+
+            .util li{
+                float: left;
+                font-size: 12px;
+                margin-left: 20px;
+            }
+
+            .gnb{
+                background-color:skyblue;
+            }
+/* 
+        display:inline-block 자체가
+        가로정렬을 시키는 속성 
+        그렇기 때문에 display:inline-block이나
+        float:left 둘 중 하나만 써야 한다. 
+        
+        간단한 형태의 구조를 가운데 정렬시키기 위해서
+        display:inline-block (text-align:center)
+
+        text-align:center는 공간에게 줘야한다
+         -> 너의 공간안에 있는 인라인요소들을 가운데 정렬시켜라
+         -> 이 경우 text-align:center는 .gnb li(X)가 아니라.gnb(O) 에게 줘야한다
+*/
+
+            .gnb{
+                text-align: center;
+                font-size: 0;
+            }
+            .gnb li{
+                display: inline-block;
+                font-size: 18px;
+                margin-right: 40px;
+
+            }
+
+            .gnb li:last-child{
+                margin-right: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Logo</h1>
+            <ul class="util">
+                <li>util1</li>
+                <li>util2</li>
+                <li>util3</li>
+                <li>util4</li>
+            </ul><!--util-->
+            <ul class="gnb">
+                <li>list1</li>
+                <li>list2</li>
+                <li>list3</li>
+                <li>list4</li>
+                <li>list5</li>
+            </ul><!--gnb-->
+        </div>
+    </body>
+</html>

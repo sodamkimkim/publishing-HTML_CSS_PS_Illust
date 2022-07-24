@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head><title>SynthesizedLayout1</title></head>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        .header{
+            background-color: #000000;
+            color: #ffffff;
+        }
+        h1{
+            font-size: 30px;
+            padding-top: 15px;
+        }
+        .Hwrap{
+            width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 80px;
+            position: relative;
+        }
+        .util{
+            position: absolute;
+            top: 30px;
+            right: 0;
+        }
+        .util li{
+            margin-left: 30px;
+            font-size: 16px;
+            display: inline-block;
+        }
+        .bn{
+            height: 550px;
+            background-image: url(banner.jpg);
+            background-size: cover;
+            background-position: center center;
+
+        }
+        .bn a{
+            display: block;
+            height: 550px;
+        }
+        .Bwrap{
+            width: 1000px;
+            background-color: khaki;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+        .Bwrap::after{
+            content:'';
+            display: block;
+            clear: both;
+        }
+        .box1{
+            margin-top: 40px;
+            float: left;
+            background-color: dimgray;
+            width: 320px;
+            height: 180px;
+            margin-right: 20px;
+            margin-bottom: 40px;
+            
+        }
+
+
+        .box1:nth-child(3){
+            margin-right: 0;
+        }
+        .row2{}
+        .row2::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .box2{
+            width: 250px;
+            height: 200px;
+            background-color: #333333;
+            float: left;
+            margin-bottom: 80px;
+            
+        }
+       
+        .box2:nth-child(2){
+            width: 500px;
+            background-color: #dddddd;
+        }
+        
+
+        .footer{
+            height: 120px;
+            background-color: black;
+        }
+
+    </style>
+    <body>
+        <div class="header">
+            <div class="Hwrap">
+                <h1><a href="#">LOGO</a></h1>
+                <ul class="util">
+                    <li><a href="#">list1</a></li>
+                    <li><a href="#">list2</a></li>
+                    <li><a href="#">list3</a></li>
+                    <li><a href="#">list4</a></li>
+                    <li><a href="#">list5</a></li>
+                </ul><!--util-->
+            </div><!--Hwrap-->
+        </div><!--header-->
+       
+        <div class="bn">
+            <a href="#"></a>
+        </div><!--bn-->
+
+        <div class="Bwrap">
+            <div class="row1">
+                <a href="#">
+                <div class="box1"></div>
+                <div class="box1"></div>
+                <div class="box1"></div>
+                </a>
+                
+            </div><!--row1-->
+
+            <div class="row2">
+                <a href="#">
+                <div class="box2"></div>
+                <div class="box2"></div>
+                <div class="box2"></div>
+                </a>
+
+   
+            </div><!--row2-->
+
+        </div><!--Bwrap-->
+
+        <div class="footer">
+
+        </div><!--footer-->
+
+        
+    </body>
+</html>

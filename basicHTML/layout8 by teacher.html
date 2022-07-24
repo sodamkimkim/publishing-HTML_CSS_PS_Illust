@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>layout8</title>
+        <style>
+            .header{
+                height: 90px;
+                border-bottom: 2px solid navy;
+            }
+
+            h1{
+                text-align: center;
+                font-size: 32px;
+                font-weight: bold;
+            }
+
+            .bn{
+                background-color: gray;
+                height: 420px;
+            }
+
+            .row1{
+                width: 940px;
+                margin: 35px auto
+            }
+
+            .row1 .box1{
+                width: 205px;
+                height: 190px;
+                background-color:black;
+                float: left;
+            }
+
+            .row1 .box1:nth-child(2){
+            width: 460px;
+            margin:0 35px;
+            }
+
+            .row1:after{
+                content: '';
+                clear: both;
+                display: block;
+            }
+
+            .row2{
+                width: 940px;
+                margin:0 auto;
+            }
+            .row2 .box2{
+                width: 205px;
+                height: 200px;
+                background-color:red;
+                float: left;
+            }
+            .row2 .box2:nth-child(2){
+                width: 530px;
+                background-color:gray
+            }
+
+            .row2:after{
+                content: '';
+                clear: both;
+                display: block;
+            }
+
+            .footer{
+                width: 940px;
+                height: 80px;
+                border-top: 2px solid navy;
+                margin-top: 40px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>로고</h1>
+        </div><!--header-->
+
+        <div class="bn"></div>
+        
+        <div class="row1">
+            <div class="box1"></div>
+            <div class="box1"></div>
+            <div class="box1"></div>
+        </div><!--row1-->
+
+        <div class="row2">
+            <div class="box2"></div>
+            <div class="box2"></div>
+            <div class="box2"></div>
+        </div><!--row2-->
+
+        <div class="footer"></div>
+
+    </body>
+</html>

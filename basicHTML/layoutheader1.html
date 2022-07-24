@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>layoutheader1</title>
+        <style>
+            /*
+            우리가 준 적 없는 style을 기본 html요소들은 조금씩 갖고 있다.
+            user agent style -> 브라우저들이 갖고있는 고유의 스타일
+            이대로 작업을 하면 여러가지 문제가 생기므로
+            => 보통 reset을 하고 작업을 시작한다.
+            */
+
+            *{
+                margin:0;
+                padding:0;
+            }/*reset 1번째 단계*/
+         
+            /*
+            "*"은 모든 html요소를 선택하는 것이다.
+            =h1,h2,h3,h4,h5,h6,p,div,a ... 
+            */
+          
+            ul{
+                list-style:none;
+            }/*reset 2번째 단계*/
+
+            .header{
+                width: 800px;
+                height: 80px;
+                background-color: #ddd;
+                margin:0  auto;
+            }
+
+            h1{
+                font-size:40px;
+            }
+
+            /*
+            1. .gnb내부의 li들을 가로정렬 한다.
+            2. 사이간격을 띄워준다.
+            3. .gnb위치를 header내부에서 왼쪽120px, 상단에서 30px 자리에 위리를 시킨다.
+            */
+
+     
+            .gnb li{
+                float: left;
+                margin-left:40px;
+            }
+
+
+            .gnb{
+                position:absolute;
+                left:120px;
+                top:30px;
+            }
+
+            .header{
+                position: relative;
+            }
+
+            .util li{
+                float: left;
+                margin-left:20px;
+                font-size: 12px;
+                color: #999999;
+            }
+            .util{
+                position: absolute;
+                right: 0px;
+                top: 10px;
+               
+            }
+
+
+        </style>
+
+    </head>
+    <body>
+        <div class="header">
+            <h1>LOGO</h1>
+            <ul class="gnb">
+                
+                <!-- gnb: global navigation bar
+                그리고 작업자에 따라 lnb쓰기도 한다.
+                lnb: local navigation bar -->
+
+                <li>list1</li>
+                <li>list2</li>
+                <li>list3</li>
+                <li>list4</li>
+                <li>list5</li>
+                <li>list6</li>
+            </ul><!--gnb-->
+
+
+            <ul class="util">
+                <li>util1</li>
+                <li>util2</li>
+                <li>util3</li>
+                <li>util4</li>
+            </ul><!--util-->
+            
+
+        </div><!--header-->
+
+    </body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>layout15</title>
+        <style>
+/* reset css */
+*{
+    margin:0;
+    padding:0;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    color:#fff;
+    text-decoration: none;
+}
+
+/* header */
+
+.header{
+    background-color:#000;
+}
+
+.hWrap{
+    width: 1000px;
+    height: 80px;
+    margin:0 auto;
+    position: relative;
+}
+
+h1{
+    padding-top:15px
+}
+
+.gnb{
+    position: absolute;
+    top: 30px;
+    right: 0;
+}
+.gnb li{
+    float: left;
+    margin-left: 30px;
+}
+/* main banner */
+
+.bn{
+    height: 500px;
+    background-image: url(images/banner.jpg);
+    background-size: cover;
+    background-position:center center;
+}
+
+.bn a{
+    height: 500px;
+    display: block;
+}
+
+
+/* container */
+
+.con{
+    width: 1000px;
+    margin:40px auto 0;
+}
+.row1:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.row1 .box{
+    width: 320px;
+    height: 180px;
+    background-color: dimgray;
+    float: left;
+}
+.row1 .box:nth-child(2){
+    margin:0 20px;
+}
+
+.row2{
+    margin-top: 40px;
+}
+.row2 .box{
+    width: 250px;
+    height: 200px;
+    background-color:#333;
+    float: left;
+}
+.row2 .box:nth-child(2){
+    width: 500px;
+    background-color: #ddd;
+}
+.row2:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+
+/* footer */
+
+.footer{
+    height: 120px;
+    background-color: #000;
+    margin-top: 80px;
+}
+
+
+
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <div class="hWrap">
+            <h1><a href="#">LOGO</a></h1>
+            <ul class="gnb">
+                <li><a href="#">list1</a></li>
+                <li><a href="#">list2</a></li>
+                <li><a href="#">list3</a></li>
+                <li><a href="#">list4</a></li>
+                <li><a href="#">list5</a></li>
+            </ul>
+            </div><!--hWrap-->
+        </div><!--header-->
+
+        <div class="bn">
+            <a href="#"></a>
+        </div><!--bn-->
+
+        <div class="con">
+            <div class="row1">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div><!--row1-->
+
+            <div class="row2">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div><!--row2-->
+        </div><!--con-->
+
+        <div class="footer"></div><!--footer-->
+    </body>
+</html>
+
+
+/*box에 a넣는거 해보기*/

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head><title>background image</title></head>
+    <style>
+        div{
+            width: 1200px;
+            height: 560px;
+            background-color: #ccc;
+            margin: 40px auto 0;
+            /*상 좌우 하*/
+
+        }
+        .box1{
+            background-image:url(images/background_image1.jpg);
+            /*백그라운드 이미지는 기본적으로 반복이 된다.*/
+            background-repeat: no-repeat;
+        }
+        .box2{
+            background-image: url(images/background_image2.jpg);
+            background-repeat: no-repeat;
+            /*백그라운드 이미지 사이즈 조절하기*/
+           background-size: cover;
+            /* 
+            background-size: 20px 100px;
+            background-size: x값 y값
+            
+            background-size는 수치를 입력해서 가로값, 세로값을 
+            따로 설정해 줄 수 있지만, 대체로 키워드를 써서 처리한다.
+
+            * background-size: contain; ->외우기) container(공간)가 생김
+            ㄴ사진의 너비/높이 중 작은값에 맞춰 다른거 auto
+            - 박스의 너비와 높이 중 작은 값에 맞춰 이미지를 늘이거나 줄임
+                장점) 이미지가 잘리지 않음
+                단점) 여백(공백)이 생길 수 있음
+            => 주 사용처) 모바일이나 반응형 등
+            특수한 상황에서 로고나 여타 이미지를 배경처리할 때가 있는데 그때 씀..
+            
+            * background-size: cover; ->외우기) 빈공간을 cover침
+            ㄴ사진의 너비/높이 중 큰값에 맞춰 다른거 auto
+            - cover는 큰 값을 찾아서 그 값에 맞춰 비율에 맞게 이미지를 늘리거나 줄임
+                장점) 요소가 아무리 커도 공백이 생기지 않게함
+                단점) 이미지가 잘릴 수도 있다.
+            => 주 사용처) 메인배너, 메인비주얼영역 등
+            모니터의 사이즈에 따라 가변될 수 있지만
+            항상 가득차 있어야 하는 공간
+            
+            ==> 대부분의 상황에서는 cover를 쓴다.
+            */
+
+            /*
+            * 백그라운드 이미지: 벽지
+            ;공간의 배경을 커스텀 -> 내부요소들은 영향을 전혀 받지 x
+
+            * 이미지<img src>
+            ;요소로서 이미지를 삽입, 하나의 객체로 선택 및 공간도 차지
+            */
+        
+        }
+        .box3{
+           background-image: url(images/background_image3.jpg);
+            background-repeat: no-repeat;
+            /* <백그라운드 이미지 중요한이야기>
+            1. 웹의 모든 것은 항상 왼쪽->오른쪽
+            위->아래로 생성및 이동된다.
+            2. 백그라운드 이미지는 항상 왼쪽상단에서부터 생성
+            */
+
+            /*background-position: -20px -100px;*/
+            
+            /*
+            - background-position: x값, y값;
+            x축 이동은 항상 왼->오
+            y축 이동은 항상 위->아래
+
+            - 반대로 움직이고 싶다면 (-)값 입력
+            -----------------------------------------
+            - 백그라운드 이미지는 단순한 배경이미지이므로 
+            요소의 밖에서는 존재하지 못한다.
+            
+            => 그냥 이미지가 잘릴 뿐,
+                배경이미지의 사이즈나 위치에 따라 요소의 모양이 변화하지 않는다.
+            */
+            background-position: right center;
+            /*
+            - 백그라운드 포지션은 이렇게 키워드를 사용하여 나타낼 수 있다.
+            right, left, center, top, bottom
+            */
+        }
+
+        .box4{
+            background-image: url(images/background_image3.jpg);
+            background-attachment:fixed;
+            background-size: cover;
+            /*
+            * background-attachemente:fixed;
+            ; 백그라운드 이미지를 브라우저에 고정 
+            => fixed된 백그라운드 이미지 사이즈를 조절하면
+            '브라우저 사이즈'에 맞춰서 조절됨
+            
+            *) 소담피셜
+            background-attachment:fixed;
+            background-attachment:cover;
+            이렇게 하면
+            브라우저 사이즈 vs 사진사이즈 중 큰거만큼
+            사진사이즈가 fixed됨
+
+            background-attachment:fixed;
+            background-attachment:contain;
+            이렇게 하면
+            브라우저 사이즈 vs 사진사이즈 중 작은거만큼
+            사진사이즈가 fixed됨
+            */
+
+        }
+
+
+    
+    </style>
+    <body>
+        <div class="box1">
+            <h1>안녕하세요 반갑습니다.
+                백그라운드 이미지는 배경일 뿐, 글자넣던 상관 안써요</h1> 
+            <p>img src="">는 하나의 요소로서 글자넣으면 밀려나요</p>
+            
+        </div>
+        <div class="box2">
+        </div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+        <div class="box6"></div>
+        
+    </body>
+</html>

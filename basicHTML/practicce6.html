@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html>
+    <head><title>practice6</title>
+    <style>
+    /*
+    util li:hover{
+    text-decoration:underline;
+    */
+    *{
+        margin:0;
+        padding:0;
+    }
+    ul{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+        color:inherit;
+    }
+    .header{
+
+        border-bottom: 2px solid darkviolet;
+    }
+    .header a{
+        color: red;
+    }
+    .wrap{
+        width: 1000px;
+        margin:0 auto;
+        height:200px;
+        position: relative;
+        background-color: blanchedalmond;
+
+    }
+    .wrap:after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+    h1{
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    
+    .util{
+        position: absolute;
+        right: 0;
+        top: 10px;
+    }
+    .util li{
+        font-size: 12px;
+        margin-left:20px;
+        float:left;
+    }
+    .util li a:hover{
+        text-decoration: underline;
+        color: blue;
+    }
+    .gnb{
+        font-size: 0;
+        text-align: center;
+        margin-top: 30px;
+    }
+    .gnb li{
+        font-size: 16px;
+        display: inline-block;
+        margin:0 15px;
+        text-transform: uppercase;
+    }
+    .gnb li:first-child a{
+        color: darkviolet;
+    }
+    .gnb li a:hover{
+        text-decoration: underline;
+        color: blue;
+    }
+    .gnb li:last-child a:active{
+        text-decoration: line-through;
+        user-select: nene;
+        color:forestgreen;
+    }
+    .bn{
+        height: 450px;
+        background-color: deeppink;
+    }
+    .bn a{
+        display: block;
+        height: 450px;
+    }
+    
+
+    </style>
+    </head>
+
+    <body>
+        <div class="header">
+            <div class="wrap">
+                <h1><img src="images/bongseonlogo.png"</h1>
+                <ul class="util">
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">장바구니</a></li>
+                </ul><!--util-->
+
+                <ul class="gnb">
+                    <li><a href="#">sale</a></li>
+                    <li><a href="#">top</a></li>
+                    <li><a href="#">bottom</a></li>
+                    <li><a href="#">dress</a></li>
+                    <li><a href="#">accessories</a></li>
+                    <li><a href="#">etc</a></li>
+                </ul><!--gnb-->
+            </div><!--wrap-->
+        </div><!--header-->
+
+        <div class="bn">
+            <a href="#"></a>
+        </div><!--bn-->
+    </body>
+</html>

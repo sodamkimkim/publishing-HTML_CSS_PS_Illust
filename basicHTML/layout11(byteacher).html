@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>layout11</title>
+        <style>
+            .wrap{
+                width: 1092px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .con1{}
+            .con1 div{
+                width: 260px;
+                height: 260px;
+                background-color: cyan;
+                float: left;
+                margin-left: 17px;
+            }
+            .con1 .boxL{
+                width: 538px;
+                margin-left: 0;
+            }
+
+            .con1:after{
+                content: '';
+                clear: both;
+                display: block;
+            }
+
+            .con2{}
+            .con2 .col{
+                float: left;
+                width: 260px;
+                margin-right: 17px;
+            }
+
+            .con2 .col .box{
+                width: 260px;
+                height: 260px;
+                background-color:cyan;
+                margin-top: 17px;
+            }
+
+            .con2 .col:last-child{
+                margin-right: 0;
+                height: 538px;
+                background-color: cyan;
+                margin-top: 17px;
+            }
+        </style>
+    </head>
+    <body>
+ 
+        <div class="wrap">
+            <div class="con1">
+                <div class="boxL"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div><!--con1-->
+
+            <div class="con2">
+                <div class="col">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div><!--col1-->
+
+                <div class="col">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div><!--col2-->
+
+                <div class="col">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div><!--col3-->
+
+                <div class="col"></div><!--col4-->
+            </div><!--con2-->
+        </div><!--wrap-->
+    </body>
+</html>

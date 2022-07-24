@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+    <head><title>layout12</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        .header{
+            background-color: ivory;
+            border-bottom: 2px solid #000;
+        }
+        .hWrap{
+            background-color: powderblue;
+            width: 940px;
+            height: 110px;
+            margin: 0 auto;
+            position: relative;
+        }
+        h1{
+            background-color: pink;
+            text-align: center;
+            padding-top: 30px;
+        }
+        .util{
+            position: absolute;
+            top: 10px;
+            right: 0;
+        }
+        .util li{
+            float: left;
+            font-size:12px;
+            border-right: 1px solid #000;
+            padding-right: 7px;
+            margin-right: 7px;        
+        }
+        .util li:last-child{
+            border-right: 0;
+            margin-right: 0;
+            padding-right:0;
+        }
+        .gnb{
+            background-color: lightcoral;
+            text-align: center;
+            font-size:0;
+
+        }
+        .gnb li{
+            background-color: paleturquoise;
+            display: inline-block;
+            font-size:18px;
+            /*
+            display:inlne-block 자체가 가로정렬시키는 속성이다.
+            float:left를 줄 필요가 없다.
+            */
+        margin:5px 35px 0;
+        }
+
+        .bn{
+            background-color: turquoise;
+            height: 480px;
+            text-align: center;
+        }
+
+        .bn a{
+            background-color: navy;
+            display: block;
+            height: 480px;
+
+
+            
+        }
+        .con{
+            margin:0 auto;
+            width:940px;
+            height: 940px;
+
+        }
+        .con:after{
+            content:'';
+            display: block;
+            clear: both;
+        }
+        
+        .row1:after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .row1 .box{
+            width:205px;
+            height: 220px;
+            background-color: black;
+            float:left;
+            margin-right: 35px;
+            margin-top: 40px;
+        }
+        .row1 .box:last-child{
+            margin-right: 0;
+        }
+        .row1 .box:nth-child(2){
+            width: 460px;
+        }
+        .row2:after{
+            content: '';
+            display: block;
+            clear: both;
+
+        }
+        .row2{
+            padding-bottom: 80px;
+            border-bottom: 2px solid cornflowerblue;
+        }
+        .row2 .box{
+            background-color: cornflowerblue;
+            width: 240px;
+            height: 220px;
+            float: left;
+            margin-top: 35px;
+            
+        }
+        .row2 .box:nth-child(2){
+            width: 460px;
+            background-color: black;
+        }
+        .row3{
+            padding-top: 60px;
+
+        }
+        .row3:after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .row3 .box{
+            background-color: cornflowerblue;
+            width: 212px;
+            height: 80px;
+            margin-right: 30px;
+            float: left;
+            margin-bottom: 100px;
+        }
+        .row3 .box:last-child{
+            margin-right: 0;
+        }
+
+        .footer{
+            background-color: slateblue;
+            height: 280px;
+
+        }
+
+
+
+
+
+
+    </style>
+    </head>
+
+    <body>
+        <div class="header">
+            <div class="hWrap">
+                <h1><a href="#">Logo</a></h1>
+                <ul class="util">
+                    <li><a href="#">Log in</a></li>
+                    <li><a href="#">Join</a></li>
+                    <li><a href="#">Cart</a></li>
+
+                </ul><!--util-->
+
+                <ul class="gnb">
+                    <li><a href="#">brand</a></li>
+                    <li><a href="#">news</a></li>
+                    <li><a href="#">products</a></li>
+                    <li><a href="#">Q&A</a></li>
+                </ul><!--gnb-->
+
+            </div><!--hWrap-->
+        </div><!--header-->
+
+        <div class="bn">
+            <a href="#"></a>
+        </div><!--bn-->
+        <div class="con">
+            <div class="row1">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div><!--row1-->
+
+
+        <div class="row2">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+
+        </div><!--row2-->
+
+        <div class="row3">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </div><!--con-->
+
+    <div class="footer"></div>
+    </body>
+</html>

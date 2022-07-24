@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head><title>background2</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+
+        }
+        ul{
+            list-style: none;
+        }
+        .mainBn{
+            height: 450px;
+
+            background-image: url(images/key_bg.jpg);
+            background-size:cover;
+
+
+            background-repeat: no-repeat;
+            background-position: center center;
+            margin-bottom: 150px;
+
+           
+
+        }
+        h2{
+
+            font-size: 48px;
+            line-height: 450px;
+
+            text-align: center;
+        }
+
+        li{
+            background-image: url(images/icon.png);
+            background-repeat:no-repeat;
+            padding-left: 20px;
+            background-position: 0 center;
+            display: inline-block;
+            margin: 0 30px;
+        }
+        /*
+        백그라운드 이미지는 항상 요소의 
+        왼쪽상단에서부터 시작한다.
+        
+        - 왼쪽상단에 있는 이미지로부터 내용물들을 밀어내려면
+        => 패딩 등을 사용하여 내용물들을 옮겨야 한다. (이미지 옮김x)
+        */
+        ul{
+            text-align: center;
+        }
+ 
+
+
+
+
+
+    </style>
+    </head>
+
+
+    <body>
+        <div class="mainBn">
+            <h2>Have A Nice Day!</h2>
+        </div><!--mainBn-->
+
+        <ul>
+            <li><img src="images/icon.png">list1</li>
+            <li>list2</li>
+            <li>list3</li>
+            <li>list4</li>
+            <li>list5</li>
+        </ul>
+        <!-- 
+            li에게 백그라운드 이미지를 활용해 
+            아이콘 넣기! icon.png
+         -->
+    </body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+    <head><title>salongdebongsun</title></head>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            ul{
+                list-style: none;
+            }
+            a{
+                text-decoration: none;
+                color: inherit;
+            }
+            .header{
+                height: 200px;
+                text-align: center;
+            }
+            .header a{
+                color: red;
+            }
+            .wrap{
+                width: 1000px;
+                margin: 0 auto;
+
+                height: 200px;
+                position: relative;
+            }
+            .wrap ::after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+            h1{
+                padding-top:20px
+            }
+            .util{
+                position:absolute;
+                right: 0;
+                top:10px;
+            }
+            .util li{
+                font-size: 12px;
+                margin-left: 20px;
+                float: left;
+            }
+            .gnb{
+                font-size: 0;
+                text-align: center;
+                margin-top:30px;
+
+            }
+            .gnb li{
+                font-size: 16px;
+                display: inline-block;
+                margin: 0px 15px;
+                text-transform: uppercase; 
+            }
+            .gnb li:first-child a{
+                color: darkviolet;
+            }
+            
+            .bn{
+                height: 450px;
+                background-color: thistle;
+            }
+            .bn a{
+                background-color: thistle;
+                display: block;
+                height: 450px;
+            }
+            /*
+            1. a는 인라인 요소다.
+            2. a는 인라인 요소이기 때문에 높이값을 가질 수 없다.
+            3. 그래서 block으로 바꿔준다.
+            4. a가 block요소로 전환이 되면, 자연ㄴ스럽게 부모의 너비를 가득 채우게 된다.
+            5. 그 다음 height를 준다.
+            */
+            .con{
+                margin-top: 40px;
+                width: 1000px;
+                margin-right: auto;
+                margin-left: auto;
+                border: 2px solid plum;
+                margin-bottom: 40px;
+                font-size: 14px;
+            }
+            .con a{
+                color: green;
+            }
+            .con::after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .box{
+               
+                width: 225px;
+                height: 225px;
+                background-color: plum;
+                display: inline-block;
+                margin-bottom: 20px;
+
+            }
+            .product{
+                margin-top:10px;
+                float: left;
+                margin-right: 33.33px;              
+
+            }
+
+            .row1::after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .product:last-child{
+                margin-right: 0;
+            }
+            .row2::after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .row2{
+                margin-top: 40px;
+
+            }
+            .footer{
+                height: 220px;
+                background-color: darkslateblue;
+            }
+            h3{
+                color: darkviolet;
+
+            }
+            .price{
+               
+                font-size: 14px;
+
+            }
+            .price2 {
+                color: red;
+            }
+            .cancled{
+                text-decoration: line-through;
+            }
+            .row2 a{
+                text-decoration: line-through;
+            }
+            .row2 h3{
+                text-decoration: line-through;
+            }
+
+
+
+        </style>
+    <body>
+        <div class="header">
+           
+            <div class="wrap">
+                <h1><img src="images/bongseonlogo.png"</h1>
+
+                <ul class="util">
+                    
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">장바구니</a></li>
+                   
+                </ul><!--util-->
+
+                <ul class="gnb">
+                    <li><a href="#">SALE</a></li>
+                    <li><a href="#">TOP</a></li>
+                    <li><a href="#">BOTTOM</a></li>
+                    <li><a href="#">DRESS</a></li>
+                    <li><a href="#">ACCESSORIES</a></li>
+                    <li><a href="#">ETC</a></li>
+                </ul><!--gnb-->
+
+            </div><!--wrap-->
+
+        </div><!--header-->
+
+        <div class="bn">
+            <a href="#"></a>
+        </div><!--bn-->
+        
+        <div class="con">
+            <div class="row1">
+                <!-- 
+                    가로정렬을 할 때는 반드시 
+                    가로로 정렬될 것들끼리
+                    하나의 부모로 묶어줘야 한다.
+                    (float를 하던 display:flex)를 하던
+                    아니면 display:inline-block을 하던 
+                    어쨌든 반드시 지켜야 할 룰
+                 -->
+                <h3>인기상품</h3>
+                <div class="product">
+                <a href="#">
+                    <div class="box"></div>
+                    <p class="p_name">카키&블랙 투톤 스커트</p>
+                    <p class="price cancled">28,000원</p>
+                    <p class="price2">20,000원</p>
+
+                 </a>
+                </div><!--row1_product1-->
+                
+                <div class="product">
+                <a href="#">
+                    <div class="box"></div>
+                    <p>New 라인 스티치 청바지</p>
+                    <p class="price">38,000원</p>
+                    <p class="price2">20,000원</p>
+                </a>
+                </div><!--row1_product2-->
+
+                <div class="product">
+                <a href="#">
+                    <div class="box"></div>
+                    <p>A라인 슬릿 스커트</p>
+                    <p class="price cancled">48,000원</p>
+                    <p class="price2">20,000원</p>
+                </a>
+                </div><!--row1_product3-->
+                
+                <div class="product">                
+                <a href="#">
+                    <div class="box"></div>
+                    <p>봄 퍼플 플레어 스커트</p>
+                    <p class="price">62,000원</p>
+                    <p class="price2">20,000원</p>
+                </a>
+                </div><!--row1_product4-->
+            </div><!--row1-->
+
+            <div class="row2">
+                <h3>신상품</h3>
+                <div class="product">
+                    <a href="#">
+                        <div class="box"></div>
+                        <p>레터링 라인 힙색</p>
+                        <p class="price">3,6000원</p>
+                        <p class="price2">20,000원</p>
+                    </a>
+                </div><!--row2_product1-->
+                <div class="product">
+                    <a href="#">
+                        <div class="box"></div>
+                        <p>써지컬 해골 체인 목걸이</p>
+                        <p class="price">12,000원</p>
+                        <p class="price2">20,000원</p>
+                    </a>
+                </div><!--row2_product2-->
+                <div class="product">
+                    <a href="#">
+                        <div class="box"></div>
+                        <p>슬림라인 브이넥 티</p>
+                        <p class="price">48,000원</p>
+                        <p class="price2">20,000원</p>
+                    </a>
+                </div><!--row2_product3-->
+                <div class="product">
+                    <a href="#">
+                        <div class="box"></div>
+                        <p>홀로그램 프린팅 오버핏 티셔츠</p>
+                        <p class="price">49,000원</p>
+                        <p class="price2">20,000원</p>
+                    </a>
+
+
+                </div><!--row2_product4-->
+
+            </div><!--row2-->
+    
+        </div><!--con-->
+        <div class="footer">
+        </div><!--footer-->
+    </body>
+</html>

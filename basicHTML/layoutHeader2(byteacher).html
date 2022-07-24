@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>header2</title>
+        <style>
+            *{
+                margin:0;
+                padding:0;
+            }
+
+            ul{
+                list-style: none;
+            }
+
+            .header{
+                width: 1000px;
+                height: 140px;
+                background-color:rosybrown;
+                margin-left: auto;
+                margin-right: auto;
+                position: relative;
+            }
+
+            h1{
+                /* 부모랑 top이 겹쳐있는 첫번째자식이
+                margin-top을 가지면, 부모랑 통째로 떨어진다
+                그래서 padding 처리를 한다 */
+                padding-top: 40px;
+                text-align: center;
+            }
+            
+            .gnb:after{
+                content: '';
+                clear: both;
+                display: block;
+            }
+
+            .gnb{
+                margin-top: 32px;
+            }
+            .gnb li{
+                width: 200px;
+                float: left;
+                text-align: center;
+            }   
+
+            .util li{
+                float: left;
+                margin-left: 20px;
+            }
+
+            .util{
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+
+
+        </style>
+    </head>
+    <body>
+
+        <div class="header">
+            <h1>LOGO</h1>
+
+            <ul class="gnb">
+                <li>list1</li>
+                <li>list2</li>
+                <li>list3</li>
+                <li>list4</li>
+                <li>list5</li>
+            </ul><!--gnb-->
+
+            <ul class="util">
+                <li>util1</li>
+                <li>util2</li>
+                <li>util3</li>
+                <li>util4</li>
+            </ul>
+        </div><!--header-->
+        
+    </body>
+</html>

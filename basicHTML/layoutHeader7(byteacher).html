@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>header</title>
+        <style>
+            *{
+                margin:0;
+                padding:0;
+            }
+
+            ul{list-style: none;}
+
+            .header{
+                width: 1200px;
+                height: 100px;
+                background-color:#000;
+                margin-left: auto;
+                margin-right: auto;
+                position: relative;
+                color:#fff;
+            }
+
+            h1{
+                padding-top: 20px;
+                margin-left: 20px;
+            }
+
+            .gnb{
+                margin-left: 20px;
+            }
+            .gnb li{
+                float: left;
+                margin-right: 40px;
+            }
+
+            .gnb:after{
+                content: '';
+                clear: both;
+                display: block;
+            }
+
+            .util{
+                position: absolute;
+                top:20px;
+                right:0;
+            }
+            .util li{
+                float: left;
+                margin-right: 12px;
+                font-size: 12px;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Logo</h1>
+            <ul class="util">
+                <li>util1</li>
+                <li>util2</li>
+                <li>util3</li>
+                <li>util4</li>
+            </ul><!--util-->
+
+            <ul class="gnb">
+                <li>list1</li>
+                <li>list2</li>
+                <li>list3</li>
+                <li>list4</li>
+                <li>list5</li>
+            </ul><!--gnb-->
+        </div><!--header-->
+    </body>
+</html>

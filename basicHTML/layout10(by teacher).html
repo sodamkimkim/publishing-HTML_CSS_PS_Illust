@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>layout10</title>
+        <style>
+            .wrap{
+                width: 1200px;  
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .wrap:after{
+                content: '';
+                clear: both;
+                display: block;
+            }
+            .header{
+                float: left;
+                width: 170px;
+                background-color: #222;
+                height: 800px;
+            }
+
+            h1{
+                color: #eee;
+                font-size: 23px;
+                text-align: center;
+            }
+            .con{
+                float: left;
+                width: 1030px;
+            }
+            
+            .bn{
+                background-color: #00f;
+                height: 500px;
+            }
+
+            .row{
+                margin-top: 40px;
+            }
+
+            .row:after{
+                content: '';
+                clear: both;
+                display: block;
+            }
+            .row .box{
+                width: 150px;
+                height: 150px;
+                background-color:#222;
+                border-radius: 50%;
+                float: left;
+                margin: 0 28px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="header">
+                <h1>로고</h1>
+            </div><!--header-->
+
+            <div class="con">
+                <div class="bn"></div>
+                <div class="row">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div><!--row-->
+            </div><!--con-->
+
+        </div><!--wrap-->
+    </body>
+</html>

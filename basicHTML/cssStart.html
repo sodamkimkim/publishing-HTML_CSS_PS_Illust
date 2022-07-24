@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Css를 해봅시다</title>
+    <style>
+        /* style 태그 내부는 CSS언어만 작동
+        CSS에서 코멘트를 남기는 것은 이렇게 남긴다.*/
+        /* 선택자{속성:속성값;
+            선택자는 아주 다양하다.
+            1. 태그이름으로 선택하기
+                태그이름{속성: 속성값;}
+            2. 클래스(html에 우리가 지어준 이름)명으로 선택하기
+                .클래스이름{속성: 속성값;}
+
+            선택자에는 우선순위가 있다.
+            1. 아래에 써져 있을 수록 우선순위 높음
+            2. 태그이름을 호명하는 것보다 class이름이 더 우선순위가 높다.*/
+
+        p{color: red;}
+       .blue{color: blue;}
+       .pink{color: pink;}
+       .gold{color: gold;}
+    </style>
+    <!-- 세미콜론(;)은 여러개의 css속성을 쓸 때, 한 속성이 끝날 때 마다 붙여주는 온점역할. -->
+    </head>
+
+    <body>
+        <!-- CSS? Cascading Style Script
+        html 구조에 기반한 고유의 논리가 존재,
+        웹/앱 등 다양한 곳에서 사용되는 스타일언어.
+    
+        CSS는 style태그 내부에 작성을 한다!!!
+        Style 태그는 일반적으로 head안에 위치한다.-->
+        <p>안녕하세요.</p>
+        <p class="blue">반갑습니다.</p>
+        <!-- class: 특정 html태그에게 이름 지어줌 -->
+        <!-- class이름 짓기
+        1. class이름은 영어+ 숫자만 된다.
+        2. 숫자부터 시작하면 또 안됨..
+        box1 (o), 1box (x)
+        3. 띄어쓰기 안됨.
+            <div class="my love"> (x)
+        4. 굳이 띄어쓰기를 하고 싶다?
+            my_love(o)
+        5. 대소문자 구분함
+            myLove랑 mylove는 서로 다른 클래스임
+    
+    -->
+        <p class="pink">랄랄라라라</p>
+        <p class="gold">울랄라라라</p>
+    </body>
+</html>

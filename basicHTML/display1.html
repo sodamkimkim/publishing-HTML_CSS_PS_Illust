@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>display1</title>
+        <style>
+            *{
+                margin: 0;
+                padding:0;
+
+            }
+
+            ul{
+                list-style: none;
+            }
+            /* reset은 항상 위에 적어줘야 한다.! 
+            밑에 적어주면 넣은 마진값 다빠짐 */
+
+            .btn{
+                margin-left: auto;
+                margin-right: auto;
+                
+                width: 84px;
+                height: 38px;
+                border-radius: 50px;
+                background-color: #000085;
+                text-align: center;
+                font-size: 20px;
+                color: #1dffff;
+ 
+                display: block;
+                /*
+                * display: block;
+                
+                인라인요소, 혹은 다른 정렬값을 가진 요소의 정렬 방식을 
+                block으로 바꿈 
+
+                display라고 하는 css속성 자체가 정렬값을 변경하는 속성
+                */
+
+                text-align: center;
+                line-height: 38px;
+                text-decoration: none;
+
+            }
+            .btn:hover{
+                background-color: #1dffff;
+                color: #000085;
+            }/* :hover는 마우스 올리면 색반전.
+            .btn2:active는 클릭하면 변화 */
+
+
+            .btn2{
+                margin-left: auto;
+                margin-right: auto;
+
+                width: 100px;
+                height: 38px;
+                border: 2px solid #000085;
+                display: block;
+                margin-top: 300px;
+                border-radius: 500px;
+                text-align: center;
+                line-height: 38px;
+                /*
+                letter-spacing은 자간조절
+                line-height는 행간조절
+                */
+                /*
+                line-height를 height값과 똑같이 주면 수직선상 가운데로 온다.
+                */
+
+                text-decoration: none;
+                color:#000085;
+
+            }
+
+            .btn2:hover{
+                background-color: #000085;
+                color:#ffffff
+            }/* 
+            * :hover는 마우스 올리면 색반전.
+            * .btn2:active는 클릭하면 변화 */
+
+            .pager{
+                background-color: darkorchid;
+                text-align: center;
+                /*
+                * text-align: center;
+                : text뿐 아니라 '인라인 요소'를 가운데 두는 속성
+                */
+
+                font-size: 0;
+                /*
+                pager가 가진 알 수 없는 공간값들 0
+                */
+            }
+            .pager li{
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background-color: turquoise;
+                
+                display: inline-block;
+                /*
+                * display: inline-block;
+                : 블록요소의 형질(너비, 높이, 마진 등 공간관련된 속성들)을 가지되
+                정렬은 인라인요소처럼 정렬(요소끼리 줄바꿈되지 않고 일렬로 주욱 나열됨)됨.
+                
+                장) text-align을 사용해서 정렬할 수 있다.
+                단) inline 요소들이 가지는 특유의 공간값들이 생긴다.
+                    ㄴ 태그와 태그사이의 공백문자가 섞여 들어감
+                    ㄴ line-height, vertical-align 등 
+                    inline요소들만이 가지는 특유의 공간값이 생겨남(이해할 수 없는 여백이 생김)
+
+                    sol) 부모요소에게 font-size:0을 줘서 텍스트관련 공간값들을다 0으로 reset
+                */
+            }
+            
+            .pager2{
+                background-color: darkorchid;
+                text-align: center;
+                font-size: 0;
+                margin-top: 30px;
+
+            }
+
+            .pager2 li{
+                width: 20px;
+                height: 20px;
+                border-radius: 50px;
+                background-color:wheat ;
+                display: inline-block;
+
+            }
+
+        </style>
+
+    </head>
+    <body>
+
+        <a href="#" class="btn">CLICK</a>
+        <a href="#" class="btn2">이야호</a>
+        <!--
+            a는 인라인 요소이기 때문에 CSS에서 display:block;해줘야
+             너비 높이 등 block요소처럼 적용 가능하다
+        -->
+
+        <!--
+            *고스트 버튼
+            : 투명한 배경에 border와 텍스트만 존재하고,
+             hover시 백그라운드 색상이 드러나는 버튼 스타일을 칭함.
+        -->
+
+        <ul class="pager">
+            <li></li><li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul><!--pager-->
+
+        <!-- 
+            * alt+shift+방향키 위아래
+            :줄복사
+         -->
+
+         <ul class="pager2">
+             <li></li>
+             <li></li>
+             <li></li>
+             <li></li>
+             <li></li>
+             <li></li>
+             <li></li>
+         </ul>
+
+
+    </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head><title>layout1</title></head>
+    <style>
+        
+        /*div{width: 1000px;}*/
+        .header{
+            height: 180px;
+            background-color: red;
+            width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+        .banner{
+            height: 480px;
+            background-color: green;
+            margin-bottom: 40px;
+            width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+        .box{
+            width: 320px;
+            height: 400px;
+            background-color: blue;
+            margin-right: 20px;
+            float:left;
+ 
+            margin-bottom: 40px;
+           
+        }
+        .box:last-child{
+            margin-right: 0;
+        }/*
+        부모사이즈 1000px를 오버했다.
+        float된 요소들이 부모 사이즈 밖으로 넘칠경우, 아래로 떨어진다.
+        그래서 box중 마지막 것이 아래로 떨어지게 됨.
+        -> box:last-child{}    
+        마지막 box 마진=0처리*/
+
+        .con{
+           margin-right: auto;
+           margin-left:auto;
+           background-color: papayawhip;
+           width:1000px;
+        }
+        .con:after{
+            content:'';
+            display: block;
+            clear: both;
+        }
+        .footer{
+            height: 240px;
+            width: 1000px;
+            background-color: yellow;
+            margin-right: auto;
+            margin-left: auto;
+
+        }
+    </style>
+    <body>
+        <div>
+            <div class="header"></div>
+            <div class="banner"></div>
+            <div class="con">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+
+            <div class="footer"></div>
+        </div>
+
+    </body>
+</html>

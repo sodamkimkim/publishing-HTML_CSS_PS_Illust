@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head><title>padding2</title></head>
+    <style>
+        .header{
+            width: 800px;
+            background-color: turquoise;
+            height: 120px;
+
+        }
+        h1{
+            padding-top: 80px;
+            /*
+            부모요소와 천장이 겹치는(첫번째)자식에게 margin-top을 주면,
+             자식만 떨어져 내리는 것이 아니라
+            부모가 통째로 떨어져 내려온다
+            (부모에게 margin-top이 들어가는 것 처럼 보인다.)
+
+            이때,
+            다양한 대처법이 존재하는데, 
+            대다수의 경우 padding-top으로 대체하여 사용한다.
+            */
+        }
+
+    </style>
+    <body>
+        <div class="header">
+            <h1>LOGO</h1>
+        </div><!--header-->
+
+    </body>
+</html>

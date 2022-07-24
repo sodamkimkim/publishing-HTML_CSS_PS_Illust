@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+    <head><title>layout11</title></head>
+    <style>
+        .wrap{
+            width: 1092px;
+            border:30px solid black;
+        }
+        .wrap:after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .f_row1{
+
+            width: 1092px;
+            height: 260px;
+            float:left;
+        }
+        .f_row1:after{
+            content: '';
+            display: block;
+            clear: both;
+
+        }
+        .box1{
+            background-color: cyan;
+            width: 260px;
+            height: 260px;
+            float:left;
+            margin-right: 17px;
+
+        }
+        .box1:first-child{
+            width: 538px;
+
+        }
+        .box1:last-child{
+            margin-right: 0;
+        }
+
+
+        .f_row2{
+
+            margin-top: 17px;
+            width: 1092px;
+            float: left;
+        }
+        .f_row2:after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        
+        .colm1{
+
+
+            float:left;
+            height: 537px;
+            width: 814px;
+        }
+        .colm1:after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        
+
+        .colm2{
+            width: 260px;
+            height: 538px;
+            float:left;
+
+
+        }
+       /* .colm2:after{
+            content: '';
+            display: block;
+            clear: both;
+        }*/
+        .box4{
+            background-color: cyan;
+            width: 260px;
+            height: 538px;
+            margin-left:17px;
+           /* float: left;*/
+        }
+
+        .s_row1{
+            float: left;
+            width: 814px;
+            height: 260px;
+            margin-bottom: 17px;
+  
+
+        }
+        .s_row1:after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .box2{
+            background-color: cyan;
+            width: 260px;
+            height: 260px;
+            float:left;
+            margin-right: 17px;
+        }
+        .box2:last-child{
+            margin-right: 0;
+        }
+
+
+        .s_row2{
+            float:left;
+            width: 814px;
+            height: 260px;
+
+
+        }
+        .s_row2:after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .box3{
+            background-color: cyan;
+            width: 260px;
+            height: 260px;
+            float:left;
+            margin-right: 17px;
+        }
+        .box3:last-child{
+            margin-right: 0;
+        }
+
+
+
+    </style>
+    <body>
+        <div class="wrap">
+            <div class="f_row1">
+                <div class="box1"></div>
+                <div class="box1"></div>
+                <div class="box1"></div>
+            </div><!--f_row1-->
+
+            <div class="f_row2">
+                <div class="colm1">
+                    <div class="s_row1">
+                        <div class="box2"></div>
+                        <div class="box2"></div>
+                        <div class="box2"></div>
+                    </div><!--s_row1-->
+
+                    <div class="s_row2">
+                        <div class="box3"></div>
+                        <div class="box3"></div>
+                        <div class="box3"></div>
+                    </div><!--s_row2-->
+                </div><!--colm1-->
+                
+                <div class="colm2">
+                    <div class="box4"></div>
+                </div><!--colm2-->
+
+
+            </div><!--f_row2-->
+
+
+        </div><!--wrap-->
+    </body>
+</html>

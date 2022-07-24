@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>margin</title>
+        <style>
+            .box1{
+                width: 300px;
+                height: 200px;
+                background-color: pink;
+            }
+
+            .box2{
+                width: 250px;
+                height: 300px;
+                margin-left: 40px;
+                background-color: deeppink;
+                margin-top: 50px;
+                margin-bottom: 60px;
+                margin-right: 70px;
+
+            }
+            /*margin 외부 여백
+            요소와 요소사이 간격을 주기 위해 사용
+            margin은 top, left, right, bottom*/
+
+            .box3{
+                width: 320px;
+                height: 250px;
+                background-color: violet;
+            
+            }
+
+            .space{
+                margin-left: auto;
+                margin-right: auto;
+
+                width: 500px;
+                height: 200px;
+                background-color: cyan;
+            }
+
+                /* <margin auto로 가운데 정렬하기>
+                블록요소를 가운데 두기 위해선
+                너비를 준 다음 (나머지가 마진처리가 된다.)
+                마진을 좌, 우로 auto로 준다.
+
+                -> 기본적으로 html 블록요소들은 처음 만들어졌을때,
+                너비는 부모사이즈를 가득 채우고 있고 높이는
+                안에 들어있는 내용물만큼으로 생성되어 있다
+
+                이때, 해당 요소에게 width값을 줘서 너비값을 정해주면,
+                남은 공간은 margin처리가 된다 (자동)
+
+                이때, 남은 공간인 margin을 left , right 둘 다 auto로 지정할 경우,
+                남은공간이 자연스럽게 자동 분배가 되어 요소가 가운데 위치하게 된다
+                */
+
+        </style>
+    </head>
+
+    <body>
+
+        <div class="space">
+
+        </div>
+        <div class="box1">
+            너비를 300px, 높이를 200px<br>
+            백그라운드색상 pink
+
+        </div>
+
+        <div class="box2">
+            너비를 250px, 높이 300px<br>
+            백그라운드색상 deeppink;
+
+        </div>
+
+        <div class="box3">
+            너비를 320px, 높이 250px<br>
+            백그라운드 색상 violet
+
+        </div>
+    </body>
+</html>

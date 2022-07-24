@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>layout14</title>
+        <style>
+@import url('https://fonts.googleapis.com/css2?family=Glory&display=swap');
+
+            /* reset css */
+            *{
+                margin:0; padding:0;
+                font-family: 'glory';
+            }
+            ul{list-style: none;}
+            a{color:#000; text-decoration: none;}
+
+            /* header */
+            .header{
+                border-top:2px solid #3388ff;
+                height: 300px;
+            }
+            h1{
+                text-align: center;
+            }
+
+            h1 img{
+                width: 200px;
+            }
+
+            .gnb{
+                text-align: center;
+                font-size: 0;
+            }
+            .gnb li{
+                display: inline-block;
+                font-size: 20px;
+                margin:0 40px;
+            }
+
+            .gnb li a:hover{
+                color:#3388ff;
+                text-decoration: underline;
+            }
+
+            .mainBn{
+                /*메인배너이미지는 일반적으로
+                브라우저 화면 가득 차게끔 설계된다
+                그런 경우 img src로 작업하면 다양한
+                모니터 환경을 대처하기가 힘들어진다 
+
+                그렇기때문에 그런상황에서는 
+                백그라운드 처리하는 것이 가장 편하다 
+                */
+                background-image: url(images_test/banner.png);
+                height:500px;
+                background-position: center center;
+                background-size: cover;
+            }
+
+            .mainBn a{
+                height: 500px;
+                display: block;
+            }
+
+            .pick{
+                margin:80px 0;
+            }
+
+            .pick h3{
+                font-size: 30px;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+
+            .pick .con{
+                width: 1200px;
+                margin:0 auto
+            }
+            .pick .box{
+                width: 380px;
+                height: 480px;
+                border-radius: 20px;
+                background-color:#ba4e31;
+                float: left;
+                margin-right: 30px;
+                text-align: center;
+            }
+
+            .pick h4{
+                margin-top: 20px;
+            }
+
+            .pick p{
+                color:#fff;
+                margin-top: 20px;
+            }
+
+            /* pick에 있는 .box에게 마우스를 올릴때 그 안의
+            p에게 적용될 속성  */
+            .pick .box:hover p{
+                text-decoration: underline;
+            }
+
+
+            .pick .box:nth-child(2){
+                background-color:#355ce5
+            }
+            .pick .box:nth-child(3){
+                margin-right: 0;
+                background-color:#dab431;
+            }
+
+            .pick .con:after{
+                content: '';
+                clear: both;
+                display: block;
+            }
+
+            .subBn{
+                height: 250px;
+                background-image: url(images_test/back.jpg);
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                text-align: center;
+                padding-top: 100px;
+                margin-bottom: 80px;
+            }
+
+            .footer{
+                background-color: #3388ff;
+                padding-top: 20px;
+                padding-bottom: 20px;
+
+                padding:20px 0;
+                /* margin이랑 똑같은 규칙!! */
+                color:#fff;
+            }
+
+            .fWrap{
+                width:1200px;
+                margin:0 auto;
+            }
+            .fWrap .copyright{
+                float: left;
+            }
+            .fWrap .email{
+                float: right;
+            }
+            .fWrap:after{
+                content: '';
+                clear: both;
+                display: block;
+            }
+
+            /* position:absolute로 처리할 시 
+
+            .fWrap{
+            width:1200px;
+            margin:0 auto;
+            position: relative;
+            }
+            .fWrap .copyright{
+                
+            }
+            .fWrap .email{
+                position: absolute;
+                top:0px;
+                right:0;
+            }
+            */
+
+        </style>
+    </head>
+    <body>
+       <div class="header">
+          <h1><a href="#">
+              <img src="images_test/logo.png">
+          </a></h1>
+
+          <ul class="gnb">
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">Brand</a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Contact us</a></li>
+          </ul><!--gnb-->
+       </div><!--header--> 
+
+       <div class="mainBn">
+           <a href="#"></a>
+       </div><!--mainBn-->
+
+       <div class="pick">
+          <h3>PICK ME</h3>
+          <div class="con">
+            <div class="box">
+                <a href="#">
+                    <h4><img src="images_test/h4-1.png"></h4>
+                    <img src="images_test/bn1.png">
+                    <p>Go Shopping</p>
+                </a>
+            </div><!--첫번째박스-->
+
+            <div class="box">
+                <a href="#">
+                    <h4><img src="images_test/h4-2.png"></h4>
+                    <img src="images_test/bn2.png">
+                    <p>Go Shopping</p>
+                </a>
+            </div><!--두번째박스-->
+
+            <div class="box">
+                <a href="#">
+                    <h4><img src="images_test/h4-3.png"></h4>
+                    <img src="images_test/bn3.png">
+                    <p>Go Shopping</p>
+                </a>
+            </div><!--세번째박스 -->
+          </div><!--con-->
+
+       </div><!--pick-->
+
+       <div class="subBn">
+          <img src="images_test/bntit.png">
+       </div><!--subBn-->
+
+       <div class="footer">
+           <div class="fWrap">
+             <p class="copyright">COPYRIGHT (C) Anonyment All Rights Reserved</p>
+             <p class="email">admin@anonyment.co.kr</p>
+           </div><!--fWrap-->
+       </div><!--footer-->
+    </body>
+</html>

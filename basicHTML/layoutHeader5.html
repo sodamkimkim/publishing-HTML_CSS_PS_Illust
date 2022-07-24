@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>layoutHeader5</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+
+            }
+            ul{
+                list-style: none;
+            }
+
+            .header{
+                position: relative;
+                background-color: #ccc;
+                width: 860px;
+                height: 160px;
+                
+                
+            }
+            h1{
+                padding-top: 40px;
+                font-size: 32px;
+                text-align: center;
+            }
+
+            .gnb{
+               text-align: center;
+               font-size: 0;
+               margin-top:40px;
+
+
+            }
+            .gnb li{
+               display:inline-block;
+               margin:0 35px;
+               font-size:16px;
+
+            }
+            .gnb li:last-child{
+                margin-right: 0;
+            }
+            .gnb li:first-child{
+                margin-left: 0;
+            }
+
+            .util{
+                position: absolute;
+                right: 30px;
+                top: 10px;
+            }
+            .util li{
+                font-size: 10px;
+                margin-left: 30px;
+                float: left;
+
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <div class="header">
+        <h1>로고</h1>
+
+        <ul class="gnb">
+            <li>브랜드소개</li>
+            <li>메뉴</li>
+            <li>프랜차이즈</li>
+            <li>게시판</li>
+        </ul>
+
+        <ul class="util">
+            <li>로그인</li>
+            <li>회원가입</li>
+            <li>장바구니</li>
+            <li>고객문의</li>
+        </ul>
+
+        </div><!--header-->
+
+    </body>
+</html>

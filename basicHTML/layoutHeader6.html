@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>layoutHeader6</title>
+        <style>
+
+            *{
+                margin: 0;
+                padding: 0;
+            }
+
+            ul{
+                list-style: none;
+            }
+            .header{
+                border-bottom:2px solid black;
+            }
+            .header_wrap{
+                position: relative;
+                width: 1000px;
+                height: 180px;
+                background-color: blanchedalmond;
+                margin-right: auto;
+                margin-left: auto;
+
+            }
+
+            h1{
+                padding-top: 50px;
+
+                text-align: center;
+                /*이미지는 inline-block.
+                인라인처럼 정렬은 되짐만 너비 높이 값을 가짐*/
+
+            }
+
+            .util{
+
+ 
+                margin-top:12px;
+                position: absolute;
+                top: 12px;
+                right:0;
+                font-size: 0;
+
+            }
+            .util li{
+                font-size:12px;
+                display: inline-block;
+                margin-left:20px;
+                
+            
+            }
+
+            .gnb{
+                text-align: center;
+                font-size: 0;
+                margin-top: 30px;
+
+            }
+
+            .gnb li{
+                display:inline-block;
+                font-size: 18px;
+                color: black;
+                margin: 0 20px;
+               
+            }
+
+
+  
+
+
+  /*
+                img {
+
+                width: 100px;
+                height: auto;
+                object-fit: cover;
+                }
+*/
+            
+
+        </style>
+
+    </head>
+    <body>
+        <div class="header">
+            <div class="header_wrap">
+                <h1><img src="logo/logo.png"></h1>
+                <ul class="util">
+                    <li>Login</li>
+                    <li>Join</li>
+                </ul><!--util-->
+
+                <ul class="gnb">
+                    <li>SHOP</li>
+                    <li>ABOUT US</li>
+                    <li>STUDIO</li>
+                    <li>COLLECTIONS</li>
+                </ul><!--gnb-->
+
+
+
+            </div><!--header_wrap-->
+
+        </div><!--header-->
+
+    </body>
+</html>

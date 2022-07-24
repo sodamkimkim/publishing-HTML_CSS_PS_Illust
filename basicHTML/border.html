@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head><title>border</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: #ccc;
+            margin-bottom:40px;
+            font-size:60px;
+            font-family:arial;
+            font-weight: 900;
+            text-align: center;
+            line-height: 200px;
+        }
+        /*line-height를 height값이랑 똑같이 주면
+         위아래 가운데정렬처럼 보임*/
+         .box1{
+             border-color: #f06;
+             border-style:solid;
+             border-width: 10px;
+             /*border는 3가지 속성을 가져야 한다.
+             color/style/width
+             순서는 상관없음~!*/
+         }
+         .box2{
+             border:10px solid #f06;
+
+         }
+         .box3{
+             border-top:10px solid black;
+             border-right:10px solid #444;
+             border-bottom:10px solid #888;
+             border-left:10px solid #bbb;
+             /*solid는 그냥 직선*/
+
+         }
+         .box4{
+             border: 1px dotted blue;
+         }
+
+         .box5{
+             border:10px dashed darkviolet;
+         }
+
+         .box6{
+             border:10px outset #666;
+         }
+         .box6:active{
+             border:10px inset #666;/*반짝반짝*/
+             user-select:none; /*클릭해도 글자 블록지정 안되게*/
+             cursor:pointer; /*클릭할 때 손가락 모양*/
+         }
+         .box7{
+             border-radius:20px; /*모서리 둥글게 하기*/
+         }
+         .box8{
+             width:400px;
+             border-radius: 50%;
+             /*border-radius 50%주면 무조건 동그라미됨.*/
+         
+            }
+         .box9{
+             width:400px;
+             border-radius:250px;
+             /*
+             border-radius 값을
+             너비와 높이 중 큰 값의 절반 이상이 되는 값을 주면 
+             알약모양이 된다.*/
+         }
+         .box10{
+             border:10px outset bisque;
+
+         }
+         .box10:active{
+             border:20px inset darkviolet;
+             user-select:none;
+             cursor:pointer;
+             border-radius:50%;
+         }
+         .box11{
+             width:500px;
+             border-radius: 300px;
+         }
+
+    </style>
+    
+</head>
+    <body>
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+        <div class="box4">box4</div>
+        <div class="box5">box5</div>
+        <div class="box6">box6</div>
+        <div class="box7">box7</div>
+        <div class="box8">box8</div>
+        <div class="box9">box9</div>
+        <div class="box10">box10</div>
+        <div class="box11">box11</div>
+
+        <!--
+        div.box$*7 ->tab하면
+        자동으로 div class box1~7생김
+         -->
+    </body>
+</html>
